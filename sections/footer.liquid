@@ -30,6 +30,8 @@
   }
 {%- endstyle -%}
 
+{% section 'tfw-footer' %}
+
 <footer class='footer color-{{ section.settings.color_scheme }} gradient section-{{ section.id }}-padding'>
   {%- liquid
     assign has_social_icons = true
@@ -426,13 +428,13 @@
       ]
     },
     {
-      "type": "custom_block",
-      "name": "Custom Block",
+      "type": "custom_html",
+      "name": "t:sections.footer.blocks.custom_block.name",
       "settings": [
         {
           "type": "text",
           "id": "template",
-          "label": "TFW Block",
+          "label": "t:sections.footer.blocks.custom_block.settings.template.label",
           "default": "sections/custom_block"
         }
       ]
