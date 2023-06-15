@@ -8,7 +8,7 @@
         "footer-0": {
           "type": "link_list",
           "settings": {
-            "heading": "Shop",
+            "heading": "Quick links",
             "menu": "footer"
           }
         },
@@ -36,7 +36,6 @@
         "color_scheme": "background-1",
         "newsletter_enable": true,
         "newsletter_heading": "Subscribe to our emails",
-        "enable_follow_on_shop": true,
         "show_social": true,
         "enable_country_selector": false,
         "enable_language_selector": false,
