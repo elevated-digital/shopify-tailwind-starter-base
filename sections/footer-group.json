@@ -8,7 +8,7 @@
         "footer-0": {
           "type": "link_list",
           "settings": {
-            "heading": "Quick links",
+            "heading": "Shop",
             "menu": "footer"
           }
         },
@@ -25,17 +25,25 @@
             "heading": "Our mission",
             "subtext": "<p>Share contact information, store details, and brand content with your customers.<\/p>"
           }
+        },
+        "53ec7c55-2728-4594-a360-ea279dc3f68e": {
+          "type": "custom_block",
+          "settings": {
+            "template": "sections\/custom_block"
+          }
         }
       },
       "block_order": [
         "footer-0",
         "footer-1",
-        "footer-2"
+        "footer-2",
+        "53ec7c55-2728-4594-a360-ea279dc3f68e"
       ],
       "settings": {
         "color_scheme": "background-1",
         "newsletter_enable": true,
         "newsletter_heading": "Subscribe to our emails",
+        "enable_follow_on_shop": true,
         "show_social": true,
         "enable_country_selector": false,
         "enable_language_selector": false,
