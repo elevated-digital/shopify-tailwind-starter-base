@@ -472,6 +472,18 @@ Ensure the default browser behavior of the `hidden` attribute.
   position: relative;
 }
 
+.\!x-top-\[2\.5\%\] {
+  top: 2.5% !important;
+}
+
+.\!x-right-0 {
+  right: 0 !important;
+}
+
+.\!x-ml-0 {
+  margin-left: 0 !important;
+}
+
 .x-ml-auto {
   margin-left: auto;
 }
@@ -492,8 +504,20 @@ Ensure the default browser behavior of the `hidden` attribute.
   display: contents;
 }
 
+.\!x-h-\[50px\] {
+  height: 50px !important;
+}
+
+.\!x-h-\[95\%\] {
+  height: 95% !important;
+}
+
 .x-w-full {
   width: 100%;
+}
+
+.\!x-w-16 {
+  width: 64px !important;
 }
 
 .x-max-w-\[400px\] {
@@ -512,14 +536,40 @@ Ensure the default browser behavior of the `hidden` attribute.
   justify-content: space-between;
 }
 
+.x-gap-3 {
+  gap: 12px;
+}
+
+.\!x-rounded-full {
+  border-radius: 9999px !important;
+}
+
+.x-rounded-full {
+  border-radius: 9999px;
+}
+
 .x-rounded-t-16 {
   border-top-left-radius: 64px;
   border-top-right-radius: 64px;
 }
 
-.x-bg-farmer-dark-green {
+.\!x-border-0 {
+  border-width: 0px !important;
+}
+
+.x-bg-farmer-green {
   --tw-bg-opacity: 1;
   background-color: rgb(64 117 56 / var(--tw-bg-opacity));
+}
+
+.\!x-bg-farmer-dark-green {
+  --tw-bg-opacity: 1 !important;
+  background-color: rgb(51 88 46 / var(--tw-bg-opacity)) !important;
+}
+
+.\!x-bg-farmer-lime {
+  --tw-bg-opacity: 1 !important;
+  background-color: rgb(131 182 87 / var(--tw-bg-opacity)) !important;
 }
 
 .x-py-10 {
@@ -527,19 +577,27 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-bottom: 40px;
 }
 
-.x-text-xs {
-  font-size: 12px;
-  line-height: 16px;
-}
-
 .x-text-sm {
   font-size: 14px;
   line-height: 20px;
 }
 
+.\!x-leading-\[1\.9\] {
+  line-height: 1.9 !important;
+}
+
 .x-text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.\!x-text-white {
+  --tw-text-opacity: 1 !important;
+  color: rgb(255 255 255 / var(--tw-text-opacity)) !important;
+}
+
+.\!x-text-white\/70 {
+  color: rgb(255 255 255 / 0.7) !important;
 }
 
 .x-text-\[\#FF0000\] {
@@ -557,14 +615,49 @@ Ensure the default browser behavior of the `hidden` attribute.
   transition-duration: 150ms;
 }
 
+.before\:\!x-shadow-none::before {
+  content: var(--tw-content);
+  --tw-shadow: 0 0 #0000 !important;
+  --tw-shadow-colored: 0 0 #0000 !important;
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow) !important;
+}
+
+.after\:\!x-shadow-none::after {
+  content: var(--tw-content);
+  --tw-shadow: 0 0 #0000 !important;
+  --tw-shadow-colored: 0 0 #0000 !important;
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow) !important;
+}
+
+.hover\:\!x-bg-white:hover {
+  --tw-bg-opacity: 1 !important;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity)) !important;
+}
+
+.hover\:\!x-text-farmer-black:hover {
+  --tw-text-opacity: 1 !important;
+  color: rgb(35 31 32 / var(--tw-text-opacity)) !important;
+}
+
 .hover\:x-text-farmer-lime:hover {
   --tw-text-opacity: 1;
   color: rgb(131 182 87 / var(--tw-text-opacity));
 }
 
+.focus\:\!x-shadow-farmer:focus {
+  --tw-shadow: 0 0 0 calc(0.1rem + var(--inputs-border-width)) rgba(131, 182, 87, 1) !important;
+  --tw-shadow-colored: 0 0 0 var(--tw-shadow-color) !important;
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow) !important;
+}
+
+.focus\:\!x-shadow-farmer-lime:focus {
+  --tw-shadow-color: #83B657 !important;
+  --tw-shadow: var(--tw-shadow-colored) !important;
+}
+
 @media (min-width: 640px) {
-  .sm\:x-py-14 {
-    padding-top: 56px;
-    padding-bottom: 56px;
+  .sm\:x-py-16 {
+    padding-top: 64px;
+    padding-bottom: 64px;
   }
 }
