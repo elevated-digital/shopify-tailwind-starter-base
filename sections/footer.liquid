@@ -1,5 +1,6 @@
 {% comment %}theme-check-disable UndefinedObject{% endcomment %}
 {{ 'section-footer.css' | asset_url | stylesheet_tag }}
+{{ 'tfw-section-footer.css' | asset_url | stylesheet_tag }}
 {{ 'component-newsletter.css' | asset_url | stylesheet_tag }}
 {{ 'component-list-menu.css' | asset_url | stylesheet_tag }}
 {{ 'component-list-payment.css' | asset_url | stylesheet_tag }}
@@ -147,10 +148,6 @@
                           {% # theme-check-enable %}
                         </div>
                       {%- endif -%}
-
-                      {%- if section.settings.show_social and has_social_icons -%}
-                        {%- render 'social-icons' -%}
-                      {%- endif -%}
                     </div>
                   {%- when 'link_list' -%}
                     {%- if block.settings.menu != blank -%}
@@ -263,6 +260,19 @@
     {%- endunless -%}
   {%- endif -%}
 
+  <div class='footer__content-middle'>
+    <div class='footer__content-middle-wrapper page-width'>
+      <div class='x-flex x-items-center x-justify-end'>
+        {%- if section.settings.show_social and has_social_icons -%}
+          {%- render 'social-icons' -%}
+        {%- endif -%}
+      </div>
+      <div class='footer-flower__wrapper x-flex x-gap-2 x-items-center x-justify-center'>
+        {%- render 'icon-tfw-flower' -%}
+      </div>
+    </div>
+  </div>
+
   <div class='footer__content-bottom'>
     <div class='footer__content-bottom-wrapper page-width'>
       <div class='footer__column footer__localization isolate'>
@@ -360,12 +370,14 @@
         {%- endif -%}
       </div>
     </div>
-    <div class='footer__content-bottom-wrapper page-width{% if section.settings.enable_country_selector == false and section.settings.enable_language_selector == false %} footer__content-bottom-wrapper--center{% endif %}'>
+    <div class='footer__content-bottom-wrapper page-width{% if section.settings.enable_country_selector == false and section.settings.enable_language_selector == false %} x-justify-between{% endif %}'>
       <div class='footer__copyright caption x-text-white'>
-        <small class='copyright__content'
-          >&copy; {{ 'now' | date: '%Y' }}, {{ shop.name | link_to: routes.root_url -}}
+        <small class='copyright__content x-tracking-normal'
+          >&copy; {{ 'now' | date: '%Y' }}
+          {{ shop.name | link_to: routes.root_url -}}
+          .
         </small>
-        <small class='copyright__content'>All Rights Reserved</small>
+        <small class='copyright__content x-tracking-normal'>All Rights Reserved</small>
         {%- if section.settings.show_policy -%}
           <ul class='policies list-unstyled'>
             {%- for policy in shop.policies -%}
@@ -379,6 +391,12 @@
             {%- endfor -%}
           </ul>
         {%- endif -%}
+      </div>
+      <div class='footer__developer-credit caption x-text-white'>
+        <p class='x-tracking-normal'>
+          Website by
+          <a class='x-font-semibold x-transition-all hover:x-text-farmer-lime' href='#' target='_blank'>Elevated®</a>
+        </p>
       </div>
     </div>
   </div>

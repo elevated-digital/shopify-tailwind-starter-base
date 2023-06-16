@@ -492,6 +492,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: 40px;
 }
 
+.x-ml-4 {
+  margin-left: 16px;
+}
+
+.x-mb-6 {
+  margin-bottom: 24px;
+}
+
 .x-flex {
   display: flex;
 }
@@ -532,12 +540,28 @@ Ensure the default browser behavior of the `hidden` attribute.
   flex-wrap: wrap;
 }
 
+.x-items-center {
+  align-items: center;
+}
+
+.x-justify-end {
+  justify-content: flex-end;
+}
+
+.x-justify-center {
+  justify-content: center;
+}
+
 .x-justify-between {
   justify-content: space-between;
 }
 
 .x-gap-3 {
   gap: 12px;
+}
+
+.x-gap-2 {
+  gap: 8px;
 }
 
 .\!x-rounded-full {
@@ -582,8 +606,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   line-height: 20px;
 }
 
+.x-font-semibold {
+  font-weight: 600;
+}
+
 .\!x-leading-\[1\.9\] {
   line-height: 1.9 !important;
+}
+
+.x-tracking-normal {
+  letter-spacing: 0em;
 }
 
 .x-text-white {
@@ -603,6 +635,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .x-text-\[\#FF0000\] {
   --tw-text-opacity: 1;
   color: rgb(255 0 0 / var(--tw-text-opacity));
+}
+
+.\!x-text-farmer-lime {
+  --tw-text-opacity: 1 !important;
+  color: rgb(131 182 87 / var(--tw-text-opacity)) !important;
 }
 
 .x-filter {
@@ -644,15 +681,15 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: rgb(131 182 87 / var(--tw-text-opacity));
 }
 
+.hover\:\!x-text-white:hover {
+  --tw-text-opacity: 1 !important;
+  color: rgb(255 255 255 / var(--tw-text-opacity)) !important;
+}
+
 .focus\:\!x-shadow-farmer:focus {
   --tw-shadow: 0 0 0 calc(0.1rem + var(--inputs-border-width)) rgba(131, 182, 87, 1) !important;
   --tw-shadow-colored: 0 0 0 var(--tw-shadow-color) !important;
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow) !important;
-}
-
-.focus\:\!x-shadow-farmer-lime:focus {
-  --tw-shadow-color: #83B657 !important;
-  --tw-shadow: var(--tw-shadow-colored) !important;
 }
 
 @media (min-width: 640px) {

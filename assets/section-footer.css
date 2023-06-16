@@ -40,11 +40,6 @@
   }
 }
 
-.footer__content-bottom {
-  border-top: solid 0.1rem rgba(var(--color-foreground), 0.08);
-  padding-top: 3rem;
-}
-
 .footer__content-bottom:only-child {
   border-top: 0;
 }
@@ -293,7 +288,6 @@
 
 .footer__copyright {
   text-align: center;
-  margin-top: 1.5rem;
 }
 
 @media screen and (min-width: 750px) {
@@ -459,7 +453,7 @@
 }
 
 .copyright__content {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
 }
 
 .copyright__content a {
