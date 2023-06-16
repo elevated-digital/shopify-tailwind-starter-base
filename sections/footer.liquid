@@ -95,11 +95,11 @@
                       </ul>
                     {%- endif -%}
                   {%- when 'text_and_image' -%}
-                    {% if block.settings.heading != blank or block.settings.image != blank %}
+                    {% if block.settings.subheading != blank or block.settings.image != blank %}
                       <div class='footer-section'>
                         <div class='footer-content'>
-                          {% if block.settings.heading != blank %}
-                            <h3>{{ block.settings.heading }}</h3>
+                          {% if block.settings.subheading != blank %}
+                            <h3>{{ block.settings.subheading }}</h3>
                           {% endif %}
                           {% if block.settings.subtext != blank %}
                             <div class='subtext'>
@@ -440,9 +440,9 @@
       "settings": [
         {
           "type": "inline_richtext",
-          "id": "heading",
-          "default": "Heading",
-          "label": "Heading"
+          "id": "subheading",
+          "default": "Sub Heading",
+          "label": "Sub Heading"
         },
         {
           "type": "richtext",
