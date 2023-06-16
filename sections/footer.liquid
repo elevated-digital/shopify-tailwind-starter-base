@@ -60,14 +60,14 @@
                 {{ block.shopify_attributes }}
               >
                 {%- if block.settings.heading != blank -%}
-                  <h2 class='footer-block__heading inline-richtext'>{{- block.settings.heading -}}</h2>
+                  <h3 class='footer-block__heading inline-richtext x-text-white'>{{- block.settings.heading -}}</h3>
                 {%- endif -%}
 
                 {%- case block.type -%}
                   {%- when '@app' -%}
                     {% render block %}
                   {%- when 'text' -%}
-                    <div class='footer-block__details-content rte'>
+                    <div class='footer-block__details-content rte x-text-white x-text-sm'>
                       {{ block.settings.subtext }}
                     </div>
                   {%- when 'link_list' -%}
@@ -90,13 +90,13 @@
                       <div class='footer-section x-grid x-grid-cols-2 x-justify-between'>
                         <div class='footer-content'>
                           {% if block.settings.subheading != blank %}
-                            <h3 class='x-text-white'>{{ block.settings.subheading }}</h3>
+                            <h3 class='x-text-white footer-block__heading'>{{ block.settings.subheading }}</h3>
                           {% endif %}
                           <ul>
                             {% for collection in collections %}
                               <li>
                                 <a
-                                  class=' x-text-white x-transition-all hover:x-text-farmer-lime'
+                                  class=' x-text-sm x-text-white x-transition-all hover:x-text-farmer-lime'
                                   href='{{ collection.url }}'
                                 >
                                   {{- collection.title -}}
