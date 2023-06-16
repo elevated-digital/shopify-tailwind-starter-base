@@ -101,11 +101,13 @@
                           {% if block.settings.subheading != blank %}
                             <h3>{{ block.settings.subheading }}</h3>
                           {% endif %}
-                          {% if block.settings.subtext != blank %}
-                            <div class='subtext'>
-                              {{ block.settings.subtext }}
-                            </div>
-                          {% endif %}
+                          <ul>
+                            {% for collection in collections %}
+                              <li>
+                                <a href='{{ collection.url }}'>{{ collection.title }}</a>
+                              </li>
+                            {% endfor %}
+                          </ul>
                         </div>
                         {% if block.settings.image != blank %}
                           <div class='footer-image'>
