@@ -468,24 +468,31 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-backdrop-sepia:  ;
 }
 
-.x-m-0 {
-  margin: 0px;
+.x-relative {
+  position: relative;
 }
 
 .x-mb-10 {
-  margin-bottom: 2.5rem;
-}
-
-.x-mb-0 {
-  margin-bottom: 0px;
-}
-
-.\!x-mb-0 {
-  margin-bottom: 0px !important;
+  margin-bottom: 40px;
 }
 
 .x-contents {
   display: contents;
+}
+
+.x-rounded-t-16 {
+  border-top-left-radius: 64px;
+  border-top-right-radius: 64px;
+}
+
+.x-bg-farmer-dark-green {
+  --tw-bg-opacity: 1;
+  background-color: rgb(64 117 56 / var(--tw-bg-opacity));
+}
+
+.x-py-10 {
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 
 .x-text-\[\#FF0000\] {
@@ -493,11 +500,13 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: rgb(255 0 0 / var(--tw-text-opacity));
 }
 
-.x-underline {
-  -webkit-text-decoration-line: underline;
-          text-decoration-line: underline;
-}
-
 .x-filter {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+@media (min-width: 640px) {
+  .sm\:x-py-14 {
+    padding-top: 56px;
+    padding-bottom: 56px;
+  }
 }

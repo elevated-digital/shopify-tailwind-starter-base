@@ -30,9 +30,7 @@
   }
 {%- endstyle -%}
 
-{% render 'tfw-footer' %}
-
-<footer class='footer color-{{ section.settings.color_scheme }} gradient section-{{ section.id }}-padding'>
+<footer class='x-bg-farmer-dark-green x-rounded-t-16 x-relative x-py-10 sm:x-py-14'>
   {%- liquid
     assign has_social_icons = true
     if settings.social_facebook_link == blank and settings.social_instagram_link == blank and settings.social_youtube_link == blank and settings.social_tiktok_link == blank and settings.social_twitter_link == blank and settings.social_pinterest_link == blank and settings.social_snapchat_link == blank and settings.social_tumblr_link == blank and settings.social_vimeo_link == blank
@@ -96,6 +94,33 @@
                         {%- endfor -%}
                       </ul>
                     {%- endif -%}
+                  {%- when 'text_and_image' -%}
+                    {% if block.settings.heading != blank or block.settings.image != blank %}
+                      <div class='footer-section'>
+                        <div class='footer-content'>
+                          {% if block.settings.heading != blank %}
+                            <h3>{{ block.settings.heading }}</h3>
+                          {% endif %}
+                          {% if block.settings.subtext != blank %}
+                            <div class='subtext'>
+                              {{ block.settings.subtext }}
+                            </div>
+                          {% endif %}
+                        </div>
+                        {% if block.settings.image != blank %}
+                          <div class='footer-image'>
+                            <img
+                              srcset='{{ block.settings.image | image_url: width: block.settings.image_width }}, {{ block.settings.image | image_url: width: image_size_2x }} 2x'
+                              src='{{ block.settings.image | image_url: width: 760 }}'
+                              alt='{{ block.settings.image.alt | escape }}'
+                              loading='lazy'
+                              width='{{ block.settings.image.width }}'
+                              height='{{ block.settings.image.height }}'
+                            >
+                          </div>
+                        {% endif %}
+                      </div>
+                    {% endif %}
                   {%- when 'brand_information' -%}
                     <div class='footer-block__brand-info'>
                       {%- if settings.brand_image != blank -%}
@@ -410,6 +435,29 @@
       ]
     },
     {
+      "type": "text_and_image",
+      "name": "Text & Image",
+      "settings": [
+        {
+          "type": "inline_richtext",
+          "id": "heading",
+          "default": "Heading",
+          "label": "Heading"
+        },
+        {
+          "type": "richtext",
+          "id": "subtext",
+          "default": "<p>Share contact information, store details, and brand content with your customers.</p>",
+          "label": "Subtext"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        }
+      ]
+    },
+    {
       "type": "text",
       "name": "t:sections.footer.blocks.text.name",
       "settings": [
@@ -424,18 +472,6 @@
           "id": "subtext",
           "default": "<p>Share contact information, store details, and brand content with your customers.</p>",
           "label": "t:sections.footer.blocks.text.settings.subtext.label"
-        }
-      ]
-    },
-    {
-      "type": "custom_html",
-      "name": "t:sections.footer.blocks.custom_block.name",
-      "settings": [
-        {
-          "type": "text",
-          "id": "template",
-          "label": "t:sections.footer.blocks.custom_block.settings.template.label",
-          "default": "sections/custom_block"
         }
       ]
     },
