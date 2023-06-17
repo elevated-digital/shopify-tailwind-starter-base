@@ -19,12 +19,24 @@
 <div class='main-blog page-width section-{{ section.id }}-padding'>
   <h1 class='title--primary'>{{ blog.title | escape }}</h1>
 
-  <div class='blog-articles {% if section.settings.layout == 'collage' %}blog-articles--collage{% endif %}'>
+  <div class='market-articles'>
     {%- for article in blog.articles -%}
-      <div class='blog-articles__article article'>
+      <div class='market-articles__article'>
         {%- if forloop.index == 1 and article.created_at == blog.articles[0].created_at -%}
-          <h2>Featured</h2>
           <div class='featured-artice'>
+            {% liquid
+              assign marketDate = article.metafields.custom.market_date
+              assign current_date = 'now' | date: '%s'
+              assign market_date_comparison = marketDate | date: '%s'
+
+              if market_date_comparison > current_date
+                echo '<h2>Next Market Stall</h2>'
+              elsif market_date_comparison == current_date
+                echo "<h2>Today's Market Stall</h2>"
+              else
+                echo '<h2>Recent Market Stall</h2>'
+              endif
+            %}
             {%- render 'tfw-featured-market-card',
               article: article,
               media_height: section.settings.image_height,

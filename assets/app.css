@@ -508,6 +508,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   display: grid;
 }
 
+.\!x-grid {
+  display: grid !important;
+}
+
 .x-contents {
   display: contents;
 }
@@ -522,6 +526,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .\!x-min-h-\[50px\] {
   min-height: 50px !important;
+}
+
+.x-min-h-\[500px\] {
+  min-height: 500px;
 }
 
 .x-w-full {
