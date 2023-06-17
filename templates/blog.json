@@ -15,6 +15,10 @@
     "market": {
       "type": "tfw-market-stall",
       "settings": {
+        "heading": "Hello",
+        "paragraph_text": "",
+        "button_text": "",
+        "button_link": ""
       }
     }
   },
