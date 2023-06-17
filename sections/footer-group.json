@@ -2,6 +2,15 @@
   "name": "t:sections.footer.name",
   "type": "footer",
   "sections": {
+    "0bfab07e-bc75-4c2a-b0bd-40089504c236": {
+      "type": "tfw-market-stall",
+      "settings": {
+        "heading": "Hello",
+        "paragraph_text": "testing here",
+        "button_text": "",
+        "button_link": ""
+      }
+    },
     "footer": {
       "type": "footer",
       "blocks": {
@@ -42,6 +51,7 @@
     }
   },
   "order": [
+    "0bfab07e-bc75-4c2a-b0bd-40089504c236",
     "footer"
   ]
 }
