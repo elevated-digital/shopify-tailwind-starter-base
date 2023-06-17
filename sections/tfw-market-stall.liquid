@@ -1,1 +1,16 @@
-<p>Next Market Stall</p>
+{% if section.settings.show_markets %}
+  <p>Next Market Stall</p>
+{% endif %}
+
+{% schema %}
+{
+  "name": "Section name",
+  "settings": [
+    {
+      "id": "show_markets",
+      "type": "checkbox",
+      "label": "Show Markets"
+    }
+  ]
+}
+{% endschema %}
