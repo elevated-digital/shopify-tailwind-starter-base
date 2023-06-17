@@ -2,12 +2,23 @@
   {% assign blogHandle = 'market-stall' %}
 
   {% for article in blogs[blogHandle].articles limit: 1 %}
+    {% liquid
+      assign marketDate = article.metafields.custom.market_date
+      assign current_date = 'now' | date: '%Y-%m-%d'
+      assign market_date_comparison = marketDate | date: '%Y-%m-%d'
+
+      if market_date_comparison == current_date
+        echo "<p>Today's Market Stall</p>"
+      else
+        echo '<p>Next Market Stall</p>'
+      endif
+    %}
+
     <h2>{{ article.title }}</h2>
     <p>{{ article.content }}</p>
 
     {% liquid
-      if article.metafields.custom.market_date
-        assign marketDate = article.metafields.custom.market_date
+      if marketDate
         assign day = marketDate | date: '%-d'
         assign month_year = marketDate | date: '%B, %Y'
 
