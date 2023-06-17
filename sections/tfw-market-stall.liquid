@@ -4,13 +4,15 @@
   {% for article in blogs[blogHandle].articles limit: 1 %}
     {% liquid
       assign marketDate = article.metafields.custom.market_date
-      assign current_date = 'now' | date: '%Y-%m-%d'
-      assign market_date_comparison = marketDate | date: '%Y-%m-%d'
+      assign current_date = 'now' | date: '%s'
+      assign market_date_comparison = marketDate | date: '%s'
 
-      if market_date_comparison == current_date
+      if market_date_comparison > current_date
+        echo '<p>Next Market Stall</p>'
+      elsif market_date_comparison == current_date
         echo "<p>Today's Market Stall</p>"
       else
-        echo '<p>Next Market Stall</p>'
+        echo '<p>Recent Market Stall</p>'
       endif
     %}
 
