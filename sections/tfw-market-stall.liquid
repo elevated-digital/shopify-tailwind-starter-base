@@ -1,93 +1,36 @@
-<section
-  class='content-chunk__feat-ingredients py-24'
-  style='background:url({{ section.settings.background_image | image_url }}) no-repeat center center'
->
-  <div class='page-width feat-ingredients__wrapper'>
-    <div class='content__top'>
-      {% if section.settings.heading %}
-        <div>
-          <h2>{{ section.settings.heading }}</h2>
-        </div>
-      {% endif %}
-      {% if section.settings.paragraph_text %}
-        <div class='text__wrapper'>
-          <p>{{ section.settings.paragraph_text }}</p>
-        </div>
-      {% endif %}
-      {% if section.settings.button_text and section.settings.button_link %}
-        <div class='button__wrapper'>
-          <a class='revate-btn--global' href='{{ section.settings.button_link }}'>
-            {{ section.settings.button_text }}
-          </a>
-        </div>
-      {% endif %}
-    </div>
-    <div class='content__bottom'>
-      {% for block in section.blocks %}
-        <div class='single__ingredient'>
-          {% if block.settings.image %}
-            <div
-              class='ingredient__image mb-3'
-              style='background:url({{ block.settings.image | image_url: 'master' }}) no-repeat'
-            ></div>
-          {% endif %}
-          {% if block.settings.caption %}
-            <p>{{ block.settings.caption }}</p>
-          {% endif %}
-        </div>
-      {% endfor %}
-    </div>
-  </div>
+<section>
+  {% assign blogHandle = 'market-stall' %}
+
+  {% for article in blogs[blogHandle].articles limit: 1 %}
+    <h2>{{ article.title }}</h2>
+    <p>{{ article.content }}</p>
+
+    {% liquid
+      if article.metafields.custom.market_date
+        assign marketDate = article.metafields.custom.market_date
+        assign day = marketDate | date: '%-d'
+        assign month_year = marketDate | date: '%B, %Y'
+
+        case day
+          when '1', '21', '31'
+            assign daySuffix = 'st'
+          when '2', '22'
+            assign daySuffix = 'nd'
+          when '3', '23'
+            assign daySuffix = 'rd'
+          else
+            assign daySuffix = 'th'
+        endcase
+
+        echo 'Market Date: ' | append: day | append: daySuffix | append: ' ' | append: month_year
+      endif
+    %}
+  {% endfor %}
 </section>
 
 {% schema %}
 {
   "name": "Market Stall",
-  "settings": [
-    {
-      "type": "image_picker",
-      "label": "Background Image",
-      "id": "background_image"
-    },
-    {
-      "type": "text",
-      "label": "Heading",
-      "id": "heading"
-    },
-    {
-      "type": "textarea",
-      "label": "Paragraph Text",
-      "id": "paragraph_text"
-    },
-    {
-      "type": "text",
-      "label": "Button Text",
-      "id": "button_text"
-    },
-    {
-      "type": "url",
-      "label": "Button Link",
-      "id": "button_link"
-    }
-  ],
-  "blocks": [
-    {
-      "type": "box",
-      "name": "Ingredient",
-      "settings": [
-        {
-          "type": "image_picker",
-          "label": "Image",
-          "id": "image"
-        },
-        {
-          "type": "text",
-          "label": "Caption",
-          "id": "caption"
-        }
-      ]
-    }
-  ],
   "presets": [
     {
       "name": "Market Stall",
