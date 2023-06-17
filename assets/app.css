@@ -520,6 +520,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 95% !important;
 }
 
+.\!x-min-h-\[50px\] {
+  min-height: 50px !important;
+}
+
 .x-w-full {
   width: 100%;
 }
