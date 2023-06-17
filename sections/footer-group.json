@@ -2,6 +2,11 @@
   "name": "t:sections.footer.name",
   "type": "footer",
   "sections": {
+    "market": {
+      "type": "tfw-market-stall",
+      "settings": {
+      }
+    },
     "footer": {
       "type": "footer",
       "blocks": {
@@ -42,6 +47,7 @@
     }
   },
   "order": [
+    "market",
     "footer"
   ]
 }
