@@ -5,6 +5,7 @@
     "market": {
       "type": "tfw-market-stall",
       "settings": {
+        "show_markets": true
       }
     },
     "footer": {
