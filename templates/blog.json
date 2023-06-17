@@ -11,19 +11,9 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
-    },
-    "market": {
-      "type": "tfw-market-stall",
-      "settings": {
-        "heading": "Hello",
-        "paragraph_text": "",
-        "button_text": "",
-        "button_link": ""
-      }
     }
   },
   "order": [
-    "main",
-    "market"
+    "main"
   ]
 }
