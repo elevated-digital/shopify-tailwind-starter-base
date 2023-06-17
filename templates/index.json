@@ -168,12 +168,33 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "f079d1d2-cd89-46c2-a7f7-5925550bd39e": {
+      "type": "tfw-market-stall",
+      "blocks": {
+        "590432ff-6bc9-4f29-aafb-81f121481198": {
+          "type": "box",
+          "settings": {
+            "caption": "Hello"
+          }
+        }
+      },
+      "block_order": [
+        "590432ff-6bc9-4f29-aafb-81f121481198"
+      ],
+      "settings": {
+        "heading": "Hello",
+        "paragraph_text": "Some text here",
+        "button_text": "See All",
+        "button_link": "shopify:\/\/products\/apricot-jam"
+      }
     }
   },
   "order": [
     "image_banner",
     "rich_text",
     "collage",
-    "multicolumn"
+    "multicolumn",
+    "f079d1d2-cd89-46c2-a7f7-5925550bd39e"
   ]
 }
