@@ -1,6 +1,6 @@
 <section
   class='content-chunk__feat-ingredients py-24'
-  style='background:url({{ section.settings.background_image | img_url: 'master' }}) no-repeat center center'
+  style='background:url({{ section.settings.background_image | image_url }}) no-repeat center center'
 >
   <div class='page-width feat-ingredients__wrapper'>
     <div class='content__top'>
@@ -28,7 +28,7 @@
           {% if block.settings.image %}
             <div
               class='ingredient__image mb-3'
-              style='background:url({{ block.settings.image | img_url: 'master' }}) no-repeat'
+              style='background:url({{ block.settings.image | image_url: 'master' }}) no-repeat'
             ></div>
           {% endif %}
           {% if block.settings.caption %}
