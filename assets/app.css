@@ -720,6 +720,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-bottom: 56px;
 }
 
+.x-py-12 {
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+
 .x-pb-8 {
   padding-bottom: 32px;
 }
@@ -865,5 +870,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   .lg\:\!x-py-20 {
     padding-top: 80px !important;
     padding-bottom: 80px !important;
+  }
+
+  .lg\:x-text-4xl {
+    font-size: 36px;
+    line-height: 40px;
   }
 }

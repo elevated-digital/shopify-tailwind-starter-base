@@ -39,7 +39,7 @@
       </div>
 
       {% for article in blog.articles offset: 1 %}
-        <div class='market-articles__article x-grid x-grid-cols-5 x-items-center x-py-14 x-border-t x-border-[rgba(18,18,18,0.08)]'>
+        <div class='market-articles__article x-grid x-grid-cols-5 x-items-center x-py-12 x-border-t x-border-[rgba(18,18,18,0.08)]'>
           {%- render 'article-card', article: article -%}
         </div>
       {% endfor %}
