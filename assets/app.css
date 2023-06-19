@@ -480,6 +480,18 @@ Ensure the default browser behavior of the `hidden` attribute.
   right: 0 !important;
 }
 
+.x-col-span-4 {
+  grid-column: span 4 / span 4;
+}
+
+.x-col-span-2 {
+  grid-column: span 2 / span 2;
+}
+
+.x-col-span-3 {
+  grid-column: span 3 / span 3;
+}
+
 .\!x-ml-0 {
   margin-left: 0 !important;
 }
@@ -492,12 +504,44 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: 40px;
 }
 
+.\!x-mb-16 {
+  margin-bottom: 64px !important;
+}
+
+.x-mb-16 {
+  margin-bottom: 64px;
+}
+
+.x-mb-20 {
+  margin-bottom: 80px;
+}
+
 .x-ml-4 {
   margin-left: 16px;
 }
 
 .x-mb-6 {
   margin-bottom: 24px;
+}
+
+.x-mb-8 {
+  margin-bottom: 32px;
+}
+
+.\!x-mb-10 {
+  margin-bottom: 40px !important;
+}
+
+.\!x-mb-6 {
+  margin-bottom: 24px !important;
+}
+
+.\!x-mb-8 {
+  margin-bottom: 32px !important;
+}
+
+.x-mb-3 {
+  margin-bottom: 12px;
 }
 
 .x-flex {
@@ -532,6 +576,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   min-height: 500px;
 }
 
+.x-min-h-\[600px\] {
+  min-height: 600px;
+}
+
 .x-w-full {
   width: 100%;
 }
@@ -540,12 +588,28 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 64px !important;
 }
 
+.x-w-5 {
+  width: 20px;
+}
+
 .x-max-w-\[400px\] {
   max-width: 400px;
 }
 
+.x-max-w-\[350px\] {
+  max-width: 350px;
+}
+
 .x-grid-cols-2 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.x-grid-cols-5 {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.x-grid-cols-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
 .x-flex-wrap {
@@ -568,12 +632,20 @@ Ensure the default browser behavior of the `hidden` attribute.
   justify-content: space-between;
 }
 
+.x-justify-items-center {
+  justify-items: center;
+}
+
 .x-gap-3 {
   gap: 12px;
 }
 
 .x-gap-2 {
   gap: 8px;
+}
+
+.x-gap-16 {
+  gap: 64px;
 }
 
 .\!x-rounded-full {
@@ -584,6 +656,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-radius: 9999px;
 }
 
+.x-rounded-3xl {
+  border-radius: 1.5rem;
+}
+
+.x-rounded-2xl {
+  border-radius: 1rem;
+}
+
 .x-rounded-t-16 {
   border-top-left-radius: 64px;
   border-top-right-radius: 64px;
@@ -591,6 +671,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .\!x-border-0 {
   border-width: 0px !important;
+}
+
+.x-border-t {
+  border-top-width: 1px;
+}
+
+.x-border-\[rgba\(18\,18\,18\,0\.08\)\] {
+  border-color: rgba(18,18,18,0.08);
 }
 
 .x-bg-farmer-green {
@@ -613,13 +701,51 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-bottom: 40px;
 }
 
+.\!x-py-10 {
+  padding-top: 40px !important;
+  padding-bottom: 40px !important;
+}
+
+.x-py-14 {
+  padding-top: 56px;
+  padding-bottom: 56px;
+}
+
+.x-pb-8 {
+  padding-bottom: 32px;
+}
+
 .x-text-sm {
   font-size: 14px;
   line-height: 20px;
 }
 
+.\!x-text-base {
+  font-size: 16px !important;
+  line-height: 24px !important;
+}
+
+.x-text-3xl {
+  font-size: 30px;
+  line-height: 36px;
+}
+
+.x-text-4xl {
+  font-size: 36px;
+  line-height: 40px;
+}
+
+.x-text-xs {
+  font-size: 12px;
+  line-height: 16px;
+}
+
 .x-font-semibold {
   font-weight: 600;
+}
+
+.x-uppercase {
+  text-transform: uppercase;
 }
 
 .\!x-leading-\[1\.9\] {
@@ -649,9 +775,19 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: rgb(255 0 0 / var(--tw-text-opacity));
 }
 
+.x-text-farmer-green {
+  --tw-text-opacity: 1;
+  color: rgb(64 117 56 / var(--tw-text-opacity));
+}
+
 .\!x-text-farmer-lime {
   --tw-text-opacity: 1 !important;
   color: rgb(131 182 87 / var(--tw-text-opacity)) !important;
+}
+
+.x-text-farmer-lime {
+  --tw-text-opacity: 1;
+  color: rgb(131 182 87 / var(--tw-text-opacity));
 }
 
 .x-filter {
@@ -698,6 +834,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: rgb(255 255 255 / var(--tw-text-opacity)) !important;
 }
 
+.hover\:x-underline:hover {
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+}
+
 .focus\:\!x-shadow-farmer:focus {
   --tw-shadow: 0 0 0 calc(0.1rem + var(--inputs-border-width)) rgba(131, 182, 87, 1) !important;
   --tw-shadow-colored: 0 0 0 var(--tw-shadow-color) !important;
@@ -708,5 +849,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   .sm\:x-py-16 {
     padding-top: 64px;
     padding-bottom: 64px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg\:\!x-py-20 {
+    padding-top: 80px !important;
+    padding-bottom: 80px !important;
   }
 }

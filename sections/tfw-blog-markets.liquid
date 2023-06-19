@@ -1,66 +1,49 @@
 {{ 'component-article-card.css' | asset_url | stylesheet_tag }}
 {{ 'component-card.css' | asset_url | stylesheet_tag }}
 {{ 'section-main-blog.css' | asset_url | stylesheet_tag }}
+{{ 'tfw-add-to-calendar.css' | asset_url | stylesheet_tag }}
 
-{%- style -%}
-  .section-{{ section.id }}-padding {
-    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
-    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
-  }
-
-  @media screen and (min-width: 750px) {
-    .section-{{ section.id }}-padding {
-      padding-top: {{ section.settings.padding_top }}px;
-      padding-bottom: {{ section.settings.padding_bottom }}px;
-    }
-  }
-{%- endstyle -%}
-
-<div class='main-blog page-width section-{{ section.id }}-padding'>
-  <h1 class='title--primary'>{{ blog.title | escape }}</h1>
+<div class='main-blog page-width !x-py-10 lg:!x-py-20'>
+  <div class='x-grid x-items-center x-justify-items-center'>
+    {% render 'icon-tfw-flower-lg' %}
+    <h1 class='title--primary !x-mb-16'>{{ blog.title | escape }}</h1>
+  </div>
 
   <div class='market-articles'>
-    {%- for article in blog.articles -%}
-      <div class='market-articles__article'>
-        {%- if forloop.index == 1 and article.created_at == blog.articles[0].created_at -%}
-          <div class='featured-artice'>
-            {% liquid
-              assign marketDate = article.metafields.custom.market_date
-              assign current_date = 'now' | date: '%s'
-              assign market_date_comparison = marketDate | date: '%s'
-
-              if market_date_comparison > current_date
-                echo '<h2>Next Market Stall</h2>'
-              elsif market_date_comparison == current_date
-                echo "<h2>Today's Market Stall</h2>"
-              else
-                echo '<h2>Recent Market Stall</h2>'
-              endif
-            %}
-            {%- render 'tfw-featured-market-card',
-              article: article,
-              media_height: section.settings.image_height,
-              media_aspect_ratio: article.image.aspect_ratio,
-              show_image: section.settings.show_image,
-              show_date: section.settings.show_date,
-              show_author: section.settings.show_author,
-              show_excerpt: true,
-              featured: true
-            -%}
-          </div>
-        {%- else -%}
-          {%- render 'article-card',
-            article: article,
+    {%- if blog.articles.size > 0 -%}
+      <div class='featured-article__wrapper x-mb-16'>
+        <div class='featured-artice'>
+          {%- render 'tfw-featured-market-card',
+            article: blog.articles.first,
             media_height: section.settings.image_height,
-            media_aspect_ratio: article.image.aspect_ratio,
+            media_aspect_ratio: blog.articles.first.image.aspect_ratio,
             show_image: section.settings.show_image,
             show_date: section.settings.show_date,
             show_author: section.settings.show_author,
-            show_excerpt: true
+            show_excerpt: true,
+            featured: true
           -%}
-        {%- endif -%}
+        </div>
       </div>
-    {%- endfor -%}
+    {%- endif -%}
+
+    <div class='recent-markets__wrapper'>
+      <h2 class='x-mb-20'>Recent Market Stalls</h2>
+      <div class='market-articles__heading x-grid x-grid-cols-5 x-items-center x-pb-8'>
+        <p class='x-text-sm x-text-farmer-green x-font-semibold x-uppercase'>Date</p>
+        <div class='x-col-span-4 x-grid x-grid-cols-4 x-items-center'>
+          <p class='x-col-span-2 x-text-sm x-text-farmer-green x-font-semibold x-uppercase'>Event</p>
+          <p class='x-text-sm x-text-farmer-green x-font-semibold x-uppercase'>Time</p>
+          <p class='x-text-sm x-text-farmer-green x-font-semibold x-uppercase'>Address</p>
+        </div>
+      </div>
+
+      {% for article in blog.articles offset: 1 %}
+        <div class='market-articles__article x-grid x-grid-cols-5 x-items-center x-py-14 x-border-t x-border-[rgba(18,18,18,0.08)]'>
+          {%- render 'article-card', article: article -%}
+        </div>
+      {% endfor %}
+    </div>
   </div>
 </div>
 
