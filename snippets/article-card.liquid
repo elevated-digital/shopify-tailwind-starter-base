@@ -30,8 +30,8 @@
       Castle Hill Farmer & Fine Food Market
     </h3>
 
-    {% if article.metafields.custom.market_time %}
-      <p>{{ article.metafields.custom.market_time }}</p>
+    {% if article.metafields.custom.market_start_time and article.metafields.custom.market_end_time %}
+      <p>{{ article.metafields.custom.market_start_time }} - {{ article.metafields.custom.market_end_time }}</p>
     {% else %}
       <p class='x-text-sm'>9:00am - 1:00pm</p>
     {% endif %}

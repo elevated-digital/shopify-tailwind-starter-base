@@ -123,12 +123,12 @@
             </div>
           {% endif %}
 
-          {% if article.metafields.custom.market_time %}
+          {% if article.metafields.custom.market_start_time and article.metafields.custom.market_end_time %}
             <div class='x-flex x-gap-2 x-items-center x-mb-3'>
               <div class='x-w-5'>
                 {% render 'icon-tfw-clock' %}
               </div>
-              <p>{{ article.metafields.custom.market_time }}</p>
+              <p>{{ article.metafields.custom.market_start_time }} - {{ article.metafields.custom.market_end_time }}</p>
             </div>
           {% endif %}
 
