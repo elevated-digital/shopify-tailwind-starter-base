@@ -544,6 +544,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: 12px;
 }
 
+.x-mb-24 {
+  margin-bottom: 96px;
+}
+
 .x-flex {
   display: flex;
 }
@@ -694,6 +698,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .\!x-bg-farmer-lime {
   --tw-bg-opacity: 1 !important;
   background-color: rgb(131 182 87 / var(--tw-bg-opacity)) !important;
+}
+
+.x-bg-framer-cream {
+  --tw-bg-opacity: 1;
+  background-color: rgb(249 244 239 / var(--tw-bg-opacity));
 }
 
 .x-py-10 {
