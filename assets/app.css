@@ -572,6 +572,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   display: flex;
 }
 
+.x-inline-flex {
+  display: inline-flex;
+}
+
 .x-grid {
   display: grid;
 }
@@ -636,6 +640,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   max-width: 250px;
 }
 
+.x-max-w-\[550px\] {
+  max-width: 550px;
+}
+
 .x-grid-cols-2 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
@@ -692,6 +700,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   gap: 2px;
 }
 
+.x-gap-10 {
+  gap: 40px;
+}
+
 .\!x-rounded-full {
   border-radius: 9999px !important;
 }
@@ -745,6 +757,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(249 244 239 / var(--tw-bg-opacity));
 }
 
+.x-bg-\[\#f3eee8\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(243 238 232 / var(--tw-bg-opacity));
+}
+
 .\!x-p-0 {
   padding: 0 !important;
 }
@@ -789,6 +806,26 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-right: 12px;
 }
 
+.x-py-20 {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.x-py-16 {
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+
+.\!x-py-16 {
+  padding-top: 64px !important;
+  padding-bottom: 64px !important;
+}
+
+.x-px-\[164px\] {
+  padding-left: 164px;
+  padding-right: 164px;
+}
+
 .x-pb-8 {
   padding-bottom: 32px;
 }
@@ -799,6 +836,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .x-pb-4 {
   padding-bottom: 16px;
+}
+
+.x-text-center {
+  text-align: center;
 }
 
 .x-text-sm {
@@ -941,6 +982,11 @@ Ensure the default browser behavior of the `hidden` attribute.
     padding-top: 64px;
     padding-bottom: 64px;
   }
+
+  .sm\:x-py-14 {
+    padding-top: 56px;
+    padding-bottom: 56px;
+  }
 }
 
 @media (min-width: 768px) {
@@ -1068,6 +1114,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   .lg\:\!x-px-8 {
     padding-left: 32px !important;
     padding-right: 32px !important;
+  }
+
+  .lg\:x-py-20 {
+    padding-top: 80px;
+    padding-bottom: 80px;
   }
 
   .lg\:x-text-4xl {
