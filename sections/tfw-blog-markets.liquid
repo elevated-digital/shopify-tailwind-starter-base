@@ -6,12 +6,12 @@
 <div class='main-blog page-width !x-py-10 lg:!x-py-20'>
   <div class='x-grid x-items-center x-justify-items-center'>
     {% render 'icon-tfw-flower-lg' %}
-    <h1 class='title--primary !x-mb-16'>{{ blog.title | escape }}</h1>
+    <h1 class='title--primary !x-mt-4 !x-mb-10 lg:!x-mb-16'>{{ blog.title | escape }}</h1>
   </div>
 
   <div class='market-articles'>
     {%- if blog.articles.size > 0 -%}
-      <div class='featured-article__wrapper x-bg-framer-cream x-rounded-2xl x-mb-24'>
+      <div class='featured-article__wrapper x-bg-framer-cream x-rounded-2xl x-mb-14 md:x-mb-24'>
         <div class='featured-artice'>
           {%- render 'tfw-featured-market-card',
             article: blog.articles.first,
@@ -27,19 +27,19 @@
       </div>
     {%- endif -%}
 
-    <div class='recent-markets__wrapper'>
-      <h2 class='x-mb-20'>Recent Market Stalls</h2>
-      <div class='market-articles__heading x-grid x-grid-cols-5 x-items-center x-pb-8'>
-        <p class='x-text-sm x-text-farmer-green x-font-semibold x-uppercase'>Date</p>
-        <div class='x-col-span-4 x-grid x-grid-cols-4 x-items-center'>
-          <p class='x-col-span-2 x-text-sm x-text-farmer-green x-font-semibold x-uppercase'>Event</p>
-          <p class='x-text-sm x-text-farmer-green x-font-semibold x-uppercase'>Time</p>
-          <p class='x-text-sm x-text-farmer-green x-font-semibold x-uppercase'>Address</p>
+    <div class='recent-markets__wrapper x-px-3 md:x-px-0'>
+      <h2 class='x-mb-8 md:x-mb-14 lg:x-mb-20'>Recent Market Stalls</h2>
+      <div class='market-articles__heading x-grid md:x-grid-cols-3 lg:x-grid-cols-5 x-items-center x-pb-4 md:x-pb-8'>
+        <p class='x-text-sm x-text-farmer-green x-font-semibold x-uppercase x-hidden md:x-block'>Date</p>
+        <div class='x-col-span-2 x-grid lg:x-grid-cols-4 lg:x-col-span-4 x-items-center'>
+          <p class='lg:x-col-span-2 x-text-sm x-text-farmer-green x-font-semibold x-uppercase'>Event</p>
+          <p class='x-text-sm x-text-farmer-green x-font-semibold x-uppercase x-hidden lg:x-block'>Time</p>
+          <p class='x-text-sm x-text-farmer-green x-font-semibold x-uppercase x-hidden lg:x-block'>Address</p>
         </div>
       </div>
 
       {% for article in blog.articles offset: 1 %}
-        <div class='market-articles__article x-grid x-grid-cols-5 x-items-center x-py-12 x-border-t x-border-[rgba(18,18,18,0.08)]'>
+        <div class='market-articles__article x-grid md:x-grid-cols-3 lg:x-grid-cols-5 x-items-center x-py-8 md:x-py-10 lg:x-py-12 x-border-t x-border-[rgba(18,18,18,0.08)]'>
           {%- render 'article-card', article: article -%}
         </div>
       {% endfor %}

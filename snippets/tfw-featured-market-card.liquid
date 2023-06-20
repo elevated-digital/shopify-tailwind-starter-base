@@ -33,12 +33,12 @@
         {% if article.image and show_image %} card--media{% else %} card--text{% endif %}
         {% if settings.blog_card_style == 'card' %} color-{{ settings.blog_card_color_scheme }} gradient{% endif %}
         {% if settings.blog_card_style == 'card' and media_height == nil and article.image == empty or show_image == false %} ratio{% endif %}
-        !x-grid x-grid-cols-5 x-gap-16 x-items-center
+        !x-grid xl:x-grid-cols-5 xl:x-gap-16 x-items-center
       '
       style='--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;'
     >
       <div
-        class='card__inner x-col-span-3 x-min-h-[600px]'
+        class='card__inner x-col-span-3 x-min-h-[400px] lg:x-min-h-[600px]'
         style='--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;'
       >
         {%- if show_image == true and article.image -%}
@@ -76,8 +76,8 @@
         {%- endif -%}
       </div>
       <div class='card__content x-col-span-2'>
-        <div class='card__information'>
-          <h2 class='x-mb-16 x-text-sm x-text-farmer-lime x-font-semibold x-uppercase'>
+        <div class='card__information !x-py-10 !x-px-8 lg:!x-p-0'>
+          <h2 class='x-mb-6 md:x-mb-10 lg:x-mb-16 x-text-xs md:x-text-sm x-text-farmer-lime x-font-semibold x-uppercase'>
             {% liquid
               assign marketDate = blog.articles.first.metafields.custom.market_date
               assign current_date = 'now' | date: '%s'
@@ -92,7 +92,7 @@
               endif
             %}
           </h2>
-          <h3 class='card__heading x-text-4xl x-max-w-[350px] !x-mb-8'>
+          <h3 class='card__heading x-text-2xl lg:x-text-4xl x-max-w-[250px] lg:x-max-w-[350px] !x-mb-5 md:!x-mb-8'>
             {{ article.title | truncate: 50 | escape }}
           </h3>
           {% if article.metafields.custom.market_date %}
@@ -133,18 +133,27 @@
           {% endif %}
 
           {% if article.metafields.custom.market_location %}
-            <div class='x-flex x-gap-2 x-items-center x-mb-10'>
+            <div class='x-flex x-gap-2 x-items-center x-mb-6 md:x-mb-10'>
               <div class='x-w-5'>
                 {% render 'icon-tfw-map' %}
               </div>
               <p>{{ article.metafields.custom.market_location }}</p>
             </div>
           {% endif %}
-          <a class='add-to-calendar__btn x-mb-10' href='#'>Add to Calendar</a>
+          <a class='add-to-calendar__btn x-mb-8 md:x-mb-10' href='#'>Add to Calendar</a>
           <p class='x-text-xs x-max-w-[400px]'>
             Products sold at this market stall:
-            <a class='hover:x-underline hover:x-text-farmer-lime' href='#'>Jams & Marmalades</a>, Chutneys, Relish &
-            Jellies, Sauces, Cordials & Honey.
+            {% assign numCollections = collections.size %}
+            {% for collection in collections %}
+              <a class='hover:x-underline hover:x-text-farmer-lime' href='{{ collection.url }}'>
+                {{- collection.title -}}
+              </a>
+              {%- unless forloop.last -%}
+                {%- if forloop.last == false and forloop.index < numCollections %}, {% endif -%}
+              {%- else -%}
+                {%- if numCollections > 1 %}.{% endif -%}
+              {%- endunless %}
+            {% endfor %}
           </p>
         </div>
       </div>

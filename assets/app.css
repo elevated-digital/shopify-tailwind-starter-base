@@ -548,6 +548,26 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: 96px;
 }
 
+.x-mb-14 {
+  margin-bottom: 56px;
+}
+
+.\!x-mt-4 {
+  margin-top: 16px !important;
+}
+
+.x-mb-1 {
+  margin-bottom: 4px;
+}
+
+.x-mb-2 {
+  margin-bottom: 8px;
+}
+
+.\!x-mb-5 {
+  margin-bottom: 20px !important;
+}
+
 .x-flex {
   display: flex;
 }
@@ -562,6 +582,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .x-contents {
   display: contents;
+}
+
+.x-hidden {
+  display: none;
 }
 
 .\!x-h-\[50px\] {
@@ -584,6 +608,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   min-height: 600px;
 }
 
+.x-min-h-\[400px\] {
+  min-height: 400px;
+}
+
 .x-w-full {
   width: 100%;
 }
@@ -604,6 +632,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   max-width: 350px;
 }
 
+.x-max-w-\[250px\] {
+  max-width: 250px;
+}
+
 .x-grid-cols-2 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
@@ -614,6 +646,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .x-grid-cols-4 {
   grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.x-grid-cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .x-flex-wrap {
@@ -650,6 +686,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .x-gap-16 {
   gap: 64px;
+}
+
+.x-gap-\[2px\] {
+  gap: 2px;
 }
 
 .\!x-rounded-full {
@@ -705,6 +745,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(249 244 239 / var(--tw-bg-opacity));
 }
 
+.\!x-p-0 {
+  padding: 0 !important;
+}
+
 .x-py-10 {
   padding-top: 40px;
   padding-bottom: 40px;
@@ -725,8 +769,36 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-bottom: 48px;
 }
 
+.x-px-8 {
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+.\!x-px-8 {
+  padding-left: 32px !important;
+  padding-right: 32px !important;
+}
+
+.x-py-8 {
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.x-px-3 {
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
 .x-pb-8 {
   padding-bottom: 32px;
+}
+
+.x-pb-2 {
+  padding-bottom: 8px;
+}
+
+.x-pb-4 {
+  padding-bottom: 16px;
 }
 
 .x-text-sm {
@@ -752,6 +824,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .x-text-xs {
   font-size: 12px;
   line-height: 16px;
+}
+
+.x-text-2xl {
+  font-size: 24px;
+  line-height: 32px;
 }
 
 .x-font-semibold {
@@ -866,14 +943,145 @@ Ensure the default browser behavior of the `hidden` attribute.
   }
 }
 
+@media (min-width: 768px) {
+  .md\:x-mb-24 {
+    margin-bottom: 96px;
+  }
+
+  .md\:x-mb-14 {
+    margin-bottom: 56px;
+  }
+
+  .md\:x-mb-0 {
+    margin-bottom: 0;
+  }
+
+  .md\:\!x-mb-8 {
+    margin-bottom: 32px !important;
+  }
+
+  .md\:x-mb-10 {
+    margin-bottom: 40px;
+  }
+
+  .md\:x-block {
+    display: block;
+  }
+
+  .md\:x-grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .md\:x-gap-0 {
+    gap: 0;
+  }
+
+  .md\:x-py-10 {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .md\:x-px-0 {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .md\:x-pb-8 {
+    padding-bottom: 32px;
+  }
+
+  .md\:x-text-sm {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .md\:x-text-black {
+    --tw-text-opacity: 1;
+    color: rgb(0 0 0 / var(--tw-text-opacity));
+  }
+
+  .md\:x-text-inherit {
+    color: inherit;
+  }
+}
+
 @media (min-width: 1024px) {
+  .lg\:x-col-span-2 {
+    grid-column: span 2 / span 2;
+  }
+
+  .lg\:x-col-span-4 {
+    grid-column: span 4 / span 4;
+  }
+
+  .lg\:x-mb-20 {
+    margin-bottom: 80px;
+  }
+
+  .lg\:\!x-mb-16 {
+    margin-bottom: 64px !important;
+  }
+
+  .lg\:x-mb-16 {
+    margin-bottom: 64px;
+  }
+
+  .lg\:x-block {
+    display: block;
+  }
+
+  .lg\:x-min-h-\[600px\] {
+    min-height: 600px;
+  }
+
+  .lg\:x-max-w-\[350px\] {
+    max-width: 350px;
+  }
+
+  .lg\:x-grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .lg\:x-grid-cols-5 {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+
+  .lg\:\!x-p-0 {
+    padding: 0 !important;
+  }
+
   .lg\:\!x-py-20 {
     padding-top: 80px !important;
     padding-bottom: 80px !important;
   }
 
+  .lg\:x-py-12 {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+
+  .lg\:\!x-py-10 {
+    padding-top: 40px !important;
+    padding-bottom: 40px !important;
+  }
+
+  .lg\:\!x-px-8 {
+    padding-left: 32px !important;
+    padding-right: 32px !important;
+  }
+
   .lg\:x-text-4xl {
     font-size: 36px;
     line-height: 40px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .xl\:x-grid-cols-5 {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+
+  .xl\:x-gap-16 {
+    gap: 64px;
   }
 }

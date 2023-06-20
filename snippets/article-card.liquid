@@ -1,6 +1,6 @@
 {%- if article and article != empty -%}
   {% if article.metafields.custom.market_date %}
-    <p>
+    <p class='x-text-xs md:x-text-sm x-text-farmer-lime md:x-text-inherit x-mb-2 md:x-mb-0'>
       {% liquid
         assign marketDate = article.metafields.custom.market_date
         assign day = marketDate | date: '%-d'
@@ -20,26 +20,21 @@
         echo '' | append: day | append: daySuffix | append: ' ' | append: month_year
       %}
     </p>
-  {% else %}
-    <p class='x-text-sm'>26th June, 2023</p>
   {% endif %}
 
-  <div class='x-col-span-4 x-grid x-grid-cols-4 x-items-center'>
-    <h3 class='x-col-span-2 !x-text-base'>
-      {% comment %} {{ article.title | truncate: 50 | escape }} {% endcomment %}
-      Castle Hill Farmer & Fine Food Market
+  <div class='x-col-span-2 x-grid lg:x-grid-cols-4 lg:x-col-span-4 x-items-center x-gap-[2px] md:x-gap-0'>
+    <h3 class='lg:x-col-span-2 !x-text-base'>
+      {{ article.title | truncate: 50 | escape }}
     </h3>
 
     {% if article.metafields.custom.market_start_time and article.metafields.custom.market_end_time %}
-      <p>{{ article.metafields.custom.market_start_time }} - {{ article.metafields.custom.market_end_time }}</p>
-    {% else %}
-      <p class='x-text-sm'>9:00am - 1:00pm</p>
+      <p class='x-text-sm'>
+        {{ article.metafields.custom.market_start_time }} - {{ article.metafields.custom.market_end_time }}
+      </p>
     {% endif %}
 
     {% if article.metafields.custom.market_location %}
-      <p>{{ article.metafields.custom.market_location }}</p>
-    {% else %}
-      <p class='x-text-sm'>Showground Rd, Castle Hill, NSW 2154</p>
+      <p class='x-text-sm'>{{ article.metafields.custom.market_location }}</p>
     {% endif %}
   </div>
 {%- endif -%}

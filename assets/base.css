@@ -3360,3 +3360,32 @@ details-disclosure > details {
     }
   }
 }
+
+/* TFW Custom Styling */
+#CartDrawer .drawer__inner,
+#CartDrawer .drawer__inner > *,
+#CartDrawer thead {
+  background:#F9F4EF;
+}
+
+#CartDrawer .drawer__inner {
+  border-radius: 64px 0 0 64px;
+  padding: 40px;
+}
+
+#CartDrawer #CartDrawer-Checkout {
+  background: #407538;
+  font-weight: 600;
+  letter-spacing: 0;
+  border-radius: 9999px;
+}
+
+#CartDrawer #CartDrawer-Checkout:hover,
+#CartDrawer #CartDrawer-Checkout:focus {
+  background:#33582E;
+}
+
+#CartDrawer #CartDrawer-Checkout:before,
+#CartDrawer #CartDrawer-Checkout:after {
+  box-shadow:none !important;
+}
