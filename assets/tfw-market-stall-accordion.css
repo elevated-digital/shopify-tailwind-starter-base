@@ -16,3 +16,12 @@
     transform: translate3d(0,0,0);
     opacity:1;
 }
+
+.content-chunk__footer-market-stall {
+    transform: translate3d(0, 0, 0);
+    transition: transform 300ms;
+}
+
+.content-chunk__footer-market-stall:hover {
+    transform: translate3d(0, -12px, 0);
+}

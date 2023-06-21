@@ -1,21 +1,20 @@
-<section class='content-chunk__home-hero-banner x-flex x-items-center x-relative x-py-16'>
+<section class='content-chunk__tfw-story x-py-10 sm:x-py-14 lg:x-py-24'>
   <div class='page-width x-w-full'>
-    <div class='x-grid x-items-center'>
-      <div>
-        <div class='x-grid x-gap-10 x-justify-items-start'>
-          <h2>
-            {{ section.settings.heading }}
-          </h2>
-          <a class='tfw-btn__main' href='{{ section.settings.button_link }}'>
-            {{ section.settings.button_text }}
-            {% render 'icon-tfw-green-arrow' %}
-          </a>
-        </div>
-      </div>
+    <div class='x-flex x-gap-10 lg:x-gap-16 x-items-center'>
       <div
-        class='article__image x-mb-8 x-w-full x-rounded-md x-pb-[53%] x-!bg-cover'
-        style='background:url({{ section.settings.cta_image }}) no-repeat'
+        class='cta__image x-w-full x-rounded-[24px] x-pb-[35%] x-!bg-cover !x-inline-grid x-max-w-[912px] lg:x-min-h-[490px]'
+        style='background:url({{ section.settings.cta_image | image_url: width: 912 }}) no-repeat'
       ></div>
+      <div class='x-grid x-justify-items-start'>
+        {% render 'icon-tfw-flower-lg' %}
+        <h2 class='x-max-w-[350px] x-inline-flex x-items-center gap-4 x-font-semibold x-text-farmer-black md:x-text-4xl x-mb-10 x-mt-4'>
+          {{ section.settings.heading }}
+        </h2>
+        <a class='tfw-btn__main' href='{{ section.settings.button_link }}'>
+          {{ section.settings.button_text }}
+          {% render 'icon-tfw-green-arrow' %}
+        </a>
+      </div>
     </div>
   </div>
 </section>
