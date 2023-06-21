@@ -24,6 +24,11 @@
         ]
       }
     },
+    "tfw_cta": {
+      "type": "tfw-cta",
+      "settings": {
+      }
+    },
     "rich_text": {
       "type": "rich-text",
       "blocks": {
@@ -155,6 +160,7 @@
   "order": [
     "tfw_hero",
     "popular_products",
+    "tfw_cta",
     "rich_text",
     "collage",
     "multicolumn",

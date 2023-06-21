@@ -837,6 +837,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-top-right-radius: 16px !important;
 }
 
+.x-rounded-b-16 {
+  border-bottom-right-radius: 64px;
+  border-bottom-left-radius: 64px;
+}
+
 .\!x-border-0 {
   border-width: 0px !important;
 }
@@ -1061,6 +1066,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .x-leading-\[1\.5rem\] {
   line-height: 1.5rem;
+}
+
+.\!x-leading-snug {
+  line-height: 1.375 !important;
+}
+
+.\!x-leading-normal {
+  line-height: 1.5 !important;
 }
 
 .x-tracking-normal {
@@ -1348,6 +1361,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   .lg\:\!x-gap-x-10 {
     -moz-column-gap: 40px !important;
          column-gap: 40px !important;
+  }
+
+  .lg\:x-rounded-b-16 {
+    border-bottom-right-radius: 64px;
+    border-bottom-left-radius: 64px;
   }
 
   .lg\:\!x-p-0 {
