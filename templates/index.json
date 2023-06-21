@@ -27,9 +27,10 @@
     "tfw_cta": {
       "type": "tfw-cta",
       "settings": {
-        "heading": "Heading",
-        "button_text": "Button Text",
-        "button_link": ""
+        "image": "shopify:\/\/shop_images\/tfw-our-story.jpg",
+        "heading": "Lovingly crafted in the Hawkesbury, New South Wales.",
+        "button_text": "Our story",
+        "button_link": "shopify:\/\/pages\/about"
       }
     },
     "market": {
