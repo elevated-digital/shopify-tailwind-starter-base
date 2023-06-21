@@ -1,7 +1,7 @@
 <section class='content-chunk__home-hero-banner x-flex x-items-center x-relative x-py-16'>
   <div class='page-width x-w-full'>
-    <div class='x-grid x-grid-cols-12 x-items-center'>
-      <div class='x-col-span-4'>
+    <div class='x-grid x-items-center'>
+      <div>
         <div class='x-grid x-gap-10 x-justify-items-start'>
           <h2>
             {{ section.settings.heading }}
@@ -12,16 +12,10 @@
           </a>
         </div>
       </div>
-      <div class='x-col-span-8'>
-        <img
-          loading='lazy'
-          class='md:x-ml-auto'
-          src='{{ section.settings.image | image_url: width: 864 }}'
-          alt='{{ section.settings.image.alt | escape }}'
-          width='{{ section.settings.image.width }}'
-          height='{{ section.settings.image.height }}'
-        >
-      </div>
+      <div
+        class='article__image x-mb-8 x-w-full x-rounded-md x-pb-[53%] x-!bg-cover'
+        style='background:url({{ section.settings.cta_image }}) no-repeat'
+      ></div>
     </div>
   </div>
 </section>
@@ -34,7 +28,7 @@
   "settings": [
     {
       "type": "image_picker",
-      "id": "image",
+      "id": "cta_image",
       "label": "Image"
     },
     {

@@ -822,6 +822,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-radius: 64px;
 }
 
+.x-rounded-md {
+  border-radius: 0.375rem;
+}
+
 .x-rounded-t-16 {
   border-top-left-radius: 64px;
   border-top-right-radius: 64px;
@@ -978,6 +982,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .x-pb-4 {
   padding-bottom: 16px;
+}
+
+.x-pb-\[53\%\] {
+  padding-bottom: 53%;
 }
 
 .x-text-center {
