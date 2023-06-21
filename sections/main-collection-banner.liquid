@@ -33,6 +33,7 @@
     {%- if collection.handle == 'all' -%}
       <div>
         <img
+          loading='eager'
           srcset='
             {%- if section.settings.default_image.width >= 165 -%}{{ section.settings.default_image | image_url: width: 165 }} 165w,{%- endif -%}
             {%- if section.settings.default_image.width >= 360 -%}{{ section.settings.default_image | image_url: width: 360 }} 360w,{%- endif -%}
@@ -54,6 +55,7 @@
     {%- if section.settings.show_collection_image and collection.image -%}
       <div>
         <img
+          loading='eager'
           srcset='
             {%- if collection.image.width >= 165 -%}{{ collection.image | image_url: width: 165 }} 165w,{%- endif -%}
             {%- if collection.image.width >= 360 -%}{{ collection.image | image_url: width: 360 }} 360w,{%- endif -%}
