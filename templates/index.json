@@ -13,6 +13,15 @@
     "popular_products": {
       "type": "tfw-popular-products",
       "settings": {
+        "heading": "<p>Popular Products<\/p>",
+        "button_text": "View all products",
+        "button_link": "shopify:\/\/collections\/all",
+        "product_list": [
+          "apricot-jam",
+          "beetroot-relish",
+          "hot-mango-chutney",
+          "rhubarb-strawberry-jam"
+        ]
       }
     },
     "rich_text": {
