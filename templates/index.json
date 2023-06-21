@@ -1,5 +1,10 @@
 {
   "sections": {
+    "tfw_hero": {
+      "type": "tfw-home-hero",
+      "settings": {
+      }
+    },
     "image_banner": {
       "type": "image-banner",
       "blocks": {
@@ -176,6 +181,7 @@
     }
   },
   "order": [
+    "tfw_hero",
     "image_banner",
     "rich_text",
     "collage",
