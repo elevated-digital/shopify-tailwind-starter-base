@@ -1,0 +1,18 @@
+.tfw-icon__minus {
+    display: none;
+}
+
+#accordion-header.selected .tfw-icon__plus {
+    display: none;
+}
+
+#accordion-header.selected .tfw-icon__minus {
+    display:block;
+}
+
+.accord--open .market__date,
+.accord--open .market__time,
+.accord--open .market__location  {
+    transform: translate3d(0,0,0);
+    opacity:1;
+}
