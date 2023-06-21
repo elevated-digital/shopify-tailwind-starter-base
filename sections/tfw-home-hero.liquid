@@ -5,13 +5,22 @@
     <div class='x-grid x-grid-cols-12 x-items-center'>
       <div class='x-col-span-4'>
         <div class='x-grid x-gap-10 x-justify-items-start'>
-          <p>{{ section.settings.heading }}</p>
-          <h1 class='x-max-w-[400px] x-text-[17px]'></h1>
-          <a href='#'>Explore range</a>
+          <div class='x-font-semibold x-text-farmer-black x-text-xl md:x-text-5xl md:x-leading-[1.1em]'>
+            {{ section.settings.heading }}
+          </div>
+          <h1 class='x-max-w-[400px] !x-text-[17px] !x-font-normal'>{{ section.settings.banner_text }}</h1>
+          <a href='{{ section.settings.button_link }}'>{{ section.settings.button_text }}</a>
         </div>
       </div>
       <div class='x-col-span-8'>
-        <img class='md:x-ml-auto' src='' alt=''>
+        <img
+          loading='eager'
+          class='md:x-ml-auto'
+          src='{{ section.settings.banner_image | image_url: 'master' }}'
+          alt='{{ section.settings.banner_image.alt | escape }}'
+          width='{{ section.settings.banner_image.width }}'
+          height='{{ section.settings.banner_image.height }}'
+        >
       </div>
     </div>
   </div>
@@ -30,8 +39,33 @@
     {
       "type": "richtext",
       "id": "heading",
-      "default": "<p>Hero Heading</p>",
       "label": "Heading"
+    },
+    {
+      "type": "textarea",
+      "id": "banner_text",
+      "label": "Text",
+      "default": "Welcome to my shop!"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "Button Text"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button link"
+    },
+    {
+      "type": "header",
+      "content": "Content Right"
+    },
+    {
+      "type": "image_picker",
+      "id": "banner_image",
+      "label": "Banner Image"
     }
   ]
 }

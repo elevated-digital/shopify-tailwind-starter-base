@@ -1014,12 +1014,25 @@ Ensure the default browser behavior of the `hidden` attribute.
   font-size: 17px;
 }
 
+.x-text-xl {
+  font-size: 20px;
+  line-height: 28px;
+}
+
+.\!x-text-\[17px\] {
+  font-size: 17px !important;
+}
+
 .x-font-semibold {
   font-weight: 600;
 }
 
 .x-font-bold {
   font-weight: 700;
+}
+
+.\!x-font-normal {
+  font-weight: 400 !important;
 }
 
 .x-uppercase {
@@ -1078,6 +1091,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .x-text-farmer-lime {
   --tw-text-opacity: 1;
   color: rgb(131 182 87 / var(--tw-text-opacity));
+}
+
+.x-text-farmer-black {
+  --tw-text-opacity: 1;
+  color: rgb(35 31 32 / var(--tw-text-opacity));
 }
 
 .x-opacity-0 {
@@ -1234,6 +1252,15 @@ Ensure the default browser behavior of the `hidden` attribute.
   .md\:x-text-sm {
     font-size: 14px;
     line-height: 20px;
+  }
+
+  .md\:x-text-5xl {
+    font-size: 48px;
+    line-height: 1;
+  }
+
+  .md\:x-leading-\[1\.1em\] {
+    line-height: 1.1em;
   }
 
   .md\:x-text-black {
