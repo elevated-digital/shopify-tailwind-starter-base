@@ -3,7 +3,7 @@
     "tfw_hero": {
       "type": "tfw-home-hero",
       "settings": {
-        "heading": "Additive free.\nGluten free.\nDairy free.\nVegan Friendly."
+        "heading": "<p>Additive free.<br\/>Gluten free.<br\/>Dairy Free.<br\/>Vegan friendly.<\/p>"
       }
     },
     "image_banner": {
