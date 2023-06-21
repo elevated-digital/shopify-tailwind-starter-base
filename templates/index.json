@@ -10,6 +10,11 @@
         "banner_image": "shopify:\/\/shop_images\/tfw-hero-banner.png"
       }
     },
+    "popular_products": {
+      "type": "tfw-popular-products",
+      "settings": {
+      }
+    },
     "rich_text": {
       "type": "rich-text",
       "blocks": {
@@ -140,6 +145,7 @@
   },
   "order": [
     "tfw_hero",
+    "popular_products",
     "rich_text",
     "collage",
     "multicolumn",

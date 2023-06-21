@@ -1,0 +1,54 @@
+<section class='content-chunk__popular-products x-bg-framer-cream x-py-20 x-rounded-[64px]'>
+  <div class='page-width x-w-full'>
+    <div class='x-mb-16'>
+      <div class='x-flex x-items-center x-justify-between'>
+        {% render 'tfw-h2-with-flower' %}
+        <a class='tfw-btn__main' href='{{ section.settings.button_link }}'>
+          {{ section.settings.button_text }}
+          {% render 'icon-tfw-green-arrow' %}
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Popular Products",
+  "tag": "section",
+  "class": "popular_products",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content Top"
+    },
+    {
+      "type": "richtext",
+      "id": "heading",
+      "label": "Heading",
+      "default": "<p>Heading</p>"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "Button Text"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button link"
+    },
+    {
+      "type": "header",
+      "content": "Content Bottom"
+    },
+    {
+      "type": "product_list",
+      "id": "product_list",
+      "label": "Products",
+      "limit": 4
+    }
+  ]
+}
+{% endschema %}

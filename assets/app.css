@@ -814,6 +814,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-radius: 16px;
 }
 
+.x-rounded-16 {
+  border-radius: 64px;
+}
+
+.x-rounded-\[64px\] {
+  border-radius: 64px;
+}
+
 .x-rounded-t-16 {
   border-top-left-radius: 64px;
   border-top-right-radius: 64px;
@@ -1257,6 +1265,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   .md\:x-text-5xl {
     font-size: 48px;
     line-height: 1;
+  }
+
+  .md\:x-text-4xl {
+    font-size: 36px;
+    line-height: 40px;
   }
 
   .md\:x-leading-\[1\.1em\] {
