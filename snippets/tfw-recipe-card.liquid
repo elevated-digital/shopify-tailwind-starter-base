@@ -1,0 +1,17 @@
+{%- if article and article != empty -%}
+  <div class='x-col-span-2 x-grid lg:x-grid-cols-4 lg:x-col-span-4 x-items-center x-gap-[2px] md:x-gap-0'>
+    <h3 class='lg:x-col-span-2 !x-text-base'>
+      {{ article.title | truncate: 50 | escape }}
+    </h3>
+
+    {% if article.metafields.custom.market_start_time and article.metafields.custom.market_end_time %}
+      <p class='x-text-sm'>
+        {{ article.metafields.custom.market_start_time }} - {{ article.metafields.custom.market_end_time }}
+      </p>
+    {% endif %}
+
+    {% if article.metafields.custom.market_location %}
+      <p class='x-text-sm'>{{ article.metafields.custom.market_location }}</p>
+    {% endif %}
+  </div>
+{%- endif -%}
