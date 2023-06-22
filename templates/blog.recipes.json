@@ -1,0 +1,12 @@
+{
+  "sections": {
+    "main": {
+      "type": "tfw-blog-markets",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}
