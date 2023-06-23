@@ -70,11 +70,21 @@
         >
           {{ article.content }}
         </div>
-
-      {%- when 'share' -%}
-        <div class='article-template__social-sharing page-width page-width--narrow' {{ block.shopify_attributes }}>
-          {% assign share_url = request.origin | append: article.url %}
-          {% render 'share-button', block: block, share_link: share_url %}
+      {%- when 'recipe_details' -%}
+        <div class='accordion-content x-hidden x-mt-10'>
+          <div class='x-flex md:x-gap-14'>
+            <div class='market__date x-ease-in-out x-duration-300 x-translate-y-2 x-opacity-0'>
+              <p class='x-text-sm x-text-farmer-green x-font-semibold x-mb-2'>Date</p>
+            </div>
+            <div class='market__time x-ease-in-out x-duration-[400ms] x-translate-y-2 x-opacity-0'>
+              <p class='x-text-sm x-text-farmer-green x-font-semibold x-mb-2'>Time</p>
+              <p>{{ article.metafields.custom.market_start_time }} - {{ article.metafields.custom.market_end_time }}</p>
+            </div>
+            <div class='market__location x-ease-in-out x-duration-500 x-translate-y-2 x-opacity-0'>
+              <p class='x-text-sm x-text-farmer-green x-font-semibold x-mb-2'>Address</p>
+              <p>{{ article.metafields.custom.market_location }}</p>
+            </div>
+          </div>
         </div>
     {%- endcase -%}
   {%- endfor -%}
@@ -359,25 +369,9 @@
       "limit": 1
     },
     {
-      "type": "share",
-      "name": "t:sections.main-article.blocks.share.name",
-      "limit": 2,
-      "settings": [
-        {
-          "type": "text",
-          "id": "share_label",
-          "label": "t:sections.main-article.blocks.share.settings.text.label",
-          "default": "Share"
-        },
-        {
-          "type": "paragraph",
-          "content": "t:sections.main-article.blocks.share.settings.featured_image_info.content"
-        },
-        {
-          "type": "paragraph",
-          "content": "t:sections.main-article.blocks.share.settings.title_info.content"
-        }
-      ]
+      "type": "recipe_details",
+      "name": "Recipe Detials",
+      "limit": 1
     }
   ]
 }

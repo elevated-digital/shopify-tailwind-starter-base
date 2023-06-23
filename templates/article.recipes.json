@@ -15,14 +15,13 @@
             "blog_show_date": true
           }
         },
-        "share": {
-          "type": "share",
-          "settings": {
-            "share_label": "Share"
-          }
-        },
         "content": {
           "type": "content",
+          "settings": {
+          }
+        },
+        "recipe_details": {
+          "type": "recipe_details",
           "settings": {
           }
         }
@@ -30,7 +29,6 @@
       "block_order": [
         "featured_image",
         "title",
-        "share",
         "content"
       ],
       "settings": {
