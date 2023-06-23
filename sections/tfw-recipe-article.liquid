@@ -1,4 +1,5 @@
 {{ 'section-blog-post.css' | asset_url | stylesheet_tag }}
+{{ 'tfw-section-recipe-post.css' | asset_url | stylesheet_tag }}
 
 <article class='article-template' itemscope itemtype='http://schema.org/BlogPosting'>
   {%- for block in section.blocks -%}
@@ -47,19 +48,26 @@
               {{- article.published_at | time_tag: format: 'date' -}}
             </span>
           {%- endif -%}
-          <span
-            class='caption-with-letter-spacing'
-            itemprop='author'
-            itemscope
-            itemtype='http://schema.org/Organization'
-          >
-            <span itemprop='name'
-              >Recipe by
-              <a class='x-underline hover:x-text-farmer-green' href='#' target='_blank' rel='nofollow'
-                >myfoodbank</a
-              ></span
+          {%- if article.metafields.custom.recipe_by and article.metafields.custom.recipe_by_link -%}
+            <span
+              class='caption-with-letter-spacing'
+              itemprop='author'
+              itemscope
+              itemtype='http://schema.org/Organization'
             >
-          </span>
+              <span itemprop='name'
+                >Recipe by
+                <a
+                  class='x-underline hover:x-text-farmer-green'
+                  href='{{ article.metafields.custom.recipe_by_link }}'
+                  target='_blank'
+                  rel='nofollow'
+                >
+                  {{- article.metafields.custom.recipe_by -}}
+                </a></span
+              >
+            </span>
+          {%- endif -%}
         </header>
 
       {%- when 'content' -%}
@@ -95,10 +103,18 @@
         </div>
       {%- when 'ingredients_method' -%}
         <div class='recipe_ingredients_method page-width page-width--narrow'>
-          <div>
-            <h2>Ingredients</h2>
+          <div class='recipe__ingredients !x-pb-10 !x-mb-10 x-border-b x-border-[rgba(18,18,18,0.08)]'>
+            <h2 class='x-mb-8'>Ingredients</h2>
+            {{ article.metafields.custom.recipe_ingredients | metafield_tag }}
           </div>
-          <div></div>
+          <div class='recipe__method !x-pb-10 !x-mb-10 x-border-b x-border-[rgba(18,18,18,0.08)]'>
+            <h2 class='x-mb-8'>Method</h2>
+            {{ article.metafields.custom.recipe_method | metafield_tag }}
+          </div>
+          <div class='recipe__product'>
+            <h2 class='x-mb-8'>Featured Product</h2>
+            {{ section.settings.featured_product }}
+          </div>
         </div>
     {%- endcase -%}
   {%- endfor -%}
@@ -390,7 +406,14 @@
     {
       "type": "ingredients_method",
       "name": "Ingredients & Method",
-      "limit": 1
+      "limit": 1,
+      "settings": [
+        {
+          "type": "product",
+          "id": "featured_product",
+          "label": "Featured Product"
+        }
+      ]
     }
   ]
 }

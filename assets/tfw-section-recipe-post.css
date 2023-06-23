@@ -1,0 +1,33 @@
+.article-template__content a {
+    text-decoration:underline;
+}
+
+.article-template__content a:hover,
+.article-template__content a:focus {
+    color:#83B657;
+    text-decoration-thickness:inherit;
+}
+
+.recipe__ingredients ul {
+    display:grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap:16px;
+}
+
+.recipe__ingredients a {
+    text-decoration:underline;
+}
+
+.recipe__ingredients a:hover,
+.recipe__ingredients a:focus {
+    color:#83B657;
+}
+
+.recipe__method h3 {
+    color:#407538;
+    margin-bottom:8px;
+}
+
+.recipe__method p:not(:last-child) {
+    margin-bottom: 32px;
+}
