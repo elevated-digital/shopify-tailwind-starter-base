@@ -28,6 +28,7 @@
         "ingredients_method": {
           "type": "ingredients_method",
           "settings": {
+            "featured_product": "apricot-jam"
           }
         }
       },
