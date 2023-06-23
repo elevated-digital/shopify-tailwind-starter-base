@@ -23,6 +23,7 @@
         "recipe_details": {
           "type": "recipe_details",
           "settings": {
+            "featured_product": "apricot-jam"
           }
         },
         "ingredients_method": {

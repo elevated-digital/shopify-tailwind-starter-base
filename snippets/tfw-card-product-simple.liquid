@@ -1,0 +1,23 @@
+<a
+  class='card-product__simple x-max-w-[500px] x-inline-flex x-w-full x-border x-border-solid x-border-[rgba(18,18,18,0.08)] x-rounded-2xl x-h-full x-relative'
+  href='{{ product.url }}'
+>
+  <div class='x-grid x-grid-cols-4 x-items-center x-w-full'>
+    <img
+      loading='lazy'
+      class='x-relative x-rounded-l-2xl'
+      src='{{ product | image_url: width: 90 }}'
+      alt='{{ product.alt | escape }}'
+      width='{{ product.width }}'
+      height='{{ product.height }}'
+    >
+    <div class='x-col-span-2'>
+      {% assign first_collection = product.collections.first %}
+      <p class='caption-with-letter-spacing'>{{ first_collection.title }}</p>
+      <h3 class=' x-text-xl'>{{ product.title }}</h3>
+    </div>
+    <div class='x-inline-grid x-justify-end x-pr-8'>
+      {%- render 'icon-tfw-green-arrow' -%}
+    </div>
+  </div>
+</a>

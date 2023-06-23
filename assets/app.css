@@ -629,6 +629,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   display: inline-grid !important;
 }
 
+.x-inline-grid {
+  display: inline-grid;
+}
+
 .x-contents {
   display: contents;
 }
@@ -709,6 +713,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   max-width: 100%;
 }
 
+.x-max-w-\[300px\] {
+  max-width: 300px;
+}
+
+.x-max-w-\[500px\] {
+  max-width: 500px;
+}
+
 .x-translate-y-2 {
   --tw-translate-y: 8px;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -786,6 +798,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   gap: 20px;
 }
 
+.x-gap-6 {
+  gap: 24px;
+}
+
 .x-gap-x-4 {
   -moz-column-gap: 16px;
        column-gap: 16px;
@@ -819,6 +835,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-radius: 16px;
 }
 
+.x-rounded-lg {
+  border-radius: 0.5rem;
+}
+
+.x-rounded-3xl {
+  border-radius: 1.5rem;
+}
+
 .x-rounded-t-16 {
   border-top-left-radius: 64px;
   border-top-right-radius: 64px;
@@ -834,8 +858,17 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-top-right-radius: 16px;
 }
 
+.x-rounded-l-2xl {
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+}
+
 .\!x-border-0 {
   border-width: 0px !important;
+}
+
+.x-border {
+  border-width: 1px;
 }
 
 .x-border-t {
@@ -844,6 +877,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .x-border-b {
   border-bottom-width: 1px;
+}
+
+.x-border-solid {
+  border-style: solid;
 }
 
 .x-border-\[rgba\(18\,18\,18\,0\.08\)\] {
@@ -982,6 +1019,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .\!x-pb-10 {
   padding-bottom: 40px !important;
+}
+
+.x-pr-8 {
+  padding-right: 32px;
+}
+
+.x-pr-10 {
+  padding-right: 40px;
 }
 
 .x-text-center {

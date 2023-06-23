@@ -31,3 +31,29 @@
 .recipe__method p:not(:last-child) {
     margin-bottom: 32px;
 }
+
+/* Card proudct Simple */
+.card-product__simple {
+    transform: translate3d(0, 0, 0);
+    transition: transform 300ms;
+}
+.card-product__simple::before {
+    content: "";
+    transition: box-shadow 300ms;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    border-radius: 1.5rem;
+    --tw-shadow: 0 0 #0000;
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.card-product__simple:hover {
+    transform: translate3d(0, -8px, 0);
+}
+
+.card-product__simple:hover::before {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+}
