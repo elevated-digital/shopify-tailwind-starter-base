@@ -1,17 +1,21 @@
 {%- if article and article != empty -%}
-  <div class='x-col-span-2 x-grid lg:x-grid-cols-4 lg:x-col-span-4 x-items-center x-gap-[2px] md:x-gap-0'>
-    <h3 class='lg:x-col-span-2 !x-text-base'>
-      {{ article.title | truncate: 50 | escape }}
-    </h3>
-
-    {% if article.metafields.custom.market_start_time and article.metafields.custom.market_end_time %}
-      <p class='x-text-sm'>
-        {{ article.metafields.custom.market_start_time }} - {{ article.metafields.custom.market_end_time }}
-      </p>
-    {% endif %}
-
-    {% if article.metafields.custom.market_location %}
-      <p class='x-text-sm'>{{ article.metafields.custom.market_location }}</p>
-    {% endif %}
-  </div>
+  <a href='{{ article.url }}' class='recipe-card-link x-w-full x-h-full'>
+    <div class='recipe-card__wrapper x-relatve x-bg-white x-rounded-[16px] x-w-full'>
+      <div class='recipe-card__imaage cta__image  x-w-full x-pb-[75%] x-!bg-cover !x-inline-grid x-relative'>
+        <img
+          loading='lazy'
+          class='x-absolute x-top-0 x-left-0 x-bottom-0 x-right-0 x-block x-w-full x-h-full x-max-w-full x-rounded-t-[16px] x-object-cover x-object-center'
+          src='{{ article.image | image_url }}{{ article.image.src.width }}'
+          alt='{{ article.image.alt | escape }}'
+          width='{{ article.image.src.width }}'
+          height='{{ article.image.height }}'
+        >
+      </div>
+      <div class='recipe-card__content x-py-8'>
+        <h2 class='card__heading !x-text-xl x-font-semibold x-max-w-[240px] x-text-center x-mx-auto !x-mb-2'>
+          {{ article.title | truncate: 50 | escape }}
+        </h2>
+      </div>
+    </div>
+  </a>
 {%- endif -%}

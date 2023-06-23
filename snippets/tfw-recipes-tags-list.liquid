@@ -1,0 +1,28 @@
+<div class='page-width x-text-center'>
+  <ul class='categories-list__wrapper x-inline-flex x-justify-center x-items-center x-gap-10 x-mb-10 x-bg-[#f3eee8] x-py-8 x-px-[164px] x-rounded-full'>
+    <li>
+      <a
+        href='/blogs/recipes'
+        {% if request.path == '/blogs/recipes' %}
+          aria-current='page'
+        {% endif %}
+      >
+        All
+      </a>
+    </li>
+    {% for tag in blogs.recipes.tags %}
+      {% assign tag_handle = tag | handle %}
+      {% assign tag_url = '/blogs/recipes/tagged/' | append: tag_handle %}
+      <li>
+        <a
+          href='{{ tag_url }}'
+          {% if request.path contains tag_url %}
+            aria-current='page'
+          {% endif %}
+        >
+          {{- tag -}}
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+</div>

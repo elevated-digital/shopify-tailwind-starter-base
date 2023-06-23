@@ -1,0 +1,12 @@
+a.pagination__item {
+    color:#33582E;
+}
+
+a.pagination__item--current {
+    color:#83B657;
+    font-weight:600;
+}
+
+.pagination__item--current::after {
+    height: 0.2rem !important;
+}

@@ -4,18 +4,42 @@
 
 <div class='main-blog page-width !x-py-10 lg:!x-py-20'>
   <div class='x-flex x-gap-10 lg:x-gap-16 x-items-center'>
-    <div
-      class='cta__image x-w-full x-rounded-[24px] x-pb-[35%] x-!bg-cover !x-inline-grid x-max-w-[912px] lg:x-min-h-[490px]'
-      style='background:url({{ blog.metafields.custom.featured_image | image_url }}{{ blog.metafields.custom.featured_image.width }}) no-repeat center center'
-    ></div>
-    <div class='x-grid x-justify-items-start'>
+    <div class='cta__image x-w-full x-rounded-[24px] x-pb-[35%] x-!bg-cover !x-inline-grid x-relative'>
+      <img
+        loading='lazy'
+        class='x-absolute x-top-0 x-left-0 x-bottom-0 x-right-0  x-block x-w-full x-h-full x-max-w-full x-rounded-[24px] x-object-cover x-object-center'
+        src='{{ blog.metafields.custom.featured_image | image_url: blog.metafields.custom.featured_image.width }}'
+        alt='{{ blog.metafields.custom.featured_image.alt | escape }}'
+        width='{{ blog.metafields.custom.featured_image.width }}'
+        height='{{ blog.metafields.custom.featured_image.height }}'
+      >
+    </div>
+    <div class='x-grid x-justify-items-start x-max-w-[450px]'>
       {% render 'tfw-breadcrumbs' %}
-      <h1>{{ blog.title | escape }}</h1>
+      <h1 class='!x-mb-8'>{{ blog.title | escape }}</h1>
+      {% if blog.metafields.custom.blog_description %}
+        <p>{{ blog.metafields.custom.blog_description }}</p>
+      {% endif %}
     </div>
   </div>
-  <div>
-    {%- paginate blog.articles by 6 -%}
-      <div class='blog-articles {% if section.settings.layout == 'collage' %}blog-articles--collage{% endif %}'>
+</div>
+<div class='x-bg-framer-cream x-rounded-t-16 x-py-10 sm:x-py-14 lg:x-pt-20 lg:x-pb-[144px] lg:-x-mb-16'>
+  <div class='page-width'>
+    {% render 'tfw-recipes-tags-list' %}
+    {%- assign totalRecipes = blog.articles.size -%}
+    {%- assign per_page = 6 -%}
+    {%- paginate blog.articles by per_page -%}
+      <div>
+        {%- assign startRecipe = paginate.current_page | minus: 1 | times: per_page | plus: 1 -%}
+        {%- assign endRecipe = paginate.current_page | times: per_page -%}
+        {%- if endRecipe > totalRecipes -%}
+          {%- assign endRecipe = totalRecipes -%}
+        {%- endif -%}
+        <div class='recipe-count x-text-sm x-text-right x-mb-8'>
+          Showing {{ startRecipe }} - {{ endRecipe }} of {{ totalRecipes }} recipes
+        </div>
+      </div>
+      <div class='blog-articles x-grid x-items-start x-grid-cols-2 x-gap-x-4 x-gap-y-4 lg:!x-gap-x-8 lg:!x-gap-y-16 lg:!x-grid-cols-4 {% if section.settings.layout == 'collage' %}blog-articles--collage{% endif %}'>
         {%- for article in blog.articles -%}
           <div class='blog-articles__article article'>
             {%- render 'tfw-recipe-card', article: article -%}
@@ -24,7 +48,7 @@
       </div>
 
       {%- if paginate.pages > 1 -%}
-        {%- render 'pagination', paginate: paginate -%}
+        {%- render 'tfw-pagination', paginate: paginate -%}
       {%- endif -%}
     {%- endpaginate -%}
   </div>

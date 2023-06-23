@@ -468,6 +468,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-backdrop-sepia:  ;
 }
 
+.x-absolute {
+  position: absolute;
+}
+
 .x-relative {
   position: relative;
 }
@@ -478,6 +482,22 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .\!x-right-0 {
   right: 0 !important;
+}
+
+.x-top-0 {
+  top: 0;
+}
+
+.x-left-0 {
+  left: 0;
+}
+
+.x-bottom-0 {
+  bottom: 0;
+}
+
+.x-right-0 {
+  right: 0;
 }
 
 .x-col-span-2 {
@@ -581,12 +601,20 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: 12px;
 }
 
+.x-block {
+  display: block;
+}
+
 .x-flex {
   display: flex;
 }
 
 .x-inline-flex {
   display: inline-flex;
+}
+
+.\!x-inline-flex {
+  display: inline-flex !important;
 }
 
 .x-grid {
@@ -621,6 +649,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 17px;
 }
 
+.x-h-full {
+  height: 100%;
+}
+
 .\!x-min-h-\[50px\] {
   min-height: 50px !important;
 }
@@ -639,6 +671,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .x-w-5 {
   width: 20px;
+}
+
+.\!x-w-11 {
+  width: 44px !important;
 }
 
 .x-max-w-\[400px\] {
@@ -665,6 +701,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   max-width: 250px;
 }
 
+.x-max-w-\[450px\] {
+  max-width: 450px;
+}
+
+.x-max-w-full {
+  max-width: 100%;
+}
+
 .x-translate-y-2 {
   --tw-translate-y: 8px;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -684,6 +728,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .x-flex-wrap {
   flex-wrap: wrap;
+}
+
+.x-items-start {
+  align-items: flex-start;
 }
 
 .x-items-center {
@@ -739,6 +787,10 @@ Ensure the default browser behavior of the `hidden` attribute.
        column-gap: 16px;
 }
 
+.x-gap-y-4 {
+  row-gap: 16px;
+}
+
 .\!x-rounded-full {
   border-radius: 9999px !important;
 }
@@ -771,6 +823,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .\!x-rounded-t-\[16px\] {
   border-top-left-radius: 16px !important;
   border-top-right-radius: 16px !important;
+}
+
+.x-rounded-t-\[16px\] {
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
 }
 
 .\!x-border-0 {
@@ -813,6 +870,16 @@ Ensure the default browser behavior of the `hidden` attribute.
 .x-bg-\[\#f3eee8\] {
   --tw-bg-opacity: 1;
   background-color: rgb(243 238 232 / var(--tw-bg-opacity));
+}
+
+.x-object-cover {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.x-object-center {
+  -o-object-position: center;
+     object-position: center;
 }
 
 .x-py-10 {
@@ -875,6 +942,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-right: 32px !important;
 }
 
+.x-py-5 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.x-px-24 {
+  padding-left: 96px;
+  padding-right: 96px;
+}
+
 .x-pb-4 {
   padding-bottom: 16px;
 }
@@ -883,8 +960,20 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-bottom: 35%;
 }
 
+.x-pb-\[100\%\] {
+  padding-bottom: 100%;
+}
+
+.x-pb-\[75\%\] {
+  padding-bottom: 75%;
+}
+
 .x-text-center {
   text-align: center;
+}
+
+.x-text-right {
+  text-align: right;
 }
 
 .x-text-sm {
@@ -923,6 +1012,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .x-text-2xl {
   font-size: 24px;
   line-height: 32px;
+}
+
+.\!x-text-xl {
+  font-size: 20px !important;
+  line-height: 28px !important;
 }
 
 .x-font-semibold {
@@ -1224,6 +1318,10 @@ Ensure the default browser behavior of the `hidden` attribute.
     grid-template-columns: repeat(5, minmax(0, 1fr));
   }
 
+  .lg\:\!x-grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  }
+
   .lg\:x-gap-16 {
     gap: 64px;
   }
@@ -1231,6 +1329,22 @@ Ensure the default browser behavior of the `hidden` attribute.
   .lg\:\!x-gap-x-8 {
     -moz-column-gap: 32px !important;
          column-gap: 32px !important;
+  }
+
+  .lg\:\!x-gap-y-8 {
+    row-gap: 32px !important;
+  }
+
+  .lg\:\!x-gap-y-10 {
+    row-gap: 40px !important;
+  }
+
+  .lg\:\!x-gap-y-14 {
+    row-gap: 56px !important;
+  }
+
+  .lg\:\!x-gap-y-16 {
+    row-gap: 64px !important;
   }
 
   .lg\:\!x-p-0 {
