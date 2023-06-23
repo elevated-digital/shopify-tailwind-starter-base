@@ -726,6 +726,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   grid-template-columns: repeat(12, minmax(0, 1fr));
 }
 
+.x-grid-cols-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
 .x-flex-wrap {
   flex-wrap: wrap;
 }
@@ -836,6 +840,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .x-border-t {
   border-top-width: 1px;
+}
+
+.x-border-b {
+  border-bottom-width: 1px;
 }
 
 .x-border-\[rgba\(18\,18\,18\,0\.08\)\] {
@@ -966,6 +974,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .x-pb-\[75\%\] {
   padding-bottom: 75%;
+}
+
+.x-pb-10 {
+  padding-bottom: 40px;
+}
+
+.\!x-pb-10 {
+  padding-bottom: 40px !important;
 }
 
 .x-text-center {
@@ -1239,6 +1255,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .md\:x-gap-0 {
     gap: 0;
+  }
+
+  .md\:x-gap-16 {
+    gap: 64px;
+  }
+
+  .md\:x-gap-20 {
+    gap: 80px;
   }
 
   .md\:x-px-0 {

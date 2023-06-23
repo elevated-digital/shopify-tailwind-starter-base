@@ -24,12 +24,19 @@
           "type": "recipe_details",
           "settings": {
           }
+        },
+        "ingredients_method": {
+          "type": "ingredients_method",
+          "settings": {
+          }
         }
       },
       "block_order": [
         "featured_image",
         "title",
-        "content"
+        "content",
+        "recipe_details",
+        "ingredients_method"
       ],
       "settings": {
       }
