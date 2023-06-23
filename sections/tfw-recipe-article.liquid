@@ -47,11 +47,19 @@
               {{- article.published_at | time_tag: format: 'date' -}}
             </span>
           {%- endif -%}
-          {%- if block.settings.blog_show_author -%}
-            <span class='caption-with-letter-spacing' itemprop='author' itemscope itemtype='http://schema.org/Person'>
-              <span itemprop='name'>{{ article.author }}</span>
-            </span>
-          {%- endif -%}
+          <span
+            class='caption-with-letter-spacing'
+            itemprop='author'
+            itemscope
+            itemtype='http://schema.org/Organization'
+          >
+            <span itemprop='name'
+              >Recipe by
+              <a class='x-underline hover:x-text-farmer-green' href='#' target='_blank' rel='nofollow'
+                >myfoodbank</a
+              ></span
+            >
+          </span>
         </header>
 
       {%- when 'content' -%}
@@ -342,12 +350,6 @@
           "id": "blog_show_date",
           "default": true,
           "label": "t:sections.main-article.blocks.title.settings.blog_show_date.label"
-        },
-        {
-          "type": "checkbox",
-          "id": "blog_show_author",
-          "default": false,
-          "label": "t:sections.main-article.blocks.title.settings.blog_show_author.label"
         }
       ]
     },

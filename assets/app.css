@@ -1098,6 +1098,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: rgba(18,18,18,.75);
 }
 
+.x-underline {
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+}
+
 .x-opacity-0 {
   opacity: 0;
 }
@@ -1160,6 +1165,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .hover\:\!x-text-white:hover {
   --tw-text-opacity: 1 !important;
   color: rgb(255 255 255 / var(--tw-text-opacity)) !important;
+}
+
+.hover\:x-text-farmer-green:hover {
+  --tw-text-opacity: 1;
+  color: rgb(64 117 56 / var(--tw-text-opacity));
 }
 
 .hover\:x-underline:hover {
