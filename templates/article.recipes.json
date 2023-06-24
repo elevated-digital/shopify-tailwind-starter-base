@@ -26,10 +26,19 @@
             "featured_product": "apricot-jam"
           }
         },
+        "ingredients": {
+          "type": "ingredients",
+          "settings": {
+          }
+        },
+        "method": {
+          "type": "method_step",
+          "settings": {
+          }
+        },
         "ingredients_method": {
           "type": "ingredients_method",
           "settings": {
-            "featured_product": "apricot-jam"
           }
         }
       },
@@ -38,6 +47,8 @@
         "title",
         "content",
         "recipe_details",
+        "ingredients",
+        "method",
         "ingredients_method"
       ],
       "settings": {

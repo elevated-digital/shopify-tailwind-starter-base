@@ -4,7 +4,7 @@
 {{ 'component-card.css' | asset_url | stylesheet_tag }}
 {{ 'component-price.css' | asset_url | stylesheet_tag }}
 
-<article class='article-template' itemscope itemtype='http://schema.org/BlogPosting'>
+<article class='article-template lg:x-mb-24' itemscope itemtype='http://schema.org/BlogPosting'>
   {%- for block in section.blocks -%}
     {%- case block.type -%}
       {%- when '@app' -%}
@@ -13,12 +13,14 @@
         </div>
       {%- when 'featured_image' -%}
         {%- if article.image -%}
-          <div class='article-template__hero-container' {{ block.shopify_attributes }}>
+          <div class='article-template__hero-container lg:!x-max-w-[1200px] lg:!x-mt-16' {{ block.shopify_attributes }}>
+            {% render 'tfw-breadcrumbs' %}
             <div
-              class='article-template__hero-{{ block.settings.image_height }} media'
+              class='article-template__hero-{{ block.settings.image_height }} media x-rounded-[24px]'
               itemprop='image'
               {% if block.settings.image_height == 'adapt' and article.image %}
-                style='padding-bottom: {{ 1 | divided_by: article.image.aspect_ratio | times: 100 }}%;'
+                {% comment %} style='padding-bottom: {{ 1 | divided_by: article.image.aspect_ratio | times: 100 }}%;' {% endcomment %}
+                style='padding-bottom:45.22535211267606%'
               {% endif %}
             >
               <img
@@ -104,8 +106,22 @@
             </div>
           </div>
           <div>
-            <p class='x-text-sm x-text-farmer-green x-font-semibold x-mb-4'>Featured Product</p>
+            <p class='x-text-sm x-text-farmer-green x-font-semibold x-mb-4'>Featured Ingredient</p>
             {%- render 'tfw-card-product-simple', product: block.settings.featured_product -%}
+          </div>
+        </div>
+      {%- when 'ingredients' -%}
+        <div class='recipe_ingredients_method page-width page-width--narrow'>
+          <div class='recipe__ingredients !x-pb-10 !x-mb-10 x-border-b x-border-[rgba(18,18,18,0.08)]'>
+            <h2 class='x-mb-8'>Ingredients</h2>
+            {{ block.settings.ingredients_list }}
+          </div>
+        </div>
+      {%- when 'method_step' -%}
+        <div class='recipe_ingredients_method page-width page-width--narrow'>
+          <div class='recipe__method !x-pb-10 !x-mb-10 x-border-b x-border-[rgba(18,18,18,0.08)]'>
+            <h2 class='x-mb-8'>Method</h2>
+            {{ block.settings.method_steps }}
           </div>
         </div>
       {%- when 'ingredients_method' -%}
@@ -114,13 +130,9 @@
             <h2 class='x-mb-8'>Ingredients</h2>
             {{ article.metafields.custom.recipe_ingredients | metafield_tag }}
           </div>
-          <div class='recipe__method !x-pb-10 !x-mb-10 x-border-b x-border-[rgba(18,18,18,0.08)]'>
+          <div class='recipe__method'>
             <h2 class='x-mb-8'>Method</h2>
             {{ article.metafields.custom.recipe_method | metafield_tag }}
-          </div>
-          <div class='recipe__product'>
-            <h2 class='x-mb-8'>Products featured in this recipe</h2>
-            {%- render 'tfw-card-product-simple', product: block.settings.featured_product -%}
           </div>
         </div>
     {%- endcase -%}
@@ -400,6 +412,31 @@
       "limit": 1
     },
     {
+      "type": "ingredients",
+      "name": "Ingredients",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "ingredients_list",
+          "label": "Ingredients List",
+          "default": "<ul><li>1 egg</li><li>125g butter, softened</li></ul>"
+        }
+      ]
+    },
+    {
+      "type": "method_step",
+      "name": "Method Step",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "method_steps",
+          "label": "Method Steps",
+          "default": "<h3>Step 1</h3><p>Preheat oven to 180°C/160°C fan forced.</p>"
+        }
+      ]
+    },
+    {
       "type": "recipe_details",
       "name": "Recipe Detials",
       "limit": 1,
@@ -414,14 +451,7 @@
     {
       "type": "ingredients_method",
       "name": "Ingredients & Method",
-      "limit": 1,
-      "settings": [
-        {
-          "type": "product",
-          "id": "featured_product",
-          "label": "Featured Product"
-        }
-      ]
+      "limit": 1
     }
   ]
 }

@@ -601,6 +601,22 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: 12px;
 }
 
+.x-mb-20 {
+  margin-bottom: 80px;
+}
+
+.x-mb-24 {
+  margin-bottom: 96px;
+}
+
+.x-mt-16 {
+  margin-top: 64px;
+}
+
+.\!x-mt-16 {
+  margin-top: 64px !important;
+}
+
 .x-block {
   display: block;
 }
@@ -719,6 +735,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .x-max-w-\[500px\] {
   max-width: 500px;
+}
+
+.x-max-w-\[1200px\] {
+  max-width: 1200px;
+}
+
+.\!x-max-w-\[1200px\] {
+  max-width: 1200px !important;
 }
 
 .x-translate-y-2 {
@@ -1373,6 +1397,14 @@ Ensure the default browser behavior of the `hidden` attribute.
     margin-bottom: 64px;
   }
 
+  .lg\:x-mb-24 {
+    margin-bottom: 96px;
+  }
+
+  .lg\:\!x-mt-16 {
+    margin-top: 64px !important;
+  }
+
   .lg\:x-block {
     display: block;
   }
@@ -1387,6 +1419,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .lg\:x-max-w-\[350px\] {
     max-width: 350px;
+  }
+
+  .lg\:\!x-max-w-\[1200px\] {
+    max-width: 1200px !important;
   }
 
   .lg\:x-grid-cols-4 {
