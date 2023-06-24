@@ -10,8 +10,8 @@
           <div>
             {% liquid
               assign marketDate = article.metafields.custom.market_date
-              assign current_date = 'now' | date: '%s'
-              assign market_date_comparison = marketDate | date: '%s'
+              assign current_date = 'now' | date: '%Y-%m-%d'
+              assign market_date_comparison = marketDate | date: '%Y-%m-%d'
 
               if market_date_comparison > current_date
                 echo '<p>Next Market Stall:</p>'

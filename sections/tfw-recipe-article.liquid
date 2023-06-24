@@ -88,21 +88,19 @@
           <div class='x-flex md:x-gap-14 x-mb-8'>
             <div class='recipe__difficulty'>
               <p class='x-text-sm x-text-farmer-green x-font-semibold x-mb-2'>Difficulty</p>
-              <p>{{ article.metafields.custom.recipe_difficulty }}</p>
+              <p>{{ block.settings.difficulty }}</p>
             </div>
             <div class='recipe__prep-time'>
-              <p class='x-text-sm x-text-farmer-green x-font-semibold x-mb-2'>Preparation Time</p>
-              <p>{{ article.metafields.custom.recipe_prep_time }}</p>
+              <p class='x-text-sm x-text-farmer-green x-font-semibold x-mb-2'>Prep Time</p>
+              <p>{{ block.settings.prep_time }}</p>
             </div>
             <div class='recipe__cooking-time'>
               <p class='x-text-sm x-text-farmer-green x-font-semibold x-mb-2'>Cooking Time</p>
-              <p>{{ article.metafields.custom.recipe_cook_time }}</p>
+              <p>{{ block.settings.cooking_time }}</p>
             </div>
             <div class='recipe__serving'>
-              <p class='x-text-sm x-text-farmer-green x-font-semibold x-mb-2'>
-                {{ article.metafields.custom.recipe_serving_type }}
-              </p>
-              <p>{{ article.metafields.custom.recipe_serving }}</p>
+              <p class='x-text-sm x-text-farmer-green x-font-semibold x-mb-2'>{{ block.settings.serving_type }}</p>
+              <p>{{ block.settings.serving_size }}</p>
             </div>
           </div>
           <div>
@@ -119,20 +117,9 @@
         </div>
       {%- when 'method_step' -%}
         <div class='recipe_ingredients_method page-width page-width--narrow'>
-          <div class='recipe__method !x-pb-10 !x-mb-10 x-border-b x-border-[rgba(18,18,18,0.08)]'>
-            <h2 class='x-mb-8'>Method</h2>
-            {{ block.settings.method_steps }}
-          </div>
-        </div>
-      {%- when 'ingredients_method' -%}
-        <div class='recipe_ingredients_method page-width page-width--narrow'>
-          <div class='recipe__ingredients !x-pb-10 !x-mb-10 x-border-b x-border-[rgba(18,18,18,0.08)]'>
-            <h2 class='x-mb-8'>Ingredients</h2>
-            {{ article.metafields.custom.recipe_ingredients | metafield_tag }}
-          </div>
           <div class='recipe__method'>
             <h2 class='x-mb-8'>Method</h2>
-            {{ article.metafields.custom.recipe_method | metafield_tag }}
+            {{ block.settings.method_steps }}
           </div>
         </div>
     {%- endcase -%}
@@ -412,6 +399,52 @@
       "limit": 1
     },
     {
+      "type": "recipe_details",
+      "name": "Recipe Detials",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "header",
+          "content": "Recipe Details"
+        },
+        {
+          "type": "text",
+          "id": "difficulty",
+          "label": "Difficulty",
+          "default": "Easy"
+        },
+        {
+          "type": "text",
+          "id": "prep_time",
+          "label": "Prep Time",
+          "default": "20 mins"
+        },
+        {
+          "type": "text",
+          "id": "cooking_time",
+          "label": "Cooking Time",
+          "default": "40 mins"
+        },
+        {
+          "type": "text",
+          "id": "serving_type",
+          "label": "Serving Type",
+          "default": "Serves"
+        },
+        {
+          "type": "text",
+          "id": "serving_size",
+          "label": "Serving Size",
+          "default": "4"
+        },
+        {
+          "type": "product",
+          "id": "featured_product",
+          "label": "Featured Product"
+        }
+      ]
+    },
+    {
       "type": "ingredients",
       "name": "Ingredients",
       "limit": 1,
@@ -435,23 +468,6 @@
           "default": "<h3>Step 1</h3><p>Preheat oven to 180°C/160°C fan forced.</p>"
         }
       ]
-    },
-    {
-      "type": "recipe_details",
-      "name": "Recipe Detials",
-      "limit": 1,
-      "settings": [
-        {
-          "type": "product",
-          "id": "featured_product",
-          "label": "Featured Product"
-        }
-      ]
-    },
-    {
-      "type": "ingredients_method",
-      "name": "Ingredients & Method",
-      "limit": 1
     }
   ]
 }

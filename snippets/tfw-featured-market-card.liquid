@@ -79,16 +79,16 @@
         <div class='card__information !x-py-10 !x-px-8 lg:!x-p-0'>
           <h2 class='x-mb-6 md:x-mb-10 lg:x-mb-16 x-text-xs md:x-text-sm x-text-farmer-lime x-font-semibold x-uppercase'>
             {% liquid
-              assign marketDate = blog.articles.first.metafields.custom.market_date
-              assign current_date = 'now' | date: '%s'
-              assign market_date_comparison = marketDate | date: '%s'
+              assign marketDate = article.metafields.custom.market_date
+              assign current_date = 'now' | date: '%Y-%m-%d'
+              assign market_date_comparison = marketDate | date: '%Y-%m-%d'
 
               if market_date_comparison > current_date
-                echo 'Next Market Stall'
+                echo '<p>Next Market Stall:</p>'
               elsif market_date_comparison == current_date
-                echo "Today's Market Stall"
+                echo "<p>Today's Market Stall:</p>"
               else
-                echo 'Latest Market Stall'
+                echo '<p>Recent Market Stall:</p>'
               endif
             %}
           </h2>
