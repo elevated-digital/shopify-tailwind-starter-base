@@ -128,6 +128,27 @@
     {%- endcase -%}
   {%- endfor -%}
 
+  {% assign current_post_tags = article.tags %}
+
+  {% if current_post_tags.size > 0 %}
+    <div class='other-recipes-section page-width lg:!x-max-w-[1200px] lg:!x-mt-24'>
+      <h2>You may also like</h2>
+      <ul class='other-recipes-list'>
+        {% for post in blogs.recipes.articles %}
+          {% if post.tags contains current_post_tags.first %}
+            {% if post.id != article.id %}
+              <li class='other-recipe-item'>
+                <a href='{{ post.url }}'>
+                  <h3>{{ post.title }}</h3>
+                </a>
+              </li>
+            {% endif %}
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </div>
+  {% endif %}
+
   {%- if blog.comments_enabled? -%}
     <div class='article-template__comment-wrapper background-secondary'>
       <div id='comments' class='page-width page-width--narrow'>
