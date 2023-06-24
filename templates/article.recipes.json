@@ -9,6 +9,16 @@
             "image_height": "adapt"
           }
         },
+        "recipe_details": {
+          "type": "recipe_details",
+          "settings": {
+            "difficulty": "Easy",
+            "prep_time": "20 mins",
+            "cooking_time": "40 mins",
+            "serving_type": "Makes",
+            "serving_size": "16 slices"
+          }
+        },
         "title": {
           "type": "title",
           "settings": {
@@ -20,14 +30,9 @@
           "settings": {
           }
         },
-        "recipe_details": {
-          "type": "recipe_details",
+        "18a6e7a5-290c-4626-b1b4-4bbc3ad14e87": {
+          "type": "featured_ingredient",
           "settings": {
-            "difficulty": "Easy",
-            "prep_time": "20 mins",
-            "cooking_time": "40 mins",
-            "serving_type": "Makes",
-            "serving_size": "16 slices",
             "featured_product": "apricot-jam"
           }
         },
@@ -46,9 +51,10 @@
       },
       "block_order": [
         "featured_image",
+        "recipe_details",
         "title",
         "content",
-        "recipe_details",
+        "18a6e7a5-290c-4626-b1b4-4bbc3ad14e87",
         "ingredients",
         "method"
       ],
