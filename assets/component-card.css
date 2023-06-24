@@ -458,3 +458,8 @@
     clip-path: polygon(var(--shape--blob-5));
   }
 }
+
+/* TFW Custom Styles */
+.product-card-wrapper.product__sold-out {
+  filter:grayscale(1);
+}

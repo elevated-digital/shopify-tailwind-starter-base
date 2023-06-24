@@ -963,6 +963,14 @@ Ensure the default browser behavior of the `hidden` attribute.
      object-position: center;
 }
 
+.x-p-4 {
+  padding: 16px;
+}
+
+.\!x-p-4 {
+  padding: 16px !important;
+}
+
 .x-py-10 {
   padding-top: 40px;
   padding-bottom: 40px;
