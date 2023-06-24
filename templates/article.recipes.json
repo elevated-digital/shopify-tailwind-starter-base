@@ -12,7 +12,7 @@
         "recipe_details": {
           "type": "recipe_details",
           "settings": {
-            "difficulty": "Easy",
+            "difficulty": "Hard",
             "prep_time": "20 mins",
             "cooking_time": "40 mins",
             "serving_type": "Makes",
