@@ -29,11 +29,13 @@
         "ingredients": {
           "type": "ingredients",
           "settings": {
+            "ingredients_list": "<ul><li>125g butter, softened<\/li><li>1\/3 cup caster sugar<\/li><li>1 teaspoon vanilla extract<\/li><li>1 egg<\/li><li>1 ½ cups self-raising flour<\/li><li>½ cup desiccated coconut<\/li><li>2 cups shredded coconut<\/li><li>Extra 1\/4 cup caster sugar<\/li><li>Extra 1 egg, whisked<\/li><li><a href=\"http:\/\/127.0.0.1:9292\/products\/apricot-jam\">The Farmer's Wife Apricot Jam<\/a><\/li><\/ul>"
           }
         },
         "method": {
           "type": "method_step",
           "settings": {
+            "method_steps": "<h3>Step 1<\/h3><p>Preheat oven to 180°C\/160°C fan forced. Grease and line a 30cm x 20cm slab pan with baking paper.<\/p><h3>Step 2<\/h3><p>Using an electric beater, beat <strong>butter<\/strong>, <strong>sugar<\/strong>, and <strong>vanilla<\/strong> until light and fluffy. Add <strong>egg<\/strong> and beat until just combined. Stir <strong>flour<\/strong> and <strong>desiccated coconut<\/strong> into the butter mixture. Spoon mixture into prepared pan and spread evenly with the back of a spoon. Bake for 15 minutes or until lightly golden. Cool.<\/p><h3>Step 3<\/h3><p>Spread <strong>apricot jam<\/strong> over the slice. Combine <strong>shredded coconut<\/strong> and <strong>extra sugar<\/strong> in a bowl. Add the <strong>extra egg<\/strong> and stir until combined. Spoon and spread mixture over jam. Bake for 25 minutes or until golden. Cool. Remove from cake pan and cut into fingers to serve.<\/p>"
           }
         },
         "ingredients_method": {
