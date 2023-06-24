@@ -35,7 +35,7 @@
         "18a6e7a5-290c-4626-b1b4-4bbc3ad14e87": {
           "type": "featured_ingredient",
           "settings": {
-            "featured_product": "beetroot-relish"
+            "featured_product": "{{ article.metafields.custom.recipe_featured_ingredient.value }}"
           }
         },
         "ingredients": {
