@@ -85,16 +85,16 @@
         </div>
       {%- when 'recipe_details' -%}
         <div class='recipe_details page-width page-width--narrow !x-pb-10 !x-mb-10 x-border-b x-border-[rgba(18,18,18,0.08)]'>
-          <div class='x-flex md:x-gap-14 x-mb-8'>
-            <div class='recipe__difficulty'>
+          <div class='x-grid x-grid-cols-4 md:x-gap-10 x-mb-8'>
+            <div class='recipe__difficulty x-border-r x-border-[rgba(18,18,18,0.08)] x-pr-10'>
               <p class='x-text-sm x-text-farmer-green x-font-semibold x-mb-2'>Difficulty</p>
               <p>{{ block.settings.difficulty }}</p>
             </div>
-            <div class='recipe__prep-time'>
+            <div class='recipe__prep-time x-border-r x-border-[rgba(18,18,18,0.08)] x-pr-10'>
               <p class='x-text-sm x-text-farmer-green x-font-semibold x-mb-2'>Prep Time</p>
               <p>{{ block.settings.prep_time }}</p>
             </div>
-            <div class='recipe__cooking-time'>
+            <div class='recipe__cooking-time x-border-r x-border-[rgba(18,18,18,0.08)] x-pr-10'>
               <p class='x-text-sm x-text-farmer-green x-font-semibold x-mb-2'>Cooking Time</p>
               <p>{{ block.settings.cooking_time }}</p>
             </div>
@@ -103,6 +103,13 @@
               <p>{{ block.settings.serving_size }}</p>
             </div>
           </div>
+          <div>
+            <p class='x-text-sm x-text-farmer-green x-font-semibold x-mb-4'>Featured Ingredient</p>
+            {%- render 'tfw-card-product-simple', product: block.settings.featured_product -%}
+          </div>
+        </div>
+      {%- when 'featured_ingredient' -%}
+        <div class='recipe_details page-width page-width--narrow !x-pb-10 !x-mb-10 x-border-b x-border-[rgba(18,18,18,0.08)]'>
           <div>
             <p class='x-text-sm x-text-farmer-green x-font-semibold x-mb-4'>Featured Ingredient</p>
             {%- render 'tfw-card-product-simple', product: block.settings.featured_product -%}
@@ -341,7 +348,7 @@
 
 {% schema %}
 {
-  "name": "t:sections.main-article.name",
+  "name": "Recipe",
   "tag": "section",
   "class": "section",
   "blocks": [
@@ -436,7 +443,14 @@
           "id": "serving_size",
           "label": "Serving Size",
           "default": "4"
-        },
+        }
+      ]
+    },
+    {
+      "type": "featured_ingredient",
+      "name": "Featured Ingredient",
+      "limit": 1,
+      "settings": [
         {
           "type": "product",
           "id": "featured_product",
@@ -460,6 +474,7 @@
     {
       "type": "method_step",
       "name": "Method Step",
+      "limit": 1,
       "settings": [
         {
           "type": "richtext",

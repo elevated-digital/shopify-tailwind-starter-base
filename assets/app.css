@@ -903,6 +903,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-bottom-width: 1px;
 }
 
+.x-border-r {
+  border-right-width: 1px;
+}
+
 .x-border-solid {
   border-style: solid;
 }
@@ -1332,6 +1336,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .md\:x-gap-20 {
     gap: 80px;
+  }
+
+  .md\:x-gap-10 {
+    gap: 40px;
   }
 
   .md\:x-px-0 {
