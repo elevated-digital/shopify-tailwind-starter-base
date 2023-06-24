@@ -1490,6 +1490,11 @@ Ensure the default browser behavior of the `hidden` attribute.
     row-gap: 64px !important;
   }
 
+  .lg\:x-gap-x-8 {
+    -moz-column-gap: 32px;
+         column-gap: 32px;
+  }
+
   .lg\:\!x-p-0 {
     padding: 0 !important;
   }

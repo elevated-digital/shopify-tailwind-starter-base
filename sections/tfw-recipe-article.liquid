@@ -117,14 +117,14 @@
         <div class='recipe_ingredients_method page-width page-width--narrow'>
           <div class='recipe__ingredients !x-pb-10 !x-mb-10 x-border-b x-border-[rgba(18,18,18,0.08)]'>
             <h2 class='x-mb-8'>Ingredients</h2>
-            {{ block.settings.ingredients_list }}
+            {{ article.metafields.custom.recipe_ingredients | metafield_tag }}
           </div>
         </div>
       {%- when 'method_step' -%}
         <div class='recipe_ingredients_method page-width page-width--narrow'>
           <div class='recipe__method'>
             <h2 class='x-mb-8'>Method</h2>
-            {{ block.settings.method_steps }}
+            {{ article.metafields.custom.recipe_method | metafield_tag }}
           </div>
         </div>
     {%- endcase -%}
@@ -134,16 +134,12 @@
 
   {% if current_post_tags.size > 0 %}
     <div class='other-recipes-section page-width lg:!x-max-w-[1200px] lg:!x-mt-24'>
-      <h2>You may also like</h2>
-      <ul class='other-recipes-list'>
+      <h2 class='x-mb-8'>You may also like</h2>
+      <ul class='other-recipes-list x-grid lg:x-grid-cols-4 lg:x-gap-x-8'>
         {% for post in blogs.recipes.articles %}
           {% if post.tags contains current_post_tags.first %}
             {% if post.id != article.id %}
-              <li class='other-recipe-item'>
-                <a href='{{ post.url }}'>
-                  <h3>{{ post.title }}</h3>
-                </a>
-              </li>
+              {%- render 'tfw-recipe-card', article: post -%}
             {% endif %}
           {% endif %}
         {% endfor %}

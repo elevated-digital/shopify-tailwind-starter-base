@@ -33,7 +33,7 @@
       assign ratio = 1
     endif
   -%}
-  <div class='card-wrapper product-card-wrapper x-bg-white x-rounded-[16px]'>
+  <div class='card-wrapper product-card-wrapper x-bg-white x-rounded-[16px] {% if card_product.available == false %} product__sold-out {% endif %}'>
     <div
       class='
         card
