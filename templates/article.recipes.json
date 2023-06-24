@@ -22,7 +22,9 @@
         "title": {
           "type": "title",
           "settings": {
-            "blog_show_date": true
+            "blog_show_date": true,
+            "recipe_by": "myfoodbank",
+            "recipe_by_link": "https:\/\/myfoodbook.com.au\/recipes\/show\/apricot-jam-and-coconut-slice"
           }
         },
         "content": {
