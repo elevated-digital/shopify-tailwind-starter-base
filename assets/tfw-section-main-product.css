@@ -4,6 +4,7 @@
 }
   
 .product__info-wrapper > product-info {
+    display: block;
     padding: 48px;
 }
 
@@ -62,3 +63,4 @@
 .price__container .price-item {
     font-size: 16px;
 }
+
