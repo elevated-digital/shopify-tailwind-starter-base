@@ -51,9 +51,9 @@
         "collapsible-row-0": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "Materials",
-            "icon": "leather",
-            "content": "",
+            "heading": "Serving Suggestion",
+            "icon": "serving_dish",
+            "content": "<p>{{ product.metafields.custom.serving_suggestion | metafield_tag }}<\/p>",
             "page": ""
           }
         },
