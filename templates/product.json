@@ -71,13 +71,9 @@
             "page": ""
           }
         },
-        "collapsible-row-2": {
-          "type": "collapsible_tab",
+        "f97a85b5-3011-42b3-9651-73b9e9ce247a": {
+          "type": "nutritional_information",
           "settings": {
-            "heading": "Nutritional Information",
-            "icon": "none",
-            "content": "",
-            "page": ""
           }
         },
         "collapsible-row-3": {
@@ -102,7 +98,7 @@
         "99688461-6e27-4f5b-aa69-704d2b4a56f0",
         "collapsible-row-0",
         "collapsible-row-1",
-        "collapsible-row-2",
+        "f97a85b5-3011-42b3-9651-73b9e9ce247a",
         "collapsible-row-3"
       ],
       "settings": {
