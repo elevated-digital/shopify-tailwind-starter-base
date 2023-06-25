@@ -10,6 +10,7 @@
   {{ 'component-rating.css' | asset_url | stylesheet_tag }}
   {{ 'component-loading-overlay.css' | asset_url | stylesheet_tag }}
   {{ 'component-deferred-media.css' | asset_url | stylesheet_tag }}
+  {{ 'tfw-section-main-product.css' | asset_url | stylesheet_tag }}
 
   {%- style -%}
     .section-{{ section.id }}-padding {
@@ -79,9 +80,8 @@
               >
                 {{- block.settings.text -}}
               </p>
-              {%- when 'pair_with' -%}
-                <p class="x-text-sm x-text-farmer-green x-font-semibold x-mb-4">Serving Suggestion</p>
-                <p class="x-text-sm x-italic">{{ product.metafields.custom.serving_suggestion }}</p>
+              {%- when 'product_icons' -%}
+                <p>Product Icons</p>
             {%- when 'title' -%}
               <div class='tfw-card-collection__wrapper x-flex x-items-center x-gap-5'>
                 {% if product.collections.first %}
@@ -624,6 +624,11 @@
     {
       "type": "pair_with",
       "name": "Pair With",
+      "limit": 1
+    },
+    {
+      "type": "product_icons",
+      "name": "Product Icons",
       "limit": 1
     },
     {
