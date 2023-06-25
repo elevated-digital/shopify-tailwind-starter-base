@@ -81,7 +81,24 @@
                 {{- block.settings.text -}}
               </p>
               {%- when 'product_icons' -%}
-                <p>Product Icons</p>
+                <div class="product-icons__wrapper x-grid x-grid-cols-4">
+                  <div class="x-grid x-gap-2 x-justify-items-center x-text-center">
+                    {%- render 'icon-tfw-local-ingredients' -%}
+                    <h4>Local <br>Ingredients</h4>
+                  </div>
+                  <div class="x-grid x-gap-2 x-justify-items-center x-text-center">
+                    {%- render 'icon-tfw-no-additives' -%}
+                    <h4>No <br>Additives</h4>
+                  </div>
+                  <div class="x-grid x-gap-2 x-justify-items-center x-text-center">
+                    {%- render 'icon-tfw-proudly-sourced' -%}
+                    <h4>Proudly <br>Sourced</h4>
+                  </div>
+                  <div class="x-grid x-gap-2 x-justify-items-center x-text-center">
+                    {%- render 'icon-tfw-gluten-free' -%}
+                    <h4>Gluten <br>Free</h4>
+                  </div>
+                </div>
             {%- when 'title' -%}
               <div class='tfw-card-collection__wrapper x-flex x-items-center x-gap-5'>
                 {% if product.collections.first %}

@@ -17,3 +17,48 @@
     font-size: 12px;
 }
   
+.product-icons__wrapper h4 {
+    font-weight:400;
+    font-size: 12px;
+}
+
+.product-icons__wrapper svg {
+    max-height: 45px;
+}
+
+.shopify-payment-button__button {
+    background:#407538;
+    letter-spacing: 0;
+    font-weight: 600;
+    border-radius: 9999px !important;
+}
+
+.shopify-payment-button__button::before,
+.shopify-payment-button__button::after,
+.product-form__submit.button--secondary::before,
+.product-form__submit.button--secondary::after {
+    box-shadow: none !important;
+}
+
+.product-form__submit.button--secondary {
+    letter-spacing: 0;
+    font-weight: 600;
+    border-radius: 9999px !important;
+    border:1px solid #231F20;
+    transition: 150ms ease;
+}
+
+.product-form__submit.button--secondary:hover,
+.product-form__submit.button--secondary:focus {
+    background:#83B657;
+    border-color: #83B657;
+    color: #fff;
+}
+
+.thumbnail-list > li > button.thumbnail {
+    border-radius: 12px;
+}
+
+.price__container .price-item {
+    font-size: 16px;
+}
