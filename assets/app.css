@@ -1140,6 +1140,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   text-transform: uppercase;
 }
 
+.x-italic {
+  font-style: italic;
+}
+
 .\!x-leading-\[1\.9\] {
   line-height: 1.9 !important;
 }

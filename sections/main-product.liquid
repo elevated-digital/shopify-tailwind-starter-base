@@ -80,7 +80,8 @@
                 {{- block.settings.text -}}
               </p>
               {%- when 'pair_with' -%}
-                <p>Pair With:</p>
+                <p class="x-text-sm x-text-farmer-green x-font-semibold x-mb-4">Serving Suggestion</p>
+                <p class="x-text-sm x-italic">{{ product.metafields.custom.serving_suggestion }}</p>
             {%- when 'title' -%}
               <div class='tfw-card-collection__wrapper x-flex x-items-center x-gap-5'>
                 {% if product.collections.first %}
