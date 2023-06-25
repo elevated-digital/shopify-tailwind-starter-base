@@ -48,6 +48,11 @@
             "show_gift_card_recipient": false
           }
         },
+        "99688461-6e27-4f5b-aa69-704d2b4a56f0": {
+          "type": "product_icons",
+          "settings": {
+          }
+        },
         "collapsible-row-0": {
           "type": "collapsible_tab",
           "settings": {
@@ -94,6 +99,7 @@
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
+        "99688461-6e27-4f5b-aa69-704d2b4a56f0",
         "collapsible-row-0",
         "collapsible-row-1",
         "collapsible-row-2",
