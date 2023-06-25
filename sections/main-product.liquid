@@ -79,7 +79,17 @@
               >
                 {{- block.settings.text -}}
               </p>
+              {%- when 'pair_with' -%}
+                <p>Pair With:</p>
             {%- when 'title' -%}
+              <div class='tfw-card-collection__wrapper x-flex x-items-center x-gap-5'>
+                {% if product.collections.first %}
+                  {% assign first_collection = product.collections.first %}
+                  <p class='tfw-card__collection tfw-collections__{{ first_collection.handle }} x-relative x-text-[10px] x-leading-[1.5rem] x-text-white x-font-semibold x-inline-flex x-items-center x-justify-center x-h-[17px] x-px-2'>
+                    {{ first_collection.title }}
+                  </p>
+                {% endif %}
+              </div>
               <div class="product__title" {{ block.shopify_attributes }}>
                 <h1>{{ product.title | escape }}</h1>
                 <a href="{{ product.url }}" class="product__title">
@@ -609,6 +619,11 @@
           "label": "t:sections.main-product.blocks.text.settings.text_style.label"
         }
       ]
+    },
+    {
+      "type": "pair_with",
+      "name": "Pair With",
+      "limit": 1
     },
     {
       "type": "title",

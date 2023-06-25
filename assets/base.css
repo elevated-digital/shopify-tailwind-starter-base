@@ -3666,3 +3666,8 @@ details-disclosure > details {
 .facet-filters__label, .facet-filters__sort {
   letter-spacing: 0 !important;
 }
+
+/* Global Product Card */
+.product-card-wrapper .card-information {
+  text-align: center;
+}
