@@ -116,6 +116,12 @@
                   </h2>
                 </a>
               </div>
+              <div class="hawkesbury-crafted">
+                <div class="x-flex x-gap-2 x-items-center">
+                  {%- render 'icon-tfw-flower' -%}
+                  <p class="x-text-sm x-leading-[1.15] x-tracking-widest x-text-farmer-black">Crafted in the <br>Hawkesbury</p>
+                </div>
+              </div>
             {%- when 'price' -%}
               <div class="no-js-hidden" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
                 {%- render 'price',
@@ -216,7 +222,67 @@
                     {% render 'icon-caret' %}
                   </summary>
                   <div class="accordion__content rte" id="ProductAccordion-{{ block.id }}-{{ section.id }}">
-                    <p>hello</p>
+                    <div class="nutritional-info_summary">
+                      <p class="!x-mb-0">Servings per package: {{ product.metafields.custom.servings_per_pack }}</p>
+                      <p class="!x-mb-3">Serving size: {{ product.metafields.custom.serving_size }}</p>
+                    </div>
+                    <table class="nutritional-info x-w-full">
+                      <thead>
+                        <tr class="x-border-t x-border-b x-border-farmer-green">
+                          <td></td>
+                          <td>Per serving</td>
+                          <td>Per 100g</td>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr class="x-border-b x-border-farmer-green">
+                          <th class="x-text-left">Energy</th>
+                          <td>{{ product.metafields.custom.energy_serve }}</td>
+                          <td>{{ product.metafields.custom.energy_100g.value }}</td>
+                        </tr>
+                        <tr class="x-border-b x-border-farmer-green">
+                          <th class="x-text-left">Protein</th>
+                          <td>{{ product.metafields.custom.protein_serve.value }}</td>
+                          <td>{{ product.metafields.custom.protein_100g.value }}</td>
+                        </tr>
+                        <tr>
+                          <th class="x-text-left">Fat</th>
+                          <td></td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td>Total</td>
+                          <td>{{ product.metafields.custom.fat_total_serve.value }}</td>
+                          <td>{{ product.metafields.custom.fat_total_100g.value }}</td>
+                        </tr>
+                        <tr class="x-border-b x-border-farmer-green">
+                          <td>Saturated</td>
+                          <td>{{ product.metafields.custom.saturated_serve.value }}</td>
+                          <td>{{ product.metafields.custom.saturated_100g.value }}</td>
+                        </tr>
+                        <tr>
+                          <th class="x-text-left">Carbohydrate</th>
+                          <td></td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td>Total</td>
+                          <td>{{ product.metafields.custom.carbohydrate_serve.value }}</td>
+                          <td>{{ product.metafields.custom.carbohydrate_100g.value }}</td>
+                        </tr>
+                        <tr class="x-border-b x-border-farmer-green">
+                          <td >Sugars</td>
+                          <td>{{ product.metafields.custom.sugars_serve.value }}</td>
+                          <td>{{ product.metafields.custom.sugars_100g.value }}</td>
+                        </tr>
+                        <tr class="x-border-b x-border-farmer-green">
+                          <th class="x-text-left">Sodium</th>
+                          <td>{{ product.metafields.custom.sodium_serve }}</td>
+                          <td>{{ product.metafields.custom.sodium_100g }}</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    
                   </div>
                 </details>
               </div>

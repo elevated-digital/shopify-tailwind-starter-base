@@ -71,3 +71,22 @@
 .accordion summary {
     padding:20px 0;
 }
+
+.accordion__content p:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.accordion__content p a {
+    text-decoration: underline;
+}
+
+.accordion__content p a:hover,
+.accordion__content p a:focus {
+    color:#83B657;
+    text-decoration-thickness:initial;
+}
+
+.nutritional-info tr td {
+    padding-top:2px;
+    padding-bottom: 2px;
+}

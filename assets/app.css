@@ -640,6 +640,22 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-top: 48px !important;
 }
 
+.x-mb-0 {
+  margin-bottom: 0;
+}
+
+.\!x-mb-0 {
+  margin-bottom: 0 !important;
+}
+
+.\!x-mb-4 {
+  margin-bottom: 16px !important;
+}
+
+.\!x-mb-3 {
+  margin-bottom: 12px !important;
+}
+
 .x-block {
   display: block;
 }
@@ -938,6 +954,28 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-color: rgba(18,18,18,0.08);
 }
 
+.x-border-black\/80 {
+  border-color: rgb(0 0 0 / 0.8);
+}
+
+.x-border-black\/60 {
+  border-color: rgb(0 0 0 / 0.6);
+}
+
+.x-border-black\/40 {
+  border-color: rgb(0 0 0 / 0.4);
+}
+
+.x-border-farmer-dark-green {
+  --tw-border-opacity: 1;
+  border-color: rgb(51 88 46 / var(--tw-border-opacity));
+}
+
+.x-border-farmer-green {
+  --tw-border-opacity: 1;
+  border-color: rgb(64 117 56 / var(--tw-border-opacity));
+}
+
 .x-bg-farmer-green {
   --tw-bg-opacity: 1;
   background-color: rgb(64 117 56 / var(--tw-bg-opacity));
@@ -1088,6 +1126,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-right: 40px;
 }
 
+.x-text-left {
+  text-align: left;
+}
+
 .x-text-center {
   text-align: center;
 }
@@ -1175,8 +1217,32 @@ Ensure the default browser behavior of the `hidden` attribute.
   line-height: 28px !important;
 }
 
+.x-leading-normal {
+  line-height: 1.5;
+}
+
+.x-leading-none {
+  line-height: 1;
+}
+
+.x-leading-5 {
+  line-height: 1.25rem;
+}
+
+.x-leading-\[1\.2\] {
+  line-height: 1.2;
+}
+
+.x-leading-\[1\.15\] {
+  line-height: 1.15;
+}
+
 .x-tracking-normal {
   letter-spacing: 0em;
+}
+
+.x-tracking-widest {
+  letter-spacing: 0.1em;
 }
 
 .x-text-white {
