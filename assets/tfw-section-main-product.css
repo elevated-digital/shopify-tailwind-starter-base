@@ -111,7 +111,7 @@
     display:none;
 }
 
-#shopify-section-template--19513176621359__judgeme_section_review_widget_7fc6 {
+#MainContent section:nth-child(2) {
     --tw-bg-opacity: 1;
     background-color: rgb(249 244 239 / var(--tw-bg-opacity));
     padding-top: 64px;
