@@ -60,7 +60,7 @@
     border-radius: 12px;
 }
 
-.price__container .price-item {
+.product__info-wrapper .price__container .price-item {
     font-size: 20px;
     margin-top: 24px !important;
     font-weight: 600;
@@ -107,7 +107,7 @@
     display:none;
 }
 
-#shopify-section-template--19513176621359__1687741814c62da34c {
+#shopify-section-template--19513176621359__judgeme_section_review_widget_7fc6 {
     --tw-bg-opacity: 1;
     background-color: rgb(249 244 239 / var(--tw-bg-opacity));
     padding-top: 80px;
