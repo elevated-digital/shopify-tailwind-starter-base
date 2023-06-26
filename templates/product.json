@@ -56,6 +56,11 @@
             "show_gift_card_recipient": false
           }
         },
+        "de508ea0-432e-467c-878d-48593175a3ab": {
+          "type": "hawkesbury_crafted",
+          "settings": {
+          }
+        },
         "99688461-6e27-4f5b-aa69-704d2b4a56f0": {
           "type": "product_icons",
           "settings": {
@@ -104,6 +109,7 @@
         "quantity_selector",
         "b7a0348a-62c3-4259-a857-29ae5f6e0196",
         "buy_buttons",
+        "de508ea0-432e-467c-878d-48593175a3ab",
         "99688461-6e27-4f5b-aa69-704d2b4a56f0",
         "collapsible-row-0",
         "collapsible-row-1",
