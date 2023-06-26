@@ -536,6 +536,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: 64px !important;
 }
 
+.\!x-my-14 {
+  margin-top: 56px !important;
+  margin-bottom: 56px !important;
+}
+
 .\!x-ml-0 {
   margin-left: 0 !important;
 }
@@ -784,6 +789,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   max-width: 1200px !important;
 }
 
+.x-max-w-\[44rem\] {
+  max-width: 44rem;
+}
+
 .x-translate-y-2 {
   --tw-translate-y: 8px;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -863,6 +872,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .x-gap-6 {
   gap: 24px;
+}
+
+.x-gap-1 {
+  gap: 4px;
 }
 
 .x-gap-x-4 {

@@ -463,3 +463,12 @@
 .product-card-wrapper.product__sold-out {
   filter:grayscale(1);
 }
+
+#MainContent .jdgm-preview-badge[data-template="index"] {
+  display: block !important;
+}
+
+.product-card-wrapper .jdgm-prev-badge {
+  font-size: 12px;
+  margin-bottom: 12px;
+}

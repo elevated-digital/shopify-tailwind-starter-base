@@ -66,6 +66,10 @@
     font-weight: 600;
 }
 
+.product__info-wrapper .price__badge-sold-out {
+    display:none !important;
+}
+
 .quantity:after {
     border-radius: 9999px;
 }
@@ -110,7 +114,39 @@
 #shopify-section-template--19513176621359__judgeme_section_review_widget_7fc6 {
     --tw-bg-opacity: 1;
     background-color: rgb(249 244 239 / var(--tw-bg-opacity));
-    padding-top: 80px;
-    padding-bottom: 80px;
+    padding-top: 64px;
+    padding-bottom: 64px;
     border-radius: 64px;
+}
+
+.product__info-container .product-form {
+    margin-bottom: 0;
+}
+
+.hawkesbury-crafted__wrapper svg {
+    max-height: 14px;
+    width:auto;
+}
+
+/* Judge.me reviews */
+.jdgm-rev-widg {
+    padding:0 !important;
+}
+
+.jdgm-write-rev-link {
+    font-weight: 600 !important;
+    border-radius: 9999px !important;
+}
+
+.jdgm-rev-widg__title {
+    margin-bottom:40px !important;
+}
+
+.related-products {
+    padding-top:64px !important;
+    padding-bottom: 80px !important;
+}
+
+.related-products .product-card-wrapper {
+    border: var(--media-border-width) solid rgba(var(--color-foreground), var(--media-border-opacity));
 }
