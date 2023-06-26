@@ -30,11 +30,6 @@
             "text_style": "subtitle"
           }
         },
-        "a9c44fd3-9696-454e-b66c-6a6384329494": {
-          "type": "pair_with",
-          "settings": {
-          }
-        },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
@@ -105,7 +100,6 @@
         "price",
         "description",
         "caption",
-        "a9c44fd3-9696-454e-b66c-6a6384329494",
         "variant_picker",
         "quantity_selector",
         "b7a0348a-62c3-4259-a857-29ae5f6e0196",
