@@ -41,6 +41,14 @@
           "settings": {
           }
         },
+        "b7a0348a-62c3-4259-a857-29ae5f6e0196": {
+          "type": "inventory",
+          "settings": {
+            "text_style": "uppercase",
+            "inventory_threshold": 10,
+            "show_inventory_quantity": true
+          }
+        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
@@ -84,6 +92,11 @@
             "content": "<p>Sustainability is important to everyone at The Farmer's Wife, from where our produce is sourced to how we create our products and packaging.<\/p><p>To encourage recycling, we encourage customers to return their used The Farmer's Wife jar and bottles at one of our market stalls.<\/p><p>To find out where & when our next stall is, visit our <a href=\"\/blogs\/market-stalls\" title=\"Market Stalls\">Market Stalls<\/a> page.<\/p>",
             "page": ""
           }
+        },
+        "f6635d65-acd4-45d3-9bb9-011de81cd719": {
+          "type": "rating",
+          "settings": {
+          }
         }
       },
       "block_order": [
@@ -94,12 +107,14 @@
         "a9c44fd3-9696-454e-b66c-6a6384329494",
         "variant_picker",
         "quantity_selector",
+        "b7a0348a-62c3-4259-a857-29ae5f6e0196",
         "buy_buttons",
         "99688461-6e27-4f5b-aa69-704d2b4a56f0",
         "collapsible-row-0",
         "collapsible-row-1",
         "f97a85b5-3011-42b3-9651-73b9e9ce247a",
-        "collapsible-row-3"
+        "collapsible-row-3",
+        "f6635d65-acd4-45d3-9bb9-011de81cd719"
       ],
       "settings": {
         "enable_sticky_info": false,
