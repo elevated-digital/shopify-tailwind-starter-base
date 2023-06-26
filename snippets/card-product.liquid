@@ -179,7 +179,7 @@
       <div style='{{ jm_style }}' class='jdgm-widget jdgm-preview-badge' data-id='{{ card_product.id }}' data-auto-install='false'>
         {{ card_product.metafields.judgeme.badge }}
       </div>  
-      <!-- End of Judge.me code -->
+      <!-- End of Judge.me code 
 {%- if show_rating and card_product.metafields.reviews.rating.value != blank -%}
               {% liquid
                 assign rating_decimal = 0
@@ -215,7 +215,7 @@
                 </span>
               </p>
             {%- endif -%}
-
+-->
             {% render 'price', product: card_product, price_class: '' %}
           </div>
         </div>
