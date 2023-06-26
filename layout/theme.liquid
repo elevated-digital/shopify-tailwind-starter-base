@@ -305,5 +305,11 @@
     {%- if settings.predictive_search_enabled -%}
       <script src='{{ 'predictive-search.js' | asset_url }}' defer='defer'></script>
     {%- endif -%}
+    <script>
+  loadBadge = function(){setTimeout( function(){
+    jdgm.customizeBadges()
+  }, 500);}
+document.addEventListener("DOMSubtreeModified", loadBadge);
+</script>
   </body>
 </html>
