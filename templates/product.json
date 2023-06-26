@@ -8,14 +8,9 @@
           "settings": {
           }
         },
-        "5b80ca80-1ff6-4a2d-90f6-7344108a584b": {
-          "type": "shopify:\/\/apps\/product-reviews\/blocks\/star_rating\/bae150af-8da8-48b2-9867-398188115e5f",
+        "9b6c305f-cc89-46fc-a8dc-751743bdee89": {
+          "type": "shopify:\/\/apps\/judge-me-product-reviews\/blocks\/preview_badge\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
           "settings": {
-            "stars_fill_color": "#407538",
-            "star_size": 20,
-            "text_align": "flex-start",
-            "product": "{{product}}",
-            "stars_text_empty": "No reviews"
           }
         },
         "price": {
@@ -102,23 +97,12 @@
             "content": "<p>Sustainability is important to everyone at The Farmer's Wife, from where our produce is sourced to how we create our products and packaging.<\/p><p>To encourage recycling, we encourage customers to return their used The Farmer's Wife jar and bottles at one of our market stalls.<\/p><p>To find out where & when our next stall is, visit our <a href=\"\/blogs\/market-stalls\" title=\"Market Stalls\">Market Stalls<\/a> page.<\/p>",
             "page": ""
           }
-        },
-        "f6635d65-acd4-45d3-9bb9-011de81cd719": {
-          "type": "rating",
-          "settings": {
-          }
-        },
-        "judgeme_preview_badge_product_page_d9ffc6a3": {
-          "type": "shopify:\/\/apps\/judge-me-product-reviews\/blocks\/preview_badge\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {
-          }
         }
       },
       "block_order": [
         "title",
-        "5b80ca80-1ff6-4a2d-90f6-7344108a584b",
+        "9b6c305f-cc89-46fc-a8dc-751743bdee89",
         "price",
-        "judgeme_preview_badge_product_page_d9ffc6a3",
         "description",
         "caption",
         "a9c44fd3-9696-454e-b66c-6a6384329494",
@@ -130,8 +114,7 @@
         "collapsible-row-0",
         "collapsible-row-1",
         "f97a85b5-3011-42b3-9651-73b9e9ce247a",
-        "collapsible-row-3",
-        "f6635d65-acd4-45d3-9bb9-011de81cd719"
+        "collapsible-row-3"
       ],
       "settings": {
         "enable_sticky_info": false,
@@ -166,22 +149,6 @@
         "padding_bottom": 28
       }
     },
-    "1687741814c62da34c": {
-      "type": "apps",
-      "blocks": {
-        "4f4d82ff-99fe-41b0-8fc0-be8dea0531bb": {
-          "type": "shopify:\/\/apps\/product-reviews\/blocks\/reviews\/bae150af-8da8-48b2-9867-398188115e5f",
-          "settings": {
-          }
-        }
-      },
-      "block_order": [
-        "4f4d82ff-99fe-41b0-8fc0-be8dea0531bb"
-      ],
-      "settings": {
-        "include_margins": true
-      }
-    },
     "judgeme_section_review_widget_7fc6": {
       "type": "apps",
       "blocks": {
@@ -201,8 +168,7 @@
   },
   "order": [
     "main",
-    "judgeme_section_review_widget_7fc6",
     "related-products",
-    "1687741814c62da34c"
+    "judgeme_section_review_widget_7fc6"
   ]
 }
