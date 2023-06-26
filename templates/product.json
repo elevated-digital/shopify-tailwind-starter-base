@@ -71,7 +71,7 @@
           "settings": {
             "heading": "Farmer's Suggestion",
             "icon": "none",
-            "content": "<p>{{ product.metafields.custom.serving_suggestion | metafield_tag }}<\/p>",
+            "content": "{{ product.metafields.custom.farmers_suggestion | metafield_tag }}",
             "page": ""
           }
         },
