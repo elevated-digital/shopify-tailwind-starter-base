@@ -141,8 +141,10 @@
               class='
                 x-grid
                 x-grid-cols-2
-                x-gap-x-4
+                x-gap-4
+
                 lg:!x-gap-x-8
+                lg:!x-gap-y-14
                 lg:x-grid-cols-4
               '
             >
@@ -171,7 +173,7 @@
             </ul>
 
             {%- if paginate.pages > 1 -%}
-              {% render 'pagination', paginate: paginate, anchor: '' %}
+              {%- render 'tfw-pagination', paginate: paginate -%}
             {%- endif -%}
           </div>
         {%- endif -%}

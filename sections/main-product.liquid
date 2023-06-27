@@ -112,12 +112,14 @@
                 </div>
               </div>
             {%- when 'hawkesbury_crafted' -%}
-              <div class='hawkesbury-crafted__wrapper'>
-                <div class='x-flex x-gap-1 x-items-center x-justify-center x-max-w-[44rem]'>
-                  {%- render 'icon-tfw-tiny-flower' -%}
-                  <p class='x-text-xs'>Crafted in the Hawkesbury</p>
+              {% if product.vendor == "The Farmer's Wife" %}
+                <div class='hawkesbury-crafted__wrapper'>
+                  <div class='x-flex x-gap-1 x-items-center x-justify-center x-max-w-[44rem]'>
+                    {%- render 'icon-tfw-tiny-flower' -%}
+                    <p class='x-text-xs'>Crafted in the Hawkesbury</p>
+                  </div>
                 </div>
-              </div>
+              {% endif %}
             {%- when 'title' -%}
               <div class='tfw-card-collection__wrapper x-flex x-items-center x-gap-5'>
                 {% if product.collections.first %}

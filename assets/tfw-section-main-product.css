@@ -150,3 +150,15 @@
 .related-products .product-card-wrapper {
     border: var(--media-border-width) solid rgba(var(--color-foreground), var(--media-border-opacity));
 }
+
+h1 {
+    line-height: 1.1;
+}
+
+.product__info-wrapper .product__description p:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.product__info-wrapper .product__description {
+    font-size: 15px;
+}
