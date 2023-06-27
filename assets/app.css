@@ -500,6 +500,18 @@ Ensure the default browser behavior of the `hidden` attribute.
   right: 0;
 }
 
+.x-bottom-4 {
+  bottom: 16px;
+}
+
+.x-right-4 {
+  right: 16px;
+}
+
+.x-left-4 {
+  left: 16px;
+}
+
 .x-col-span-2 {
   grid-column: span 2 / span 2;
 }
@@ -1264,6 +1276,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .x-tracking-widest {
   letter-spacing: 0.1em;
+}
+
+.x-tracking-wider {
+  letter-spacing: 0.05em;
 }
 
 .x-text-white {

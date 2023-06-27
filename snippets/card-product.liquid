@@ -33,7 +33,7 @@
       assign ratio = 1
     endif
   -%}
-  <div class='card-wrapper product-card-wrapper x-bg-white x-rounded-[16px] {% if card_product.available == false %} product__sold-out {% endif %}'>
+  <div class='card-wrapper product-card-wrapper x-bg-white x-rounded-[16px] {% if card_product.available == false %} product__sold-out {% else %}{% for variant in card_product.variants %}{% if variant.price < variant.compare_at_price %} product__on-sale {% break %}{% endif %}{% endfor %}{% endif %}'>
     <div
       class='
         card
@@ -132,6 +132,12 @@
                 {{- 'products.product.on_sale' | t -}}
               </span>
             {%- endif -%}
+          </div>
+          <div class='card__hot x-absolute x-bottom-4 x-right-4'>
+            <div class='hot-badge__wrapper x-grid x-gap-1 x-items-center x-justify-items-center'>
+              {%- render 'icon-tfw-hot-jar' -%}
+              <p class='x-uppercase x-text-xs x-font-bold x-text-farmer-black'>Hot</p>
+            </div>
           </div>
         </div>
       </div>

@@ -66,6 +66,21 @@
     font-weight: 600;
 }
 
+.price--on-sale .price-item--regular {
+    font-weight: 400 !important;
+}
+
+.product__info-wrapper .price--on-sale {
+    display: flex;
+    align-items: flex-end;
+}
+
+.product__info-wrapper .price--on-sale .price__badge-sale {
+    letter-spacing: 0 !important;
+    background:#83B657;
+    border-color: #83B657;
+}
+
 .product__info-wrapper .price__badge-sold-out {
     display:none !important;
 }

@@ -464,6 +464,15 @@
   filter:grayscale(1);
 }
 
+.product-card-wrapper.product__on-sale {
+  border:1px solid #407538;
+}
+
+.product-card-wrapper.product__on-sale .badge {
+  background:#407538;
+  border-color: #407538;
+}
+
 #MainContent .jdgm-preview-badge[data-template="index"] {
   display: block !important;
 }
