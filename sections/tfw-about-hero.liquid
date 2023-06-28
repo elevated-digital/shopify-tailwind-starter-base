@@ -1,0 +1,49 @@
+<section class='content-chunk__home-hero-banner x-flex x-items-center x-relative x-py-16'>
+  <div class='page-width x-w-full'>
+    <div class='content__top x-grid x-gap-10 x-items-center x-justify-center x-text-center'>
+      <img
+        loading='eager'
+        class='md:x-ml-auto'
+        src='{{ section.settings.banner_image | image_url: width: 700 }}'
+        alt='{{ section.settings.banner_image.alt | escape }}'
+        width='{{ section.settings.banner_image.width }}'
+        height='{{ section.settings.banner_image.height }}'
+      >
+      <div>
+        {% render 'tfw-breadcrumbs' %}
+        <h1 class='!x-mb-8'>{{ section.settings.heading }}</h1>
+        {{ section.settings.hero_text }}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Hero Section",
+  "tag": "section",
+  "class": "home_hero",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Hero"
+    },
+    {
+      "type": "image_picker",
+      "id": "banner_image",
+      "label": "Banner Image"
+    },
+    {
+      "type": "richtext",
+      "id": "heading",
+      "label": "Heading"
+    },
+    {
+      "type": "richtext",
+      "id": "hero_text",
+      "label": "Text",
+      "default": "<p>Welcome to my shop!</p>"
+    }
+  ]
+}
+{% endschema %}
