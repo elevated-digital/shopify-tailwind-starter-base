@@ -4,7 +4,7 @@
   <div class='x-flex x-gap-10 lg:x-gap-16'>
     <div class='cta__image x-w-full x-rounded-[24px] x-!bg-cover !x-inline-grid x-relative x-max-w-[700px]'>
       <img
-        loading='lazy'
+        loading='eager'
         class='x-absolute x-top-0 x-left-0 x-bottom-0 x-right-0  x-block x-w-full x-h-full x-max-w-full x-rounded-[24px] x-object-cover x-object-center'
         src='{{ page.metafields.custom.featured_image | image_url: page.metafields.custom.featured_image.width }}'
         alt='{{ page.metafields.custom.featured_image.alt | escape }}'
@@ -12,7 +12,7 @@
         height='{{ page.metafields.custom.featured_image.height }}'
       >
     </div>
-    <div class='x-grid x-justify-items-start x-w-full'>
+    <div class='x-grid x-justify-items-start x-w-full lg:x-p-16'>
       {% render 'tfw-breadcrumbs' %}
       <h1 class='!x-mb-8'>{{ page.title | escape }}</h1>
       <div class='rte x-max-w-[450px]'>

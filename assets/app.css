@@ -1017,6 +1017,15 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-color: rgb(64 117 56 / var(--tw-border-opacity));
 }
 
+.x-border-farmer-green\/30 {
+  border-color: rgb(64 117 56 / 0.3);
+}
+
+.x-border-\[\#c4c4c4\] {
+  --tw-border-opacity: 1;
+  border-color: rgb(196 196 196 / var(--tw-border-opacity));
+}
+
 .x-bg-farmer-green {
   --tw-bg-opacity: 1;
   background-color: rgb(64 117 56 / var(--tw-bg-opacity));
@@ -1637,6 +1646,10 @@ Ensure the default browser behavior of the `hidden` attribute.
     padding: 0 !important;
   }
 
+  .lg\:x-p-16 {
+    padding: 64px;
+  }
+
   .lg\:\!x-py-20 {
     padding-top: 80px !important;
     padding-bottom: 80px !important;
@@ -1655,6 +1668,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   .lg\:x-px-16 {
     padding-left: 64px;
     padding-right: 64px;
+  }
+
+  .lg\:x-py-16 {
+    padding-top: 64px;
+    padding-bottom: 64px;
   }
 
   .lg\:x-pt-20 {
