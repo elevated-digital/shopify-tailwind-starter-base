@@ -3,6 +3,9 @@
     "hero": {
       "type": "tfw-about-hero",
       "settings": {
+        "banner_image": "shopify:\/\/shop_images\/about-flower-hero.png",
+        "heading": "<p>About The Farmer's Wife<\/p>",
+        "hero_text": ""
       }
     },
     "image_slider": {
