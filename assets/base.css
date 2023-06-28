@@ -3370,6 +3370,10 @@ details-disclosure > details {
   }
 }
 
+.global-p__wrapper p:not(:last-child) {
+  margin-bottom: 24px;
+}
+
 .tfw-btn__main {
   display:inline-flex;
   align-items: center;

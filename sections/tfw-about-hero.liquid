@@ -1,17 +1,19 @@
 <section class='content-chunk__home-hero-banner x-flex x-items-center x-relative x-py-16'>
   <div class='page-width x-w-full'>
-    <div class='content__top x-grid x-gap-10 x-items-center x-justify-center x-text-center'>
+    <div class='content__top x-grid x-gap-10 x-items-center x-justify-center x-justify-items-center'>
       <img
         loading='eager'
-        class='md:x-ml-auto'
+        class='x-max-auto'
         src='{{ section.settings.banner_image | image_url: width: 700 }}'
         alt='{{ section.settings.banner_image.alt | escape }}'
         width='{{ section.settings.banner_image.width }}'
         height='{{ section.settings.banner_image.height }}'
       >
-      <div>
+      <div class='x-text-center'>
         {% render 'tfw-breadcrumbs' %}
-        <h1 class='!x-mb-8'>{{ section.settings.heading }}</h1>
+        <h1>{{ section.settings.heading }}</h1>
+      </div>
+      <div class='global-p__wrapper x-max-w-[800px] x-mx-auto'>
         {{ section.settings.hero_text }}
       </div>
     </div>
