@@ -1,0 +1,45 @@
+.tfw-form__wrapper .section-contact-form-padding {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.tfw-form__wrapper .field::before,
+.tfw-form__wrapper .field::after {
+    display: none !important;
+}
+
+.tfw-form__wrapper input.field__input,
+.tfw-form__wrapper textarea {
+    border-radius: 0.5rem !important;
+    --tw-border-opacity: 1;
+    border: 1px solid rgba(219,222,231,var(--tw-border-opacity));
+}
+
+.tfw-form__wrapper .field__label {
+    letter-spacing: 0 !important;
+    color:rgba(18,18,18,.5);
+}
+
+.tfw-form__wrapper input:focus,
+.tfw-form__wrapper textarea:focus {
+    border:0;
+    box-shadow: 0 0 0 calc(0.1rem + var(--inputs-border-width)) rgba(131, 182, 87, 1);
+}
+
+.tfw-form__wrapper button[type="submit"] {
+    letter-spacing: 0;
+    border-radius: 9999px;
+    background:#407538;
+    font-weight: 600;
+    transition: 300ms ease;
+}
+
+.tfw-form__wrapper button[type="submit"]:hover,
+.tfw-form__wrapper button[type="submit"]:focus {
+    background:#33582E;
+}
+
+.tfw-form__wrapper button[type="submit"]::before,
+.tfw-form__wrapper button[type="submit"]::after {
+    display: none !important;
+}
