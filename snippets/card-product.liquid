@@ -33,7 +33,7 @@
       assign ratio = 1
     endif
   -%}
-  <div class='card-wrapper product-card-wrapper x-bg-white x-rounded-[16px] {% if card_product.available == false %} product__sold-out {% else %}{% for variant in card_product.variants %}{% if variant.price < variant.compare_at_price %} product__on-sale {% break %}{% endif %}{% endfor %}{% endif %}'>
+  <div class='product-card__{{ card_product.handle }} card-wrapper product-card-wrapper x-bg-white x-rounded-[16px] {% if card_product.available == false %} product__sold-out {% else %}{% for variant in card_product.variants %}{% if variant.price < variant.compare_at_price %} product__on-sale {% break %}{% endif %}{% endfor %}{% endif %}'>
     <div
       class='
         card

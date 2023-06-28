@@ -3723,32 +3723,17 @@ details-disclosure > details {
 }
 
 /* Hot Mango Chutney Card */
-.product-card-wrapper #CardLink-template--19513175900463__product-grid-8492775670063 br,
-.product-card-wrapper #CardLink-template--19513176031535__popular_products-8492775670063 br {
-  display: none !important;
-}
-
 /* Honey Mustard Dressing Card */
-.product-card-wrapper #CardLink-template--19513175900463__product-grid-8494441726255 br {
+.product-card__hot-mango-chutney .card__heading br,
+.product-card__honey-mustard-dressing .card__heading br {
   display: none !important;
 }
 
 /* Fig & Ginger Jam */
-.product-card-wrapper #CardLink-template--19513175900463__product-grid-8492432064815 {
-  max-width: 200px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 /* Rhubarb & Ginger Jam */
-.product-card-wrapper #CardLink-template--19513175900463__product-grid-8492525453615 {
-  max-width: 200px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* Extra Virgin Olive Oil */
-.product-card-wrapper #CardLink-template--19513175900463__product-grid-8494515421487 {
+.product-card__fig-ginger-jam .card__heading > a,
+.product-card__rhubarb-ginger-jam .card__heading > a,
+.product-card__extra-virgin-olive-oil .card__heading > a {
   max-width: 200px;
   margin-left: auto;
   margin-right: auto;
