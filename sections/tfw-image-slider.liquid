@@ -1,3 +1,60 @@
 {{ 'owl-carousel.css' | asset_url | stylesheet_tag }}
 
+<section class='content-chunk__tfw-image-slideer x-relative x-overflow-hidden x-py-16'>
+  <div class='page-width x-w-full'>
+    {% if section.blocks.size > 0 %}
+      <div class='owl-carousel owl-theme'>
+        {% for block in section.blocks %}
+          <div class='image-slider__slide'>
+            <img
+              loading='lazy'
+              src='{{ block.settings.image_slide | image_url: width: block.settings.image_slide.width }}'
+              alt='{{ block.settings.image_slide.alt | escape }}'
+              width='{{ block.settings.image_slide.width }}'
+              height='{{ block.settings.image_slide.height }}'
+            >
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+  </div>
+</section>
+
 <script src='{{ 'owl-carousel.js' | asset_url }}' defer='defer'></script>
+{% javascript %}
+  jQuery(function ($) {
+    // Owl Carousel
+    $('.owl-carousel').owlCarousel({
+      center: true,
+      items: 1,
+      loop: true,
+      margin: 10,
+      responsive: {
+        950: {
+          margin: 80,
+        },
+      },
+    });
+  });
+{% endjavascript %}
+
+{% schema %}
+{
+  "name": "TFW Image Slider",
+  "tag": "section",
+  "class": "image_slider",
+  "blocks": [
+    {
+      "type": "image",
+      "name": "Image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image_slide",
+          "label": "Image"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
