@@ -133,12 +133,14 @@
               </span>
             {%- endif -%}
           </div>
-          <div class='card__hot x-absolute x-bottom-4 x-right-4'>
-            <div class='hot-badge__wrapper x-grid x-gap-1 x-items-center x-justify-items-center'>
-              {%- render 'icon-tfw-hot-jar' -%}
-              <p class='x-uppercase x-text-xs x-font-bold x-text-farmer-black'>Hot</p>
+          {% if card_product.metafields.custom.add_hot_icon == true %}
+            <div class='card__hot x-absolute x-bottom-4 x-right-4'>
+              <div class='hot-badge__wrapper x-grid x-gap-1 x-items-center x-justify-items-center'>
+                {%- render 'icon-tfw-hot-jar' -%}
+                <p class='x-uppercase x-text-xs x-font-bold x-text-farmer-black'>Hot</p>
+              </div>
             </div>
-          </div>
+          {% endif %}
         </div>
       </div>
       <div class='card__content'>
