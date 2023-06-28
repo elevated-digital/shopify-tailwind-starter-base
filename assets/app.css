@@ -914,6 +914,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   gap: 4px;
 }
 
+.x-gap-16 {
+  gap: 64px;
+}
+
 .x-gap-x-4 {
   -moz-column-gap: 16px;
        column-gap: 16px;

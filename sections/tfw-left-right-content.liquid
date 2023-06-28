@@ -1,0 +1,76 @@
+<section class='content-chunk__tfw-content x-bg-framer-cream x-py-20 x-rounded-[64px]'>
+  <div class='page-width x-w-full'>
+    <div class='content__top'>
+      {% render 'tfw-h2-with-flower' %}
+    </div>
+    <div class='content__bottom x-grid x-grid-cols-2 x-gap-16'>
+      <div>
+        <img
+          loading='lazy'
+          class='x-mb-10'
+          src='{{ section.settings.image_left | image_url: width: section.settings.image_left.width }}'
+          alt='{{ section.settings.image_left.alt | escape }}'
+          width='{{ section.settings.image_left.width }}'
+          height='{{ section.settings.image_left.height }}'
+        >
+        <div class='global-p__wrapper'>
+          {{ section.settings.text_left }}
+        </div>
+      </div>
+      <div>
+        <div class='global-p__wrapper'>
+          {{ section.settings.text_right }}
+        </div>
+        <img
+          loading='lazy'
+          class='x-mb-10'
+          src='{{ section.settings.image_right | image_url: width: section.settings.image_right.width }}'
+          alt='{{ section.settings.image_right.alt | escape }}'
+          width='{{ section.settings.image_right.width }}'
+          height='{{ section.settings.image_right.height }}'
+        >
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "TFW Section",
+  "tag": "section",
+  "class": "tfw_hero",
+  "settings": [
+    {
+      "type": "header",
+      "content": "TFW Section"
+    },
+    {
+      "type": "richtext",
+      "id": "heading",
+      "label": "Heading"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_left",
+      "label": "Image Left"
+    },
+    {
+      "type": "richtext",
+      "id": "text_left",
+      "label": "Text Left",
+      "default": "<p>This is text left!</p>"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_right",
+      "label": "Image Right"
+    },
+    {
+      "type": "richtext",
+      "id": "text_right",
+      "label": "Text Right",
+      "default": "<p>This is text right!</p>"
+    }
+  ]
+}
+{% endschema %}

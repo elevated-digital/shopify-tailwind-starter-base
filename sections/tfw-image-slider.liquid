@@ -1,13 +1,15 @@
 {{ 'owl-carousel.css' | asset_url | stylesheet_tag }}
+{{ 'tfw-owl-carousel.css' | asset_url | stylesheet_tag }}
 
 <section class='content-chunk__tfw-image-slideer x-relative x-overflow-hidden x-py-16'>
-  <div class='page-width x-w-full'>
+  <div class='page-width !x-max-w-[1200px]'>
     {% if section.blocks.size > 0 %}
       <div class='owl-carousel owl-theme'>
         {% for block in section.blocks %}
           <div class='image-slider__slide'>
             <img
               loading='lazy'
+              class='x-rounded-[24px]'
               src='{{ block.settings.image_slide | image_url: width: block.settings.image_slide.width }}'
               alt='{{ block.settings.image_slide.alt | escape }}'
               width='{{ block.settings.image_slide.width }}'
@@ -31,7 +33,7 @@
       margin: 10,
       responsive: {
         950: {
-          margin: 80,
+          margin: 0,
         },
       },
     });

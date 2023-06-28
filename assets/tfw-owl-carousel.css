@@ -1,0 +1,11 @@
+.owl-carousel .owl-stage-outer {
+    overflow: visible !important;
+}
+
+.owl-carousel .owl-item {
+    transition: transform 300ms;
+}
+
+.owl-carousel .owl-item:not(.active) {
+    transform:scale(.8);
+}
