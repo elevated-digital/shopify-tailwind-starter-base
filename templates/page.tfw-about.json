@@ -10,6 +10,38 @@
     },
     "image_slider": {
       "type": "tfw-image-slider",
+      "blocks": {
+        "f6983ed7-37cd-4c65-a8d6-94ec2b144067": {
+          "type": "image",
+          "settings": {
+            "image_slide": "shopify:\/\/shop_images\/tfw-banner-1.jpg"
+          }
+        },
+        "f5b7b30c-7d18-4d9a-8cc4-d399483e5765": {
+          "type": "image",
+          "settings": {
+            "image_slide": "shopify:\/\/shop_images\/tfw-banner-1.jpg"
+          }
+        },
+        "49ce2818-f534-4bae-98fd-e9cacffb168f": {
+          "type": "image",
+          "settings": {
+            "image_slide": "shopify:\/\/shop_images\/tfw-banner-1.jpg"
+          }
+        },
+        "034b3bb6-71f0-47c9-81a2-e40777c12a05": {
+          "type": "image",
+          "settings": {
+            "image_slide": "shopify:\/\/shop_images\/tfw-banner-1.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "f6983ed7-37cd-4c65-a8d6-94ec2b144067",
+        "f5b7b30c-7d18-4d9a-8cc4-d399483e5765",
+        "49ce2818-f534-4bae-98fd-e9cacffb168f",
+        "034b3bb6-71f0-47c9-81a2-e40777c12a05"
+      ],
       "settings": {
       }
     }
