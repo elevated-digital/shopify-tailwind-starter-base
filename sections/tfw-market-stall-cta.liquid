@@ -1,8 +1,13 @@
 <section class='content-chunk__market-stall-cta x-py-10 sm:x-py-14 lg:x-py-24'>
   <div class='page-width x-w-full'>
     <div class='x-flex x-gap-10 lg:x-gap-16 x-items-center'>
-      <div class='x-grid x-justify-items-start'>
-        <h2 class='x-max-w-[350px] x-font-semibold x-text-farmer-black md:x-text-4xl x-mb-8'>
+      <div
+        class='cta__image x-w-full x-rounded-[24px] x-!bg-cover !x-inline-grid x-max-w-[912px] lg:x-min-h-[490px]'
+        style='background:url({{ section.settings.cta_image | image_url }}{{ section.settings.cta_image.width }}) no-repeat center center'
+      ></div>
+      <div class='x-grid x-justify-items-start x-max-w-[300px]'>
+        {% render 'icon-tfw-flower-lg' %}
+        <h2 class='x-font-semibold x-text-farmer-black md:x-text-4xl x-mb-8 x-mt-6'>
           {{ section.settings.heading }}
         </h2>
         <p class='x-mb-8'>{{ section.settings.body }}</p>
@@ -11,10 +16,6 @@
           {% render 'icon-tfw-green-arrow' %}
         </a>
       </div>
-      <div
-        class='cta__image x-w-full x-rounded-[24px] x-pb-[35%] x-!bg-cover !x-inline-grid x-max-w-[912px] lg:x-min-h-[490px]'
-        style='background:url({{ section.settings.cta_image | image_url }}{{ section.settings.cta_image.width }}) no-repeat'
-      ></div>
     </div>
   </div>
 </section>

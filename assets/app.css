@@ -642,6 +642,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: 12px;
 }
 
+.x-mt-6 {
+  margin-top: 24px;
+}
+
 .x-block {
   display: block;
 }
@@ -796,6 +800,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .x-max-w-\[240px\] {
   max-width: 240px;
+}
+
+.x-max-w-\[300px\] {
+  max-width: 300px;
 }
 
 .x-translate-y-2 {
