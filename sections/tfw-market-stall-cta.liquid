@@ -1,0 +1,65 @@
+<section class='content-chunk__market-stall-cta x-py-10 sm:x-py-14 lg:x-py-24'>
+  <div class='page-width x-w-full'>
+    <div class='x-flex x-gap-10 lg:x-gap-16 x-items-center'>
+      <div class='x-grid x-justify-items-start'>
+        <h2 class='x-max-w-[350px] x-font-semibold x-text-farmer-black md:x-text-4xl x-mb-8'>
+          {{ section.settings.heading }}
+        </h2>
+        <p class='x-mb-8'>{{ section.settings.body }}</p>
+        <a class='tfw-btn__main' href='{{ section.settings.button_link }}'>
+          {{ section.settings.button_text }}
+          {% render 'icon-tfw-green-arrow' %}
+        </a>
+      </div>
+      <div
+        class='cta__image x-w-full x-rounded-[24px] x-pb-[35%] x-!bg-cover !x-inline-grid x-max-w-[912px] lg:x-min-h-[490px]'
+        style='background:url({{ section.settings.cta_image | image_url }}{{ section.settings.cta_image.width }}) no-repeat'
+      ></div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "TFW CTA",
+  "tag": "section",
+  "class": "tfw_cta",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "cta_image",
+      "label": "Image"
+    },
+    {
+      "type": "textarea",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Heading"
+    },
+    {
+      "type": "textarea",
+      "id": "body",
+      "label": "body",
+      "default": "Some body text here"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "Button Text"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button link"
+    }
+  ],
+  "presets": [
+    {
+      "name": "TFW CTA",
+      "category": "TFW",
+      "settings": {}
+    }
+  ]
+}
+{% endschema %}

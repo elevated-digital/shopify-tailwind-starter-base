@@ -1,33 +1,33 @@
 <section class='content-chunk__tfw-content x-bg-framer-cream x-py-20 x-rounded-[64px]'>
-  <div class='page-width x-w-full'>
-    <div class='content__top'>
+  <div class='page-width x-w-full !x-max-w-[1100px]'>
+    <div class='content__top x-text-center x-mb-16'>
       {% render 'tfw-h2-with-flower' %}
     </div>
-    <div class='content__bottom x-grid x-grid-cols-2 x-gap-16'>
-      <div>
-        <img
-          loading='lazy'
-          class='x-mb-10'
-          src='{{ section.settings.image_left | image_url: width: section.settings.image_left.width }}'
-          alt='{{ section.settings.image_left.alt | escape }}'
-          width='{{ section.settings.image_left.width }}'
-          height='{{ section.settings.image_left.height }}'
-        >
-        <div class='global-p__wrapper'>
-          {{ section.settings.text_left }}
-        </div>
-      </div>
-      <div>
-        <div class='global-p__wrapper'>
+    <div class='content__bottom x-grid md:x-grid-cols-2 md:x-gap-16'>
+      <div class='md:x-order-2'>
+        <div class='global-p__wrapper x-mb-10 x-px-6'>
           {{ section.settings.text_right }}
         </div>
         <img
           loading='lazy'
-          class='x-mb-10'
+          class='x-rounded-[24px]'
           src='{{ section.settings.image_right | image_url: width: section.settings.image_right.width }}'
           alt='{{ section.settings.image_right.alt | escape }}'
           width='{{ section.settings.image_right.width }}'
           height='{{ section.settings.image_right.height }}'
+        >
+      </div>
+      <div class='x-grid'>
+        <div class='global-p__wrapper x-px-6 md:x-order-2'>
+          {{ section.settings.text_left }}
+        </div>
+        <img
+          loading='lazy'
+          class='x-mb-10 x-rounded-[24px]'
+          src='{{ section.settings.image_left | image_url: width: section.settings.image_left.width }}'
+          alt='{{ section.settings.image_left.alt | escape }}'
+          width='{{ section.settings.image_left.width }}'
+          height='{{ section.settings.image_left.height }}'
         >
       </div>
     </div>

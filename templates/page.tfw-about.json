@@ -17,10 +17,16 @@
         "image_right": "shopify:\/\/shop_images\/environment-commitment-right.jpg",
         "text_right": "<p>At The Farmer's Wife, sustainability is at the core of our values. We prioritise every step of our process, from sourcing the finest produce to crafting our products and packaging.<\/p>"
       }
+    },
+    "stall-cta": {
+      "type": "tfw-market-stall-cta",
+      "settings": {
+      }
     }
   },
   "order": [
     "hero",
-    "tfw-content"
+    "tfw-content",
+    "stall-cta"
   ]
 }
