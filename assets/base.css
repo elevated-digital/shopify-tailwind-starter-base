@@ -3587,13 +3587,15 @@ details-disclosure > details {
   transform: translate3d(0, 0, 0);
 }
 
-.product-card-wrapper {
+.product-card-wrapper,
+.recipe-card__wrapper {
   transform: translate3d(0, 0, 0);
   transition: transform 300ms;
   position: relative;
 }
 
-.product-card-wrapper::before {
+.product-card-wrapper::before,
+.recipe-card__wrapper::before {
   content: "";
   transition: box-shadow 300ms;
   position: absolute;
@@ -3606,11 +3608,13 @@ details-disclosure > details {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
-.product-card-wrapper:hover {
+.product-card-wrapper:hover,
+.recipe-card__wrapper:hover {
   transform: translate3d(0, -8px, 0);
 }
 
-.product-card-wrapper:hover::before {
+.product-card-wrapper:hover::before,
+.recipe-card__wrapper:hover::before {
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
 }
 
