@@ -12,8 +12,8 @@
       "type": "tfw-left-right-content",
       "settings": {
         "heading": "<p>Our commitment to Sustainability and Recycling<\/p>",
-        "image_left": "shopify:\/\/shop_images\/environment-commitment-left.jpg",
-        "text_left": "<p>In our commitment to promoting recycling, we warmly encourage our valued customers to return their used The Farmer's Wife jars and bottles at any of our market stalls. By doing so, together we contribute to a greener future.<\/p><p>To stay updated on the locations and schedules of our upcoming market stalls, please visit our dedicated Market Stalls page.<\/p>",
+        "image_left": "shopify:\/\/shop_images\/market-stall-mudgee-honey.jpg",
+        "text_left": "<p>In our commitment to promoting recycling, we warmly encourage our valued customers to return their used The Farmer's Wife jars and bottles at any of our market stalls. By doing so, together we contribute to a greener future.<\/p>",
         "image_right": "shopify:\/\/shop_images\/environment-commitment-right.jpg",
         "text_right": "<p>At The Farmer's Wife, sustainability is at the core of our values. We prioritise every step of our process, from sourcing the finest produce to crafting our products and packaging.<\/p>"
       }
@@ -21,6 +21,11 @@
     "stall-cta": {
       "type": "tfw-market-stall-cta",
       "settings": {
+        "cta_image": "shopify:\/\/shop_images\/the-farmers-wife-market-stall.jpg",
+        "heading": "Market Stalls 2023 schedule",
+        "body": "To stay updated on the locations and schedules of our upcoming market stalls, please visit our dedicated Market Stalls page.",
+        "button_text": "View schedule",
+        "button_link": "shopify:\/\/blogs\/market-stalls"
       }
     }
   },
