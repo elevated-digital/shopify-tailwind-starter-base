@@ -307,11 +307,16 @@
     {%- endif -%}
 
       <script>
-  scrollLoad = function(){setTimeout( function(){
+        window.addEventListener("load", (event) => {
+  console.log("page is fully loaded");
+          scrollLoad = function(){setTimeout( function(){
     jdgm.customizeBadges()
   }, 500);}
 
 document.addEventListener("scroll", scrollLoad);
+});
+
+
     
 </script>
   </body>
