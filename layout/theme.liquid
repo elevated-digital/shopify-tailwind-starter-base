@@ -309,9 +309,11 @@
     
   </body>
 </html>
-<script>
-  loadBadge = function(){setTimeout( function(){
+  <script>
+  scrollLoad = function(){setTimeout( function(){
     jdgm.customizeBadges()
   }, 500);}
-document.addEventListener("DOMSubtreeModified", loadBadge);
+
+document.addEventListener("scroll", scrollLoad);
+    
 </script>
