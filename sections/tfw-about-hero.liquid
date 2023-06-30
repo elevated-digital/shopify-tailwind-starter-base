@@ -1,6 +1,6 @@
 {{ 'tfw-about-hero.css' | asset_url | stylesheet_tag }}
 
-<section class='content-chunk__home-hero-banner x-flex x-items-center x-relative x-py-10 md:x-py-20'>
+<section class='content-chunk__home-hero-banner x-flex x-items-center x-relative x-py-10 sm:py-14 md:x-py-20'>
   <div class='page-width x-w-full'>
     <div class='content__top x-grid lg:x-grid-cols-2 x-gap-10 x-items-center'>
       <img
@@ -14,15 +14,15 @@
       <div>
         <div class='x-grid x-max-w-[540px]'>
           {% render 'tfw-breadcrumbs' %}
-          <h1 class='x-leading-[1.1] x-mb-8 x-max-w-[450px]'>{{ section.settings.heading }}</h1>
+          <h1 class='x-leading-[1.1] x-mb-6 md:x-mb-8 x-max-w-[450px]'>{{ section.settings.heading }}</h1>
           <div class='global-p__wrapper x-max-w-[800px] x-mx-auto x-relative'>
             <div
-              class='text-curtain x-absolute x-top-[49px] x-left-0 x-right-0 x-bottom-0 x-w-full x-h-[calc(100%-49px)] !x-block x-bg-farmer-linear x-opacity-100'
+              class='text-curtain x-absolute x-top-[49px] x-left-0 x-right-0 x-bottom-0 x-w-full x-h-[calc(100%-49px) md:!x-block x-bg-farmer-linear x-opacity-100'
             ></div>
             <div class='text-wrapper'>
               {{ section.settings.hero_text }}
             </div>
-            <p class='tfw-btn__main read-more__btn !x-absolute x-bottom-[20%] x-left-0 x-z-[1] x-cursor-pointer'>
+            <p class='tfw-btn__main read-more__btn !x-hidden md:!x-block md:!x-absolute x-bottom-[20%] x-left-0 x-z-[1] x-cursor-pointer'>
               Read more
             </p>
           </div>

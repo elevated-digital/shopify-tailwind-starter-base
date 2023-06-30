@@ -1,16 +1,16 @@
-<section class='content-chunk__tfw-content x-bg-framer-cream x-py-20 x-rounded-[64px]'>
+<section class='content-chunk__tfw-content x-bg-framer-cream x-py-10 sm:py-14 md:x-py-20 x-rounded-[40px] md:x-rounded-[64px]'>
   <div class='page-width x-w-full !x-max-w-[1100px]'>
-    <div class='content__top x-text-center x-mb-16'>
+    <div class='content__top x-text-center x-mb-6 sm:x-mb-10 md:x-mb-16'>
       {% render 'tfw-h2-with-flower' %}
     </div>
-    <div class='content__bottom x-grid md:x-grid-cols-2 md:x-gap-16'>
+    <div class='content__bottom x-grid md:x-grid-cols-2 x-gap-6 md:x-gap-16'>
       <div class='md:x-order-2'>
-        <div class='global-p__wrapper x-mb-10 x-px-6'>
+        <div class='global-p__wrapper x-mb-6 sm:x-mb-10 md:x-px-6'>
           {{ section.settings.text_right }}
         </div>
         <img
           loading='lazy'
-          class='x-rounded-[24px]'
+          class='x-rounded-[16px] md:x-rounded-[24px]'
           src='{{ section.settings.image_right | image_url: width: section.settings.image_right.width }}'
           alt='{{ section.settings.image_right.alt | escape }}'
           width='{{ section.settings.image_right.width }}'
@@ -18,12 +18,12 @@
         >
       </div>
       <div class='x-grid'>
-        <div class='global-p__wrapper x-px-6 md:x-order-2'>
+        <div class='global-p__wrapper x-mb-6 md:x-mb-0 md:x-px-6 md:x-order-2'>
           {{ section.settings.text_left }}
         </div>
         <img
           loading='lazy'
-          class='x-mb-10 x-rounded-[24px]'
+          class='x-mb-0 md:x-mb-10 x-rounded-[16px] md:x-rounded-[24px]'
           src='{{ section.settings.image_left | image_url: width: section.settings.image_left.width }}'
           alt='{{ section.settings.image_left.alt | escape }}'
           width='{{ section.settings.image_left.width }}'

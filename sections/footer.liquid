@@ -31,7 +31,7 @@
   }
 {%- endstyle -%}
 
-<footer class='x-bg-farmer-green x-rounded-t-16 x-relative x-py-10 sm:x-py-16'>
+<footer class='x-bg-farmer-green x-rounded-t-[40px] md:x-rounded-t-16 x-relative x-py-14 sm:x-py-16'>
   {%- liquid
     assign has_social_icons = true
     if settings.social_facebook_link == blank and settings.social_instagram_link == blank and settings.social_youtube_link == blank and settings.social_tiktok_link == blank and settings.social_twitter_link == blank and settings.social_pinterest_link == blank and settings.social_snapchat_link == blank and settings.social_tumblr_link == blank and settings.social_vimeo_link == blank
@@ -261,7 +261,7 @@
   {%- endif -%}
 
   <div class='footer__content-middle'>
-    <div class='footer__content-middle-wrapper page-width'>
+    <div class='footer__content-middle-wrapper page-width !x-px-10 md:!x-px-5'>
       <div class='x-flex x-items-center x-justify-end'>
         {%- if section.settings.show_social and has_social_icons -%}
           {%- render 'social-icons' -%}
@@ -274,7 +274,7 @@
   </div>
 
   <div class='footer__content-bottom'>
-    <div class='footer__content-bottom-wrapper page-width'>
+    <div class='footer__content-bottom-wrapper page-width !x-px-10 md:!x-px-5'>
       <div class='footer__column footer__localization isolate'>
         {%- if section.settings.enable_country_selector and localization.available_countries.size > 1 -%}
           <noscript>
@@ -370,7 +370,7 @@
         {%- endif -%}
       </div>
     </div>
-    <div class='footer__content-bottom-wrapper page-width{% if section.settings.enable_country_selector == false and section.settings.enable_language_selector == false %} x-justify-between{% endif %}'>
+    <div class='footer__content-bottom-wrapper !x-gap-y-2 md:!x-gap-y-[15px]  page-width{% if section.settings.enable_country_selector == false and section.settings.enable_language_selector == false %} x-justify-between{% endif %}'>
       <div class='footer__copyright caption x-text-white'>
         <small class='copyright__content x-tracking-normal'
           >&copy; {{ 'now' | date: '%Y' }}
@@ -393,7 +393,7 @@
         {%- endif -%}
       </div>
       <div class='footer__developer-credit caption x-text-white'>
-        <p class='x-tracking-normal'>
+        <p class='x-tracking-normal x-text-xs'>
           Shopify Store by
           <a
             class='x-font-semibold x-transition-all hover:x-text-farmer-lime'
