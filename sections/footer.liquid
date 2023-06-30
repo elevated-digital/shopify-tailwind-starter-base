@@ -57,7 +57,7 @@
           <div class='footer__blocks-wrapper x-flex x-flex-wrap x-justify-between'>
             {%- for block in section.blocks -%}
               <div
-                class='footer-block x-w-full x-max-w-[400px]'
+                class='footer-block x-w-full md:x-max-w-[400px]'
                 {{ block.shopify_attributes }}
               >
                 {%- if block.settings.heading != blank -%}
@@ -261,7 +261,7 @@
   {%- endif -%}
 
   <div class='footer__content-middle'>
-    <div class='footer__content-middle-wrapper page-width !x-px-10 md:!x-px-5'>
+    <div class='footer__content-middle-wrapper page-width'>
       <div class='x-flex x-items-center x-justify-end'>
         {%- if section.settings.show_social and has_social_icons -%}
           {%- render 'social-icons' -%}
@@ -274,7 +274,7 @@
   </div>
 
   <div class='footer__content-bottom'>
-    <div class='footer__content-bottom-wrapper page-width !x-px-10 md:!x-px-5'>
+    <div class='footer__content-bottom-wrapper page-width md:!x-px-5'>
       <div class='footer__column footer__localization isolate'>
         {%- if section.settings.enable_country_selector and localization.available_countries.size > 1 -%}
           <noscript>
@@ -370,7 +370,7 @@
         {%- endif -%}
       </div>
     </div>
-    <div class='footer__content-bottom-wrapper !x-gap-y-2 md:!x-gap-y-[15px]  page-width{% if section.settings.enable_country_selector == false and section.settings.enable_language_selector == false %} x-justify-between{% endif %}'>
+    <div class='footer__content-bottom-wrapper !x-gap-y-2 md:!x-gap-y-[15px] !x-justify-between x-flex-col sm:x-flex-row x-items-center page-width{% if section.settings.enable_country_selector == false and section.settings.enable_language_selector == false %} x-justify-between{% endif %}'>
       <div class='footer__copyright caption x-text-white'>
         <small class='copyright__content x-tracking-normal'
           >&copy; {{ 'now' | date: '%Y' }}

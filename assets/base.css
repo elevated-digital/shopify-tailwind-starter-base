@@ -3762,4 +3762,21 @@ details-disclosure > details {
   .footer-block__details-content {
     margin-bottom: 0 !important;
   }
+
+  .footer__content-middle-wrapper,
+  .footer__content-bottom-wrapper {
+    padding-left: calc(4rem / var(--font-body-scale));
+    padding-right: calc(4rem / var(--font-body-scale));
+  }
+
+  .newsletter-form__field-wrapper {
+    max-width: 100% !important;
+  }
+
+  .categories-list__wrapper li a {
+    font-size: 12px;
+  }
+
+  
+
 }

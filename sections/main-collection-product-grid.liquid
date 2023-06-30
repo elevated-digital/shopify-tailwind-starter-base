@@ -13,7 +13,7 @@
   <script src='{{ 'product-form.js' | asset_url }}' defer='defer'></script>
 {%- endif -%}
 
-<div class='x-bg-framer-cream x-rounded-t-16 x-py-10 sm:x-py-14 lg:x-pt-20 lg:x-pb-[144px] lg:-x-mb-16'>
+<div class='x-bg-framer-cream x-rounded-t-[40px] md:x-rounded-t-16 x-pt-10 sm:x-pt-14 lg:x-pt-20 x-pb-24 -x-mb-10 lg:x-pb-[144px] lg:-x-mb-16'>
   {% render 'tfw-collections-list' %}
   {%- paginate collection.products by section.settings.products_per_page -%}
     {% comment %} Sort is the first tabbable element when filter type is vertical {% endcomment %}

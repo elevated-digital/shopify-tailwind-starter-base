@@ -481,3 +481,10 @@
   font-size: 12px;
   margin-bottom: 12px;
 }
+
+@media screen and (max-width: 749px) {
+  .product-card-wrapper .jdgm-prev-badge {
+    font-size: 10px;
+    margin-bottom: 0;
+  }
+}

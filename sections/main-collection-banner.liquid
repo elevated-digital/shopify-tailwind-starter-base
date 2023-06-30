@@ -9,11 +9,11 @@
   }
 {%- endstyle -%}
 
-<div class='collection-hero !x-py-16 {% if section.settings.show_collection_image %} collection-hero--with-image{% endif %} color-{{ section.settings.color_scheme }} gradient'>
-  <div class='collection-hero__inner page-width x-justify-between'>
-    <div class='collection-hero__text-wrapper'>
+<div class='collection-hero x-py-10 md:!x-py-16 {% if section.settings.show_collection_image %} collection-hero--with-image{% endif %} color-{{ section.settings.color_scheme }} gradient'>
+  <div class='collection-hero__inner page-width x-justify-between x-gap-6 md:x-gap-0 !x-pb-0'>
+    <div class='collection-hero__text-wrapper x-order-2 md:x-order-1'>
       {% render 'tfw-breadcrumbs' %}
-      <h1 class='collection-hero__title !x-mb-8'>
+      <h1 class='collection-hero__title !x-mb-4 md:!x-mb-8'>
         <span class='visually-hidden'>{{ 'sections.collection_template.title' | t }}: </span>
         {{- collection.title | escape -}}
       </h1>

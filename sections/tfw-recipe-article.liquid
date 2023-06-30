@@ -4,7 +4,7 @@
 {{ 'component-card.css' | asset_url | stylesheet_tag }}
 {{ 'component-price.css' | asset_url | stylesheet_tag }}
 
-<article class='article-template lg:x-mb-24' itemscope itemtype='http://schema.org/BlogPosting'>
+<article class='article-template x-mb-16 lg:x-mb-24' itemscope itemtype='http://schema.org/BlogPosting'>
   {%- for block in section.blocks -%}
     {%- case block.type -%}
       {%- when '@app' -%}
@@ -13,14 +13,16 @@
         </div>
       {%- when 'featured_image' -%}
         {%- if article.image -%}
-          <div class='article-template__hero-container lg:!x-max-w-[1200px] lg:!x-mt-10' {{ block.shopify_attributes }}>
+          <div
+            class='article-template__hero-container page-width lg:!x-max-w-[1200px] !x-mt-10'
+            {{ block.shopify_attributes }}
+          >
             {% render 'tfw-breadcrumbs' %}
             <div
-              class='article-template__hero-{{ block.settings.image_height }} media x-rounded-[24px]'
+              class='article-template__hero-{{ block.settings.image_height }} media x-mt-5 md:x-mt-0 x-rounded-[16px] md:x-rounded-[24px] x-pb-[70%] md:x-pb-[45%]'
               itemprop='image'
               {% if block.settings.image_height == 'adapt' and article.image %}
                 {% comment %} style='padding-bottom: {{ 1 | divided_by: article.image.aspect_ratio | times: 100 }}%;' {% endcomment %}
-                style='padding-bottom:45.22535211267606%'
               {% endif %}
             >
               <img
@@ -84,21 +86,21 @@
           {{ article.content }}
         </div>
       {%- when 'recipe_details' -%}
-        <div class='recipe_details page-width page-width--narrow !x-pb-10 !x-mb-10 x-border-b x-border-[rgba(18,18,18,0.08)] x-text-center !x-mt-12'>
-          <div class='x-grid x-grid-cols-4 md:x-gap-10'>
-            <div class='recipe__difficulty x-border-r x-border-[rgba(18,18,18,0.08)] x-pr-10'>
+        <div class='recipe_details page-width page-width--narrow x-text-center !x-mt-8 md:!x-mt-12'>
+          <div class='x-grid x-grid-cols-2 md:x-grid-cols-4 md:x-gap-10 !x-pb-10 !x-mb-10 x-border-b x-border-[rgba(18,18,18,0.08)]'>
+            <div class='recipe__difficulty x-pb-6 md:x-pb-0 x-border-b md:x-border-b-0 x-border-r x-border-[rgba(18,18,18,0.08)] md:x-pr-10'>
               <p class='x-text-sm x-text-farmer-green x-font-semibold x-mb-2'>Difficulty</p>
               <p>{{ article.metafields.custom.recipe_difficulty }}</p>
             </div>
-            <div class='recipe__prep-time x-border-r x-border-[rgba(18,18,18,0.08)] x-pr-10'>
+            <div class='recipe__prep-time x-pb-6 md:x-pb-0 x-border-b md:x-border-b-0 md:x-border-r x-border-[rgba(18,18,18,0.08)] md:x-pr-10'>
               <p class='x-text-sm x-text-farmer-green x-font-semibold x-mb-2'>Prep Time</p>
               <p>{{ article.metafields.custom.recipe_prep_time }}</p>
             </div>
-            <div class='recipe__cooking-time x-border-r x-border-[rgba(18,18,18,0.08)] x-pr-10'>
+            <div class='recipe__cooking-time x-pt-6 md:x-pt-0 x-border-r x-border-[rgba(18,18,18,0.08)] md:x-pr-10'>
               <p class='x-text-sm x-text-farmer-green x-font-semibold x-mb-2'>Cooking Time</p>
               <p>{{ article.metafields.custom.recipe_cook_time }}</p>
             </div>
-            <div class='recipe__serving'>
+            <div class='recipe__serving  x-pt-6 md:x-pt-0'>
               <p class='x-text-sm x-text-farmer-green x-font-semibold x-mb-2'>
                 {{ article.metafields.custom.recipe_serving_type }}
               </p>
@@ -107,15 +109,15 @@
           </div>
         </div>
       {%- when 'featured_ingredient' -%}
-        <div class='recipe_details page-width page-width--narrow !x-pb-10 !x-mb-10 x-border-b x-border-[rgba(18,18,18,0.08)]'>
-          <div>
+        <div class='recipe_details page-width page-width--narrow'>
+          <div class='!x-pb-8 !x-mb-8 md:!x-pb-10 md:!x-mb-10 x-border-b x-border-[rgba(18,18,18,0.08)]'>
             <p class='x-text-sm x-text-farmer-green x-font-semibold x-mb-4'>Featured Ingredient</p>
             {%- render 'tfw-card-product-simple', product: block.settings.featured_product -%}
           </div>
         </div>
       {%- when 'ingredients' -%}
         <div class='recipe_ingredients_method page-width page-width--narrow'>
-          <div class='recipe__ingredients !x-pb-10 !x-mb-10 x-border-b x-border-[rgba(18,18,18,0.08)]'>
+          <div class='recipe__ingredients !x-pb-8 !x-mb-8 md:!x-pb-10 md:!x-mb-10 x-border-b x-border-[rgba(18,18,18,0.08)]'>
             <h2 class='x-mb-8'>Ingredients</h2>
             {{ article.metafields.custom.recipe_ingredients | metafield_tag }}
           </div>

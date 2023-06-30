@@ -3,11 +3,11 @@
 {{ 'section-main-blog.css' | asset_url | stylesheet_tag }}
 
 <div class='main-blog page-width !x-py-10 lg:!x-py-20'>
-  <div class='x-flex x-gap-10 lg:x-gap-16 x-items-center'>
-    <div class='cta__image x-w-full x-rounded-[24px] x-pb-[35%] x-!bg-cover !x-inline-grid x-relative'>
+  <div class='x-flex x-gap-10 x-flex-col lg:x-flex-row lg:x-gap-16 x-items-center'>
+    <div class='cta__image x-w-full x-pb-[55%] md:x-pb-[35%] x-!bg-cover !x-inline-grid x-relative'>
       <img
         loading='eager'
-        class='x-absolute x-top-0 x-left-0 x-bottom-0 x-right-0  x-block x-w-full x-h-full x-max-w-full x-rounded-[24px] x-object-cover x-object-center'
+        class='x-absolute x-top-0 x-left-0 x-bottom-0 x-right-0  x-block x-w-full x-h-full x-max-w-full x-rounded-[16px] md:x-rounded-[24px] x-object-cover x-object-center'
         src='{{ blog.metafields.custom.featured_image | image_url: blog.metafields.custom.featured_image.width }}'
         alt='{{ blog.metafields.custom.featured_image.alt | escape }}'
         width='{{ blog.metafields.custom.featured_image.width }}'
@@ -16,14 +16,14 @@
     </div>
     <div class='x-grid x-justify-items-start x-max-w-[450px]'>
       {% render 'tfw-breadcrumbs' %}
-      <h1 class='!x-mb-8'>{{ blog.title | escape }}</h1>
+      <h1 class='x-mb-6 md:x-mb-8'>{{ blog.title | escape }}</h1>
       {% if blog.metafields.custom.blog_description %}
         <p>{{ blog.metafields.custom.blog_description }}</p>
       {% endif %}
     </div>
   </div>
 </div>
-<div class='x-bg-framer-cream x-rounded-t-16 x-py-10 sm:x-py-14 lg:x-pt-20 lg:x-pb-[144px] lg:-x-mb-16'>
+<div class='recipe-cards__wrapper x-bg-framer-cream x-rounded-t-[40px] md:x-rounded-t-16 x-pt-10 sm:x-pt-14 lg:x-pt-20 x-pb-24 -x-mb-10 lg:x-pb-[144px] lg:-x-mb-16'>
   <div class='page-width'>
     {% render 'tfw-recipes-tags-list' %}
     {%- assign totalRecipes = blog.articles.size -%}
@@ -35,7 +35,7 @@
         {%- if endRecipe > totalRecipes -%}
           {%- assign endRecipe = totalRecipes -%}
         {%- endif -%}
-        <div class='recipe-count x-text-sm x-text-right x-mb-8'>
+        <div class='recipe-count x-text-left md:x-text-right x-text-xs md:x-text-sm x-mb-4 md:x-mb-8'>
           Showing {{ startRecipe }} - {{ endRecipe }} of {{ totalRecipes }} recipes
         </div>
       </div>
