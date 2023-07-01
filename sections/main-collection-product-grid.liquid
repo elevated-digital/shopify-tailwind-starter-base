@@ -190,7 +190,7 @@
 </div>
 
 {% javascript %}
-  document.addEventListener('shopify:section:load', function (event) {
+  document.addEventListener('DOMContentLoaded', function () {
     jQuery(function ($) {
       // Owl Carousel
       $('.owl-carousel').owlCarousel({

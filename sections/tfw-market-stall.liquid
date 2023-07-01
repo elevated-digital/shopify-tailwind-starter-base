@@ -77,7 +77,7 @@
 </section>
 
 {% javascript %}
-  document.addEventListener('shopify:section:load', function (event) {
+  document.addEventListener('DOMContentLoaded', function () {
     jQuery(function ($) {
       // Market Stall Accordion
       $('.content-chunk__footer-market-stall').on('click', '#accordion-header', function (e) {
