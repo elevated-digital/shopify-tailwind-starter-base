@@ -33,10 +33,12 @@
 </section>
 
 {% javascript %}
-  jQuery(function ($) {
-    $('.read-more__btn').on('click', function () {
-      $('.text-curtain').css('opacity', '0');
-      $(this).css('visibility', 'hidden');
+  document.addEventListener('DOMContentLoaded', function () {
+    jQuery(function ($) {
+      $('.read-more__btn').on('click', function () {
+        $('.text-curtain').css('opacity', '0');
+        $(this).css('visibility', 'hidden');
+      });
     });
   });
 {% endjavascript %}

@@ -59,15 +59,17 @@
 </div>
 
 {% javascript %}
-  jQuery(function ($) {
-    // Owl Carousel
-    $('.owl-carousel').owlCarousel({
-      loop: false,
-      autoWidth: true,
-      margin: 10,
-      nav: true,
+  document.addEventListener('DOMContentLoaded', function () {
+    jQuery(function ($) {
+      // Owl Carousel
+      $('.owl-carousel').owlCarousel({
+        loop: false,
+        autoWidth: true,
+        margin: 10,
+        nav: true,
+      });
+      $('.owl-carousel .owl-dots').remove();
     });
-    $('.owl-carousel .owl-dots').remove();
   });
 {% endjavascript %}
 

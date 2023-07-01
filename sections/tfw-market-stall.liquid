@@ -77,26 +77,28 @@
 </section>
 
 {% javascript %}
-  jQuery(function ($) {
-    // Market Stall Accordion
-    $('.content-chunk__footer-market-stall').on('click', '#accordion-header', function (e) {
-      e.preventDefault();
+  document.addEventListener('DOMContentLoaded', function () {
+    jQuery(function ($) {
+      // Market Stall Accordion
+      $('.content-chunk__footer-market-stall').on('click', '#accordion-header', function (e) {
+        e.preventDefault();
 
-      $(this).toggleClass('selected');
-      $(this).next('.accordion-content').slideToggle(200);
+        $(this).toggleClass('selected');
+        $(this).next('.accordion-content').slideToggle(200);
 
-      var accordionContent = $(this).next('.accordion-content');
-      var accordionText = $('.open-close__text'); // Get the accordion text element
+        var accordionContent = $(this).next('.accordion-content');
+        var accordionText = $('.open-close__text'); // Get the accordion text element
 
-      if ($(this).hasClass('selected')) {
-        accordionText.text('Close market details');
-        setTimeout(function () {
-          accordionContent.addClass('accord--open');
-        }, 150); // Wait for 1 second before adding the class
-      } else {
-        accordionText.text('Expand market details');
-        accordionContent.removeClass('accord--open');
-      }
+        if ($(this).hasClass('selected')) {
+          accordionText.text('Close market details');
+          setTimeout(function () {
+            accordionContent.addClass('accord--open');
+          }, 150); // Wait for 1 second before adding the class
+        } else {
+          accordionText.text('Expand market details');
+          accordionContent.removeClass('accord--open');
+        }
+      });
     });
   });
 {% endjavascript %}

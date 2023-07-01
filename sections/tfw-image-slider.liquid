@@ -24,18 +24,20 @@
 
 <script src='{{ 'owl-carousel.js' | asset_url }}' defer='defer'></script>
 {% javascript %}
-  jQuery(function ($) {
-    // Owl Carousel
-    $('.owl-carousel').owlCarousel({
-      center: true,
-      items: 1,
-      loop: true,
-      margin: 10,
-      responsive: {
-        950: {
-          margin: 0,
+  document.addEventListener('DOMContentLoaded', function () {
+    jQuery(function ($) {
+      // Owl Carousel
+      $('.owl-carousel').owlCarousel({
+        center: true,
+        items: 1,
+        loop: true,
+        margin: 10,
+        responsive: {
+          950: {
+            margin: 0,
+          },
         },
-      },
+      });
     });
   });
 {% endjavascript %}
