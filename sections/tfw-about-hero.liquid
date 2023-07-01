@@ -33,7 +33,7 @@
 </section>
 
 {% javascript %}
-  document.addEventListener('DOMContentLoaded', function () {
+  document.addEventListener('shopify:section:load', function (event) {
     jQuery(function ($) {
       $('.read-more__btn').on('click', function () {
         $('.text-curtain').css('opacity', '0');
