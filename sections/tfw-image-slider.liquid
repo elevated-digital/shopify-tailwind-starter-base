@@ -24,7 +24,7 @@
 
 <script src='{{ 'owl-carousel.js' | asset_url }}' defer='defer'></script>
 {% javascript %}
-  document.addEventListener('DOMContentLoaded', function () {
+  document.addEventListener('shopify:section:load', function (event) {
     jQuery(function ($) {
       // Owl Carousel
       $('.owl-carousel').owlCarousel({
