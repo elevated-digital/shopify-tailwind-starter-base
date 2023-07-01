@@ -1,7 +1,8 @@
 <div class='page-width x-text-center'>
-  <ul class='categories-list__wrapper x-inline-flex x-justify-center x-items-center x-gap-8 md:x-gap-10 x-mb-10 x-bg-[#f3eee8] x-py-4 lg:x-py-8 x-px-16 lg:x-px-[164px] x-rounded-full'>
+  <ul class='categories-list__wrapper owl-carousel owl-theme x-mb-5 md:x-mb-10'>
     <li>
       <a
+        class='x-bg-[#f3eee8] x-py-3 x-px-6 x-rounded-full'
         href='/blogs/recipes'
         {% if request.path == '/blogs/recipes' %}
           aria-current='page'
@@ -15,6 +16,7 @@
       {% assign tag_url = '/blogs/recipes/tagged/' | append: tag_handle %}
       <li>
         <a
+          class='x-bg-[#f3eee8] x-py-3 x-px-6 x-rounded-full'
           href='{{ tag_url }}'
           {% if request.path contains tag_url %}
             aria-current='page'

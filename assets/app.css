@@ -532,6 +532,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   order: 2;
 }
 
+.x-order-1 {
+  order: 1;
+}
+
 .x-col-span-2 {
   grid-column: span 2 / span 2;
 }
@@ -697,6 +701,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .\!x-mb-4 {
   margin-bottom: 16px !important;
+}
+
+.x-mb-5 {
+  margin-bottom: 20px;
 }
 
 .x-block {
@@ -1084,6 +1092,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-bottom-left-radius: 0.75rem;
 }
 
+.\!x-rounded-t-\[8px\] {
+  border-top-left-radius: 8px !important;
+  border-top-right-radius: 8px !important;
+}
+
 .\!x-border-0 {
   border-width: 0px !important;
 }
@@ -1167,6 +1180,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .x-p-4 {
   padding: 16px;
+}
+
+.\!x-p-3 {
+  padding: 12px !important;
 }
 
 .\!x-py-10 {
@@ -1648,6 +1665,10 @@ Ensure the default browser behavior of the `hidden` attribute.
     margin-bottom: 40px;
   }
 
+  .sm\:x-flex {
+    display: flex;
+  }
+
   .sm\:x-max-h-full {
     max-height: 100%;
   }
@@ -1868,12 +1889,21 @@ Ensure the default browser behavior of the `hidden` attribute.
     border-bottom-left-radius: 1rem;
   }
 
+  .md\:\!x-rounded-t-\[16px\] {
+    border-top-left-radius: 16px !important;
+    border-top-right-radius: 16px !important;
+  }
+
   .md\:x-border-r {
     border-right-width: 1px;
   }
 
   .md\:x-border-b-0 {
     border-bottom-width: 0px;
+  }
+
+  .md\:\!x-p-4 {
+    padding: 16px !important;
   }
 
   .md\:x-px-0 {

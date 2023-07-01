@@ -2,6 +2,8 @@
 {{ 'component-loading-overlay.css' | asset_url | stylesheet_tag }}
 {{ 'component-card.css' | asset_url | stylesheet_tag }}
 {{ 'component-price.css' | asset_url | stylesheet_tag }}
+{{ 'owl-carousel.css' | asset_url | stylesheet_tag }}
+{{ 'tfw-owl-carousel.css' | asset_url | stylesheet_tag }}
 
 {% if section.settings.image_shape == 'blob' %}
   {{ 'mask-blobs.css' | asset_url | stylesheet_tag }}
@@ -13,7 +15,9 @@
   <script src='{{ 'product-form.js' | asset_url }}' defer='defer'></script>
 {%- endif -%}
 
-<div class='x-bg-framer-cream x-rounded-t-[40px] md:x-rounded-t-16 x-pt-10 sm:x-pt-14 lg:x-pt-20 x-pb-24 -x-mb-10 lg:x-pb-[144px] lg:-x-mb-16'>
+<script src='{{ 'owl-carousel.js' | asset_url }}' defer='defer'></script>
+
+<div class='x-bg-framer-cream x-overflow-hidden x-rounded-t-[40px] md:x-rounded-t-16 x-pt-10 sm:x-pt-14 lg:x-pt-20 x-pb-24 -x-mb-10 lg:x-pb-[144px] lg:-x-mb-16'>
   {% render 'tfw-collections-list' %}
   {%- paginate collection.products by section.settings.products_per_page -%}
     {% comment %} Sort is the first tabbable element when filter type is vertical {% endcomment %}
@@ -184,6 +188,19 @@
     {% render 'mask-arch' %}
   {%- endif -%}
 </div>
+
+{% javascript %}
+  jQuery(function ($) {
+    // Owl Carousel
+    $('.owl-carousel').owlCarousel({
+      loop: false,
+      autoWidth: true,
+      margin: 10,
+      nav: true,
+    });
+    $('.owl-carousel .owl-dots').remove();
+  });
+{% endjavascript %}
 
 {% schema %}
 {

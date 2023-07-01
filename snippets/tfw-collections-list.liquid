@@ -1,7 +1,8 @@
 <div class='page-width x-text-center'>
-  <ul class='categories-list__wrapper x-hidden xl:x-inline-flex x-justify-center x-items-center x-gap-10 x-mb-10 x-bg-[#f3eee8] x-py-8 x-px-16 2xl:x-px-[164px] x-rounded-full'>
+  <ul class='categories-list__wrapper owl-carousel owl-theme x-mb-5 md:x-mb-10'>
     <li>
       <a
+        class='x-bg-[#f3eee8] x-py-3 x-px-6 x-rounded-full'
         href='/collections/all'
         {% if request.path == '/collections/all' %}
           aria-current='page'
@@ -13,6 +14,7 @@
     {% for collection in collections %}
       <li>
         <a
+          class='x-bg-[#f3eee8] x-py-3 x-px-6 x-rounded-full'
           href='{{ collection.url }}'
           {% if request.path == collection.url %}
             aria-current='page'

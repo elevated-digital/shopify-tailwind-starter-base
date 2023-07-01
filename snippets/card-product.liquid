@@ -33,7 +33,7 @@
       assign ratio = 1
     endif
   -%}
-  <div class='product-card__{{ card_product.handle }} card-wrapper product-card-wrapper x-bg-white x-rounded-[12px] md:x-rounded-[16px] {% if card_product.available == false %} product__sold-out {% else %}{% for variant in card_product.variants %}{% if variant.price < variant.compare_at_price %} product__on-sale {% break %}{% endif %}{% endfor %}{% endif %}'>
+  <div class='product-card__{{ card_product.handle }} card-wrapper product-card-wrapper x-bg-white x-rounded-[8px] md:x-rounded-[16px] {% if card_product.available == false %} product__sold-out {% else %}{% for variant in card_product.variants %}{% if variant.price < variant.compare_at_price %} product__on-sale {% break %}{% endif %}{% endfor %}{% endif %}'>
     <div
       class='
         card
@@ -52,7 +52,7 @@
         style='--ratio-percent: {{ 1 | divided_by: 1 | times: 100 }}%;'
       >
         {%- if card_product.featured_media -%}
-          <div class='card__media !x-rounded-[8px] md:!x-rounded-[16px] {% if image_shape and image_shape != 'default' %} shape--{{ image_shape }} color-{{ settings.card_color_scheme }} gradient{% endif %}'>
+          <div class='card__media !x-rounded-t-[8px] md:!x-rounded-t-[16px] {% if image_shape and image_shape != 'default' %} shape--{{ image_shape }} color-{{ settings.card_color_scheme }} gradient{% endif %}'>
             <div class='media media--transparent'>
               {%- if card_product.media[1] != null -%}
                 <img
@@ -98,7 +98,7 @@
             </div>
           </div>
         {%- endif -%}
-        <div class='card__content !x-p-4'>
+        <div class='card__content !x-p-3 md:!x-p-4'>
           <div class='card__information'>
             <h3
               class='card__heading'
@@ -145,7 +145,7 @@
       </div>
       <div class='card__content'>
         <div class='card__information !x-py-5 md:!x-py-8'>
-          <div class='tfw-card-collection__wrapper x-flex x-items-center x-justify-center x-gap-5'>
+          <div class='tfw-card-collection__wrapper x-items-center x-justify-center x-gap-5 x-hidden sm:x-flex'>
             {% if card_product.collections.first %}
               {% assign first_collection = card_product.collections.first %}
               <p class='tfw-card__collection tfw-collections__{{ first_collection.handle }} x-relative x-text-[8px] sm:x-text-[10px] x-leading-[1.5rem] x-text-white x-font-semibold x-inline-flex x-items-center x-justify-center x-h-[17px] x-px-2 x-mb-4'>
