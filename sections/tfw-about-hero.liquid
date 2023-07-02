@@ -33,12 +33,10 @@
 </section>
 
 {% javascript %}
-  document.addEventListener('shopify:section:load', function (event) {
-    jQuery(function ($) {
-      $('.read-more__btn').on('click', function () {
-        $('.text-curtain').css('opacity', '0');
-        $(this).css('visibility', 'hidden');
-      });
+  jQuery(function ($) {
+    $('.read-more__btn').on('click', function () {
+      $('.text-curtain').css('opacity', '0');
+      $(this).css('visibility', 'hidden');
     });
   });
 {% endjavascript %}
