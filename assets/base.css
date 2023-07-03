@@ -3723,6 +3723,12 @@ details-disclosure > details {
   margin-right: auto;
 }
 
+.menu-drawer__menu-item--active, .menu-drawer__menu-item:focus, .menu-drawer__close-button:focus, .menu-drawer__menu-item:hover, .menu-drawer__close-button:hover,
+.menu-drawer__utility-links {
+  --tw-bg-opacity: 1;
+  background-color: rgb(249 244 239 / var(--tw-bg-opacity)) !important;
+}
+
 @media screen and (min-width: 750px) {
   
   #CartDrawer .drawer__inner {

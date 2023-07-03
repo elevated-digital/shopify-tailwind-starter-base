@@ -3,7 +3,7 @@
     <div class='x-flex x-flex-col md:x-flex-row x-gap-6 md:x-gap-10 lg:x-gap-16 x-items-center'>
       <div class='cta__image x-w-full x-rounded-[24px] x-pb-[37%] x-!bg-cover !x-hidden md:!x-inline-grid x-relative'>
         <img
-          loading='eager'
+          loading='lazy'
           class='x-absolute x-top-0 x-left-0 x-bottom-0 x-right-0  x-block x-w-full x-h-full x-max-w-full x-rounded-[16px] md:x-rounded-[24px] x-object-cover x-object-center'
           src='{{ section.settings.cta_image | image_url }}'
           alt='{{ section.settings.cta_image.alt | escape }}'

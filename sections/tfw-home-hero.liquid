@@ -1,12 +1,12 @@
-<section class='content-chunk__home-hero-banner x-flex x-items-center x-relative x-py-16'>
+<section class='content-chunk__home-hero-banner x-flex x-items-center x-relative x-py-10 md:x-py-16 x-overflow-hidden'>
   <div class='page-width x-w-full'>
-    <div class='x-grid x-grid-cols-12 x-items-center'>
-      <div class='x-col-span-4'>
-        <div class='x-grid x-gap-10 x-justify-items-start'>
-          <div class='x-font-semibold x-text-farmer-black x-text-xl md:x-text-5xl md:x-leading-[1.1em]'>
+    <div class='x-flex x-gap-8 md:x-gap-0 x-justify-between x-items-center x-flex-col md:x-flex-row'>
+      <div class='x-max-w-[400px] x-order-2 md:x-order-1'>
+        <div class='x-grid x-gap-4 md:x-gap-10 x-justify-items-start'>
+          <div class='x-font-semibold x-text-farmer-black x-text-3xl md:x-text-5xl md:x-leading-[1.1em]'>
             {{ section.settings.heading }}
           </div>
-          <h1 class='x-max-w-[400px] !x-text-[17px] !x-leading-normal !x-font-normal x-text-farmer-black-light'>
+          <h1 class='!x-text-base md:!x-text-[17px] !x-leading-normal !x-font-normal x-text-farmer-black-light'>
             {{ section.settings.banner_text }}
           </h1>
           <a class='tfw-btn__main' href='{{ section.settings.button_link }}'>
@@ -15,11 +15,12 @@
           </a>
         </div>
       </div>
-      <div class='x-col-span-8'>
+      <div class='x-order-1 md:x-order-2'>
         <img
+          id='dynamic-image'
           loading='eager'
           class='md:x-ml-auto'
-          src='{{ section.settings.banner_image | image_url: width: 864 }}'
+          src='{{ section.settings.banner_image | image_url: width: section.settings.banner_image.width }}'
           alt='{{ section.settings.banner_image.alt | escape }}'
           width='{{ section.settings.banner_image.width }}'
           height='{{ section.settings.banner_image.height }}'
@@ -28,6 +29,26 @@
     </div>
   </div>
 </section>
+
+{% javascript %}
+  // Check if our dynamic image exists
+  var dynamicImage = document.querySelector('#dynamic-image');
+
+  if (dynamicImage) {
+    adjustImageWidth(); // Run on page load
+
+    window.addEventListener('resize', function () {
+      adjustImageWidth();
+    });
+  }
+
+  function adjustImageWidth() {
+    var imageHeight = dynamicImage.offsetHeight;
+    var aspectRatio = 864 / 662; // Image aspect ratio (width / height)
+    var imageWidth = imageHeight * aspectRatio;
+    dynamicImage.style.minWidth = imageWidth + 'px';
+  }
+{% endjavascript %}
 
 {% schema %}
 {

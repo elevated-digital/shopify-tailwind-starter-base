@@ -1,13 +1,19 @@
 <section class='content-chunk__tfw-story x-py-10 sm:x-py-14 lg:x-py-24'>
   <div class='page-width x-w-full'>
-    <div class='x-flex x-gap-10 lg:x-gap-16 x-items-center'>
-      <div
-        class='cta__image x-w-full x-rounded-[24px] x-pb-[35%] x-!bg-cover !x-inline-grid x-max-w-[912px] lg:x-min-h-[490px]'
-        style='background:url({{ section.settings.cta_image | image_url }}{{ section.settings.cta_image.width }}) no-repeat'
-      ></div>
-      <div class='x-grid x-justify-items-start'>
+    <div class='x-flex x-flex-col md:x-flex-row x-gap-6 md:x-gap-10 lg:x-gap-16 x-items-center'>
+      <div class='cta__image x-w-full x-max-w-[912px] x-rounded-[24px] x-pb-[35%] x-!bg-cover !x-hidden md:!x-inline-grid x-relative'>
+        <img
+          loading='lazy'
+          class='x-absolute x-top-0 x-left-0 x-bottom-0 x-right-0  x-block x-w-full x-h-full x-max-w-full x-rounded-[16px] md:x-rounded-[24px] x-object-cover x-object-center'
+          src='{{ section.settings.cta_image | image_url }}'
+          alt='{{ section.settings.cta_image.alt | escape }}'
+          width='{{ section.settings.cta_image.width }}'
+          height='{{ section.settings.cta_image.height }}'
+        >
+      </div>
+      <div class='x-grid x-justify-items-center x-text-center md:x-text-left md:x-justify-items-start x-max-w-[300px] md:x-max-w-none'>
         {% render 'icon-tfw-flower-lg' %}
-        <h2 class='x-max-w-[350px] x-inline-flex x-items-center gap-4 x-font-semibold x-text-farmer-black md:x-text-4xl x-mb-10 x-mt-4'>
+        <h2 class='x-max-w-[350px] x-inline-flex x-items-center gap-4 x-font-semibold x-text-farmer-black md:x-text-4xl x-mb-6 md:x-mb-10 x-mt-4'>
           {{ section.settings.heading }}
         </h2>
         <a class='tfw-btn__main' href='{{ section.settings.button_link }}'>

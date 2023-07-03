@@ -2,10 +2,10 @@
 {{ 'component-card.css' | asset_url | stylesheet_tag }}
 {{ 'component-price.css' | asset_url | stylesheet_tag }}
 
-<section class='content-chunk__popular-products x-bg-framer-cream x-py-20 x-rounded-[64px]'>
+<section class='content-chunk__popular-products x-bg-framer-cream x-pt-10 x-pb-12 md:x-py-20 x-rounded-[40px] md:x-rounded-[64px]'>
   <div class='page-width x-w-full'>
-    <div class='x-mb-16'>
-      <div class='x-flex x-items-center x-justify-between'>
+    <div class='x-mb-10 md:x-mb-16'>
+      <div class='x-flex x-items-center x-justify-between x-flex-col x-gap-3 md:x-flex-row md:x-gap-0'>
         {% render 'tfw-h2-with-flower' %}
         <a class='tfw-btn__main' href='{{ section.settings.button_link }}'>
           {{ section.settings.button_text }}
@@ -17,7 +17,7 @@
       <ul
         id='product-grid'
         data-id='{{ section.id }}'
-        class='x-grid x-grid-cols-2 x-gap-x-4 lg:!x-gap-x-8 lg:x-grid-cols-4'
+        class='x-grid x-grid-cols-2 x-gap-4 lg:!x-gap-x-8 lg:!x-gap-y-14 lg:x-grid-cols-4'
       >
         {%- for product in section.settings.product_list -%}
           {% assign lazy_load = false %}

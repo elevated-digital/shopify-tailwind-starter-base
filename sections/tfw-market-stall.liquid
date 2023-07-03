@@ -1,34 +1,40 @@
 {{ 'tfw-market-stall-accordion.css' | asset_url | stylesheet_tag }}
 
-<section class='content-chunk__footer-market-stall x-bg-framer-cream x-rounded-t-16 -x-mb-14 x-px-5 x-py-10 sm:x-px-10 sm:x-py-14 lg:x-px-16 x-relative'>
+<section class='content-chunk__footer-market-stall x-bg-framer-cream x-rounded-t-[40px] md:x-rounded-t-16 -x-mb-14 x-py-10 sm:x-py-14 x-px-5 md:x-px-0 x-relative'>
   <div class='page-width !x-mb-14'>
     <div class='accordion__wrapper'>
       {% assign blogHandle = 'market-stalls' %}
 
       {% for article in blogs[blogHandle].articles limit: 1 %}
-        <div id='accordion-header' class='x-flex x-justify-between x-items-center x-cursor-pointer'>
-          <div>
+        <div
+          id='accordion-header'
+          class='x-flex x-justify-between md:x-items-center x-flex-col md:x-flex-row x-cursor-pointer'
+        >
+          <div class='x-grid x-gap-2 md:x-gap-0 x-mb-6 md:x-mb-0'>
             {% liquid
               assign marketDate = article.metafields.custom.market_date
               assign current_date = 'now' | date: '%Y-%m-%d'
               assign market_date_comparison = marketDate | date: '%Y-%m-%d'
+              assign todaysMarketStall = "Today's Market Stall:"
 
               if market_date_comparison > current_date
-                echo '<p>Next Market Stall:</p>'
+                echo '<p class="x-text-sm md:x-text-base">Next Market Stall:</p>'
               elsif market_date_comparison == current_date
-                echo "<p>Today's Market Stall:</p>"
+                echo '<p class="x-text-sm md:x-text-base">{{ todaysMarketStall }}</p>'
               else
-                echo '<p>Recent Market Stall:</p>'
+                echo '<p class="x-text-sm md:x-text-base">Recent Market Stall:</p>'
               endif
             %}
 
-            <h2 class='x-flex'>
+            <h2 class='x-flex x-max-w-[250px] md:x-max-w-none'>
               {{ article.title }}
-              {% render 'icon-tfw-info' %}
+              <div class='x-hidden md:x-inline-flex'>
+                {% render 'icon-tfw-info' %}
+              </div>
             </h2>
           </div>
           <div>
-            <p class='x-inline-flex x-items-center x-gap-4 x-text-farmer-lime x-font-semibold x-relative'>
+            <p class='x-inline-flex x-items-center x-gap-4 x-text-farmer-lime x-font-semibold x-relative x-w-full md:x-w-auto x-justify-between'>
               <span class='open-close__text'>Expand market details</span>
               {% render 'tfw-icon-plus' %}
               {% render 'tfw-icon-minus' %}
@@ -36,7 +42,7 @@
           </div>
         </div>
         <div class='accordion-content x-hidden x-mt-10'>
-          <div class='x-flex md:x-gap-14'>
+          <div class='x-grid x-grid-cols-2 x-gap-y-6 md:x-flex md:x-gap-14'>
             <div class='market__date x-ease-in-out x-duration-300 x-translate-y-2 x-opacity-0'>
               <p class='x-text-sm x-text-farmer-green x-font-semibold x-mb-2'>Date</p>
               <p>
@@ -65,7 +71,7 @@
               <p class='x-text-sm x-text-farmer-green x-font-semibold x-mb-2'>Time</p>
               <p>{{ article.metafields.custom.market_start_time }} - {{ article.metafields.custom.market_end_time }}</p>
             </div>
-            <div class='market__location x-ease-in-out x-duration-500 x-translate-y-2 x-opacity-0'>
+            <div class='market__location x-col-span-2 x-ease-in-out x-duration-500 x-translate-y-2 x-opacity-0'>
               <p class='x-text-sm x-text-farmer-green x-font-semibold x-mb-2'>Address</p>
               <p>{{ article.metafields.custom.market_location }}</p>
             </div>
