@@ -82,37 +82,48 @@
               </p>
             {%- when 'product_icons' -%}
               <div class='product-icons__wrapper x-grid x-grid-cols-4 !x-my-10'>
-                <div class='x-grid x-gap-2 x-justify-items-center x-text-center'>
-                  {%- render 'icon-tfw-local-ingredients' -%}
-                  <h4>
-                    Local <br>
-                    Ingredients
-                  </h4>
-                </div>
-                <div class='x-grid x-gap-2 x-justify-items-center x-text-center'>
-                  {%- render 'icon-tfw-no-additives' -%}
-                  <h4>
-                    No <br>
-                    Additives
-                  </h4>
-                </div>
-                <div class='x-grid x-gap-2 x-justify-items-center x-text-center'>
-                  {%- render 'icon-tfw-proudly-sourced' -%}
-                  <h4>
-                    Proudly <br>
-                    Sourced
-                  </h4>
-                </div>
-                <div class='x-grid x-gap-2 x-justify-items-center x-text-center'>
-                  {%- render 'icon-tfw-gluten-free' -%}
-                  <h4>
-                    Gluten <br>
-                    Free
-                  </h4>
-                </div>
+                {% if product.metafields.custom.add_local_ingredients_icon %}
+                  <div class='x-grid x-gap-2 x-justify-items-center x-text-center'>
+                    {%- render 'icon-tfw-local-ingredients' -%}
+                    <h4>
+                      Local <br>
+                      Ingredients
+                    </h4>
+                  </div>
+                {% endif %}
+                {% if product.metafields.custom.add_no_additives_icon %}
+                  <div class='x-grid x-gap-2 x-justify-items-center x-text-center'>
+                    {%- render 'icon-tfw-no-additives' -%}
+                    <h4>
+                      No <br>
+                      Additives
+                    </h4>
+                  </div>
+                {% endif %}
+                {% if product.metafields.custom.add_proudly_sourced_icon %}
+                  <div class='x-grid x-gap-2 x-justify-items-center x-text-center'>
+                    {%- render 'icon-tfw-proudly-sourced' -%}
+                    <h4>
+                      Proudly <br>
+                      Sourced
+                    </h4>
+                  </div>
+                {% endif %}
+                {% if product.metafields.custom.add_gluten_free_icon %}
+                  <div class='x-grid x-gap-2 x-justify-items-center x-text-center'>
+                    {%- render 'icon-tfw-gluten-free' -%}
+                    <h4>
+                      Gluten <br>
+                      Free
+                    </h4>
+                  </div>
+                {% endif %}
               </div>
+
             {%- when 'hawkesbury_crafted' -%}
-              {% if product.vendor == "The Farmer's Wife" %}
+              {% if product.vendor == "The Farmer's Wife"
+                and product.metafields.custom.add_proudly_sourced_icon != true
+              %}
                 <div class='hawkesbury-crafted__wrapper'>
                   <div class='x-flex x-gap-1 x-items-center x-justify-center x-max-w-[44rem]'>
                     {%- render 'icon-tfw-tiny-flower' -%}
