@@ -3723,10 +3723,40 @@ details-disclosure > details {
   margin-right: auto;
 }
 
-.menu-drawer__menu-item--active, .menu-drawer__menu-item:focus, .menu-drawer__close-button:focus, .menu-drawer__menu-item:hover, .menu-drawer__close-button:hover,
-.menu-drawer__utility-links {
+.menu-drawer__menu-item--active, .menu-drawer__menu-item:focus, .menu-drawer__close-button:focus, .menu-drawer__menu-item:hover, .menu-drawer__close-button:hover {
+  color: #FFF !important;
+  background-color: #407538 !important;
+}
+
+.search-modal__content {
+  background: #F9F4EF;
+}
+
+.search-modal__form .field:before,
+.search-modal__form .field:after {
+  display: none !important;
+}
+
+.search__input.field__input {
+  --tw-shadow: 0 0 0 calc(0.1rem + var(--inputs-border-width)) rgba(131, 182, 87, 1) !important;
+  --tw-shadow-colored: 0 0 0 var(--tw-shadow-color) !important;
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow) !important;
+}
+
+#menu-drawer {
   --tw-bg-opacity: 1;
   background-color: rgb(249 244 239 / var(--tw-bg-opacity)) !important;
+  border-radius:0 40px 40px 0;
+  width: calc(100vw - 10rem);
+  border: 0 !important;
+}
+
+#menu-drawer .list-social__item svg path {
+  fill: #33582E;
+}
+
+.search__input.field__input {
+  border-radius: 9999px;
 }
 
 @media screen and (min-width: 750px) {
@@ -3734,12 +3764,20 @@ details-disclosure > details {
   #CartDrawer .drawer__inner {
     padding: 40px;
   }
+
+  .predictive-search--header {
+    border-radius: 20px !important;
+  }
 }
 
 @media screen and (max-width: 749px) {
 
   .header__heading-logo {
     max-height:45px;
+  }
+
+  .predictive-search--header {
+    border-radius: 0 0 20px 20px !important;
   }
   
   .footer-block__newsletter {
@@ -3776,6 +3814,10 @@ details-disclosure > details {
 
   .hot-badge__wrapper p {
     font-size: 10px;
+  }
+
+  #CartDrawer .drawer__inner {
+    border-radius: 40px 0 0 40px;
   }
 
 }
