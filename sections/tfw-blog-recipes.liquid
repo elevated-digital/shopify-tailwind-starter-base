@@ -31,7 +31,7 @@
   <div class='page-width'>
     {% render 'tfw-recipes-tags-list' %}
     {%- assign totalRecipes = blog.articles.size -%}
-    {%- assign per_page = 6 -%}
+    {%- assign per_page = 8 -%}
     {%- paginate blog.articles by per_page -%}
       <div>
         {%- assign startRecipe = paginate.current_page | minus: 1 | times: per_page | plus: 1 -%}
