@@ -3759,6 +3759,16 @@ details-disclosure > details {
   border-radius: 9999px;
 }
 
+.shopify-payment-button__button .shopify-cleanslate [data-testid="ShopifyPay-button"] {
+  border-radius: 9999px !important;
+  background: #407538 !important;
+  border-color: #407538 !important;
+}
+
+.shopify-payment-button__more-options {
+  display: none !important;
+}
+
 @media screen and (min-width: 750px) {
   
   #CartDrawer .drawer__inner {

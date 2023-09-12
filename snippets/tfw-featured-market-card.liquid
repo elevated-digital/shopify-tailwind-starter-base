@@ -140,7 +140,7 @@
               <p>{{ article.metafields.custom.market_location }}</p>
             </div>
           {% endif %}
-          <a class='add-to-calendar__btn x-mb-8 md:x-mb-10' href='#'>Add to Calendar</a>
+          {% comment %} <a class='add-to-calendar__btn x-mb-8 md:x-mb-10' href='#'>Add to Calendar</a> {% endcomment %}
           <p class='x-text-xs x-max-w-[400px]'>
             Products sold at this market stall:
             {% assign numCollections = collections.size %}
