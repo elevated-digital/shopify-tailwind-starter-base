@@ -3831,3 +3831,7 @@ details-disclosure > details {
   }
 
 }
+
+.footer__follow-on-shop {
+  display:none !important;
+}
