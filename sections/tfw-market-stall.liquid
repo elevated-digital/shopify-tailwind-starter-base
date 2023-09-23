@@ -11,20 +11,18 @@
           class='x-flex x-justify-between md:x-items-center x-flex-col md:x-flex-row x-cursor-pointer'
         >
           <div class='x-grid x-gap-2 md:x-gap-0 x-mb-6 md:x-mb-0'>
-            {% liquid
-              assign marketDate = article.metafields.custom.market_date
-              assign current_date = 'now' | date: '%Y-%m-%d'
-              assign market_date_comparison = marketDate | date: '%Y-%m-%d'
-              assign todaysMarketStall = "Today's Market Stall:"
-
-              if market_date_comparison > current_date
-                echo '<p class="x-text-sm md:x-text-base">Next Market Stall:</p>'
-              elsif market_date_comparison == current_date
-                echo '<p class="x-text-sm md:x-text-base">{{ todaysMarketStall }}</p>'
-              else
-                echo '<p class="x-text-sm md:x-text-base">Recent Market Stall:</p>'
-              endif
-            %}
+            {% assign marketDate = article.metafields.custom.market_date %}
+            {% assign current_date = 'now' | date: '%Y-%m-%d' %}
+            {% assign market_date_comparison = marketDate | date: '%Y-%m-%d' %}
+            {% assign todaysMarketStall = "Today's Market Stall:" %}
+            
+            {% if market_date_comparison > current_date %}
+                <p class="x-text-sm md:x-text-base">Next Market Stall:</p>
+            {% elsif market_date_comparison == current_date %}
+                <p class="x-text-sm md:x-text-base">{{ todaysMarketStall }}</p>
+            {% else %}
+                <p class="x-text-sm md:x-text-base">Recent Market Stall:</p>
+            {% endif %}
 
             <h2 class='x-flex x-max-w-[250px] md:x-max-w-none'>
               {{ article.title }}
