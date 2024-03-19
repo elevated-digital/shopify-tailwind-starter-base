@@ -40,11 +40,11 @@
         </div>
       </div>
 
-      {% for article in blog.articles offset: 1 %}
-        <div class='market-articles__article x-grid md:x-grid-cols-3 lg:x-grid-cols-5 x-items-center x-py-8 md:x-py-10 lg:x-py-12 x-border-t x-border-[rgba(18,18,18,0.08)]'>
-          {%- render 'article-card', article: article -%}
-        </div>
-      {% endfor %}
+      {% for article in articles_reversed offset: 1 %}
+    <div class='market-articles__article x-grid md:x-grid-cols-3 lg:x-grid-cols-5 x-items-center x-py-8 md:x-py-10 lg:x-py-12 x-border-t x-border-[rgba(18,18,18,0.08)]'>
+      {%- render 'article-card', article: article -%}
+    </div>
+  {% endfor %}
     </div>
   </div>
 </div>
