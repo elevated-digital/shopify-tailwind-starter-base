@@ -9,14 +9,16 @@
     <h1 class='title--primary !x-mt-4 !x-mb-10 lg:!x-mb-16'>{{ blog.title | escape }}</h1>
   </div>
 
+  {%- assign articles_reversed = blog.articles | reverse -%}
+
   <div class='market-articles'>
-    {%- if blog.articles.size > 0 -%}
+    {%- if articles_reversed.size > 0 -%}
       <div class='featured-article__wrapper x-bg-framer-cream x-rounded-2xl x-mb-14 md:x-mb-24'>
-        <div class='featured-artice'>
+        <div class='featured-article'>
           {%- render 'tfw-featured-market-card',
-            article: blog.articles.first,
+            article: articles_reversed.first,
             media_height: section.settings.image_height,
-            media_aspect_ratio: blog.articles.first.image.aspect_ratio,
+            media_aspect_ratio: articles_reversed.first.image.aspect_ratio,
             show_image: section.settings.show_image,
             show_date: section.settings.show_date,
             show_author: section.settings.show_author,
