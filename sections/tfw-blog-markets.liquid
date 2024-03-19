@@ -14,40 +14,42 @@
   <div class='market-articles'>
     
       <div class='featured-article__wrapper x-bg-framer-cream x-rounded-2xl x-mb-14 md:x-mb-24'>
-        <div class='featured-article'>
-          {%- render 'tfw-featured-market-card',
-            article: articles_reversed.first,
-            media_height: section.settings.image_height,
-            media_aspect_ratio: articles_reversed.first.image.aspect_ratio,
-            show_image: section.settings.show_image,
-            show_date: section.settings.show_date,
-            show_author: section.settings.show_author,
-            show_excerpt: true,
-            featured: true
-          -%}
-        </div>
+        {%- for article in articles_reversed limit:1 -%}
+  <div class='featured-article'>
+    {%- render 'tfw-featured-market-card',
+      article: article,
+      media_height: section.settings.image_height,
+      media_aspect_ratio: article.image.aspect_ratio,
+      show_image: section.settings.show_image,
+      show_date: section.settings.show_date,
+      show_author: section.settings.show_author,
+      show_excerpt: true,
+      featured: true
+    -%}
+  </div>
+{%- endfor -%}
       </div>
     
 
-    <div class='recent-markets__wrapper x-px-3 md:x-px-0'>
-      <h2 class='x-mb-8 md:x-mb-14 lg:x-mb-20'>Recent Market Stalls</h2>
-      <div class='market-articles__heading x-grid md:x-grid-cols-3 lg:x-grid-cols-5 x-items-center x-pb-4 md:x-pb-8'>
-        <p class='x-text-sm x-text-farmer-green x-font-semibold x-uppercase x-hidden md:x-block'>Date</p>
-        <div class='x-col-span-2 x-grid lg:x-grid-cols-4 lg:x-col-span-4 x-items-center'>
-          <p class='lg:x-col-span-2 x-text-sm x-text-farmer-green x-font-semibold x-uppercase'>Event</p>
-          <p class='x-text-sm x-text-farmer-green x-font-semibold x-uppercase x-hidden lg:x-block'>Time</p>
-          <p class='x-text-sm x-text-farmer-green x-font-semibold x-uppercase x-hidden lg:x-block'>Address</p>
+      <div class='recent-markets__wrapper x-px-3 md:x-px-0'>
+        <h2 class='x-mb-8 md:x-mb-14 lg:x-mb-20'>Recent Market Stalls</h2>
+        <div class='market-articles__heading x-grid md:x-grid-cols-3 lg:x-grid-cols-5 x-items-center x-pb-4 md:x-pb-8'>
+          <p class='x-text-sm x-text-farmer-green x-font-semibold x-uppercase x-hidden md:x-block'>Date</p>
+          <div class='x-col-span-2 x-grid lg:x-grid-cols-4 lg:x-col-span-4 x-items-center'>
+            <p class='lg:x-col-span-2 x-text-sm x-text-farmer-green x-font-semibold x-uppercase'>Event</p>
+            <p class='x-text-sm x-text-farmer-green x-font-semibold x-uppercase x-hidden lg:x-block'>Time</p>
+            <p class='x-text-sm x-text-farmer-green x-font-semibold x-uppercase x-hidden lg:x-block'>Address</p>
+          </div>
         </div>
+  
+        {% for article in articles_reversed offset: 1 %}
+          <div class='market-articles__article x-grid md:x-grid-cols-3 lg:x-grid-cols-5 x-items-center x-py-8 md:x-py-10 lg:x-py-12 x-border-t x-border-[rgba(18,18,18,0.08)]'>
+            {%- render 'article-card', article: article -%}
+          </div>
+        {% endfor %}
       </div>
-
-      {% for article in articles_reversed offset: 1 %}
-        <div class='market-articles__article x-grid md:x-grid-cols-3 lg:x-grid-cols-5 x-items-center x-py-8 md:x-py-10 lg:x-py-12 x-border-t x-border-[rgba(18,18,18,0.08)]'>
-          {%- render 'article-card', article: article -%}
-        </div>
-      {% endfor %}
     </div>
   </div>
-</div>
 
 {% schema %}
 {
