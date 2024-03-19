@@ -4,8 +4,9 @@
   <div class='page-width !x-mb-14'>
     <div class='accordion__wrapper'>
       {% assign blogHandle = 'market-stalls' %}
+      {% assign reversed_articles = blogs[blogHandle].articles | reverse %}
 
-      {% for article in blogs[blogHandle].articles limit: 1 %}
+      {% for article in reversed_articles limit: 1 %}
         <div
           id='accordion-header'
           class='x-flex x-justify-between md:x-items-center x-flex-col md:x-flex-row x-cursor-pointer'
